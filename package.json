@@ -4,30 +4,26 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
+    "package": "svelte-kit package",
     "preview": "svelte-kit preview",
+    "prepare": "svelte-kit sync",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "prepare": "npm run smui-theme",
-    "smui-theme": "smui-theme compile static/smui.css -i src/theme"
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@smui/button": "^5.0.0-beta.7",
-    "@smui/card": "^5.0.0-beta.7",
-    "@smui/checkbox": "^5.0.0-beta.7",
-    "@smui/drawer": "^5.0.0-beta.7",
-    "@smui/form-field": "^5.0.0-beta.7",
-    "@smui/icon-button": "^5.0.0-beta.7",
-    "@smui/list": "^5.0.0-beta.7",
-    "@smui/ripple": "^5.0.0-beta.7",
-    "@smui/top-app-bar": "^5.0.0-beta.7",
-    "@sveltejs/adapter-static": "^1.0.0-next.20",
+    "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "smui-theme": "^5.0.0-beta.7",
-    "svelte": "^3.42.6",
+    "@types/cookie": "^0.4.1",
+    "svelte": "^3.46.0",
     "svelte-check": "^2.2.6",
-    "svelte-preprocess": "^4.9.4",
+    "svelte-preprocess": "^4.10.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.4.3"
+    "typescript": "~4.6.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@fontsource/fira-mono": "^4.5.0",
+    "@lukeed/uuid": "^2.0.0",
+    "cookie": "^0.4.1"
+  }
 }
