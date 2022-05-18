@@ -1,13 +1,17 @@
-<mat-sidenav-container class="docs-component-viewer-sidenav-container">
-  <!-- If on small screen, menu resides in drawer -->
-  <mat-sidenav #sidenav class="docs-component-viewer-sidenav">
-  </mat-sidenav>
-  <div class="docs-component-sidenav-content">
-    <div class="docs-component-sidenav-inner-content">
-      <main class="docs-component-sidenav-body-content">
-        <!-- If on large screen, menu resides to left of content -->
-        <router-outlet></router-outlet>
-      </main>
-    </div>
-  </div>
-</mat-sidenav-container>
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/">
+    <img class="icon avatar" src="assets/avatar.webp">
+    Túlio
+  </button>
+  <button mat-button routerLink="tools">Tools</button>
+  <button mat-button routerLink="blog">Blog</button>
+  <div class="spacer"></div>
+  <a mat-icon-button href="https://github.com/tulior" target="_blank">
+    <img class="icon" src="assets/github.svg">
+  </a>
+  <a mat-icon-button href="https://twitter.com/tulio_cg" target="_blank">
+    <img class="icon" src="assets/twitter.svg">
+  </a>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

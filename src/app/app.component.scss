@@ -1,86 +1,12 @@
-
-app-component-sidenav {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+.icon {
+  height: 26px;
 }
 
-.docs-component-viewer-sidenav-container {
-  flex: 1;
-  box-sizing: border-box;
+.avatar {
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
-.docs-component-viewer-sidenav {
-  overflow: auto;
-}
-
-.docs-component-sidenav-inner-content {
-  display: flex;
-  flex-direction: row;
-}
-
-.mat-drawer {
-  &::-webkit-scrollbar {
-    height: 4px;
-    width: 4px;
-  }
-}
-
-.docs-component-viewer-nav {
-  position: sticky;
-  top: 0;
-
-  .docs-component-viewer-nav-content {
-    height: calc(100vh - 56px);
-    overflow: auto;
-
-    &::-webkit-scrollbar {
-      height: 4px;
-      width: 4px;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0 0 5px 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    li {
-      font-size: 13px;
-      line-height: 16px;
-      margin: 0;
-      padding: 5px 15px 5px 20px;
-    }
-
-    a {
-      display: block;
-      text-decoration: none;
-    }
-  }
-}
-
-.docs-component-sidenav-content {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.docs-component-sidenav-inner-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.docs-component-sidenav-body-content {
-  display: flex;
-  flex: 1 1 auto;
-}
-
-div .mat-list-base {
-  padding-top: 0;
-}
-
-div.docs-component-viewer-nav-content .mat-nav-list .mat-list-item .mat-list-item-content {
-  padding-left: 25px;
+.spacer {
+  flex-grow: 1;
 }
