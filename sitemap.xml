@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tulio.org/curriculo/</loc>
+    <lastmod>2022-05-24T15:37:56-04:00</lastmod>
+  </url><url>
+    <loc>https://tulio.org/projetos/projeto-1/</loc>
+    <lastmod>2022-05-24T15:37:56-04:00</lastmod>
+  </url><url>
+    <loc>https://tulio.org/projetos/projeto-2/</loc>
+    <lastmod>2022-05-24T15:37:56-04:00</lastmod>
+  </url><url>
+    <loc>https://tulio.org/projetos/</loc>
+    <lastmod>2022-05-24T15:37:56-04:00</lastmod>
+  </url><url>
+    <loc>https://tulio.org/</loc>
+    <lastmod>2022-05-24T15:37:56-04:00</lastmod>
+  </url><url>
+    <loc>https://tulio.org/categories/</loc>
+  </url><url>
+    <loc>https://tulio.org/tags/</loc>
+  </url>
+</urlset>

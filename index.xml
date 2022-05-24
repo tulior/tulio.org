@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tulio.org</title>
+    <link>https://tulio.org/</link>
+    <description>Recent content on tulio.org</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 24 May 2022 15:37:56 -0400</lastBuildDate><atom:link href="https://tulio.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Currículo</title>
+      <link>https://tulio.org/curriculo/</link>
+      <pubDate>Tue, 24 May 2022 15:37:56 -0400</pubDate>
+      
+      <guid>https://tulio.org/curriculo/</guid>
+      <description>O que vou postar aqui? Olá, esta página está em construção! Colocarei meu currículo aqui em breve!</description>
+    </item>
+    
+    <item>
+      <title>Projeto 1</title>
+      <link>https://tulio.org/projetos/projeto-1/</link>
+      <pubDate>Tue, 24 May 2022 15:37:56 -0400</pubDate>
+      
+      <guid>https://tulio.org/projetos/projeto-1/</guid>
+      <description>Em construção&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Projeto 2</title>
+      <link>https://tulio.org/projetos/projeto-2/</link>
+      <pubDate>Tue, 24 May 2022 15:37:56 -0400</pubDate>
+      
+      <guid>https://tulio.org/projetos/projeto-2/</guid>
+      <description>Em construção&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>
