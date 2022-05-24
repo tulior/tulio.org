@@ -1,0 +1,48 @@
+baseURL = 'https://tulio.org/'
+languageCode = 'pt-BR'
+title = 'tulio.org'
+theme = "PaperMod"
+
+[params]
+DateFormat = '2006-01-02'
+
+[[menu.main]]
+identifier = "projetos"
+name = "Projetos"
+url = "/projetos/"
+weight = 10
+
+[[menu.main]]
+identifier = "curriculo"
+name = "Currículo"
+url = "/curriculo/"
+weight = 10
+
+[params.profileMode]
+enabled = true
+title = "Túlio Ribeiro dos Anjos"
+subtitle = "Desenvolvedor"
+imageUrl = "static/avatar.webp"
+imageTitle = "Túlio Ribeiro dos Anjos - Desenvolvedor Java"
+imageWidth = 120
+imageHeight = 120
+
+[[params.profileMode.buttons]]
+name = "Currículo"
+url = "/curriculo"
+
+[[params.profileMode.buttons]]
+name = "Projetos"
+url = "/projetos"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/tulior"
+
+[[params.socialIcons]]
+name = "instagram"
+url = "https://www.instagram.com/tulioranjos/"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/t%C3%BAlio-ribeiro-dos-anjos-779946238/"

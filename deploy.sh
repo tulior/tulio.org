@@ -4,10 +4,10 @@
 set -e
 
 # build
-npm run build
+hugo -D
 
 # navigate into the build output directory
-cd dist/tulio.org
+cd public
 
 # if you are deploying to a custom domain
 echo 'tulio.org' > CNAME
