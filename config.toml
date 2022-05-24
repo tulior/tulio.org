@@ -1,10 +1,13 @@
 baseURL = 'https://tulio.org/'
 languageCode = 'pt-BR'
 title = 'tulio.org'
-theme = "PaperMod"
+theme = 'PaperMod'
 
 [params]
 DateFormat = '2006-01-02'
+
+[params.assets]
+favicon = 'favicon.ico'
 
 [[menu.main]]
 identifier = "projetos"
@@ -22,7 +25,7 @@ weight = 10
 enabled = true
 title = "Túlio Ribeiro dos Anjos"
 subtitle = "Desenvolvedor"
-imageUrl = "static/avatar.webp"
+imageUrl = "img/avatar-120x120.webp"
 imageTitle = "Túlio Ribeiro dos Anjos - Desenvolvedor Java"
 imageWidth = 120
 imageHeight = 120
