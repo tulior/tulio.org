@@ -3,79 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Túlio Ribeiro dos Anjos || Full Stack Architect</title>
+    <meta name="description" content="Túlio Ribeiro - Senior Back-end Developer with 12+ years experience in .NET modernization and cloud integrations">
+    <meta property="og:image" content="https://tulio.org/preview.png">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self' https://cdn.tailwindcss.com;
+                   script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline';
+                   style-src 'self' 'unsafe-inline'">
+    <title>tulio@portfolio:~/execute</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-green-400 font-mono min-h-screen overflow-x-hidden relative">
-    <!-- Matrix Background -->
-    <canvas id="matrix" class="fixed inset-0 -z-10 opacity-10"></canvas>
+<body class="bg-black text-[#66FF66] font-mono min-h-screen overflow-x-hidden relative">
+    <canvas id="matrix" class="fixed inset-0 -z-10 opacity-10" aria-hidden="true"></canvas>
 
     <main class="max-w-4xl mx-auto px-4 py-6 md:py-8 text-sm">
-        <!-- Header Section -->
         <header class="mb-8 md:mb-12 border-b border-green-500/30 pb-4 md:pb-6">
             <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div>
                     <h1 class="text-2xl md:text-3xl mb-2 glitch" data-text="Túlio_Ribeiro_dos_Anjos">Túlio Ribeiro dos Anjos</h1>
-                    <p class="text-green-500/70 text-sm md:text-base">Full Stack Developer</p>
-                    <div class="mt-2 text-green-500/80 text-xs md:text-sm">
-                        <p>📧 mail@tulio.org | 📱 +55 67 9 9266 0804</p>
-                        <p>🌎 Campo Grande, Brazil | 🔗 <a href="https://tulio.org" class="hover:text-green-300">tulio.org</a></p>
+                    <div class="text-green-500/80 text-xs md:text-sm">
+                        <ul role="list">
+                            <li>📧 mail@tulio.org | 📱 +55 67 9 9266 0804</li>
+                            <li>🌎 Campo Grande, Brazil | 🔗 <a href="https://tulio.org" class="hover:text-green-300 focus:ring-2 focus:ring-green-500 transition-colors">tulio.org</a></li>
+                        </ul>
+                        <p class="mt-2 text-green-500/70">Status: <span class="text-green-300">Open to remote work</span></p>
                     </div>
                 </div>
                 <a href="/Download_CV.pdf" download 
-                   class="border border-green-500/30 px-4 py-2 hover:bg-green-500/10 transition-colors text-sm md:text-base w-full md:w-auto text-center">
+                   class="border border-green-500/30 px-4 py-2 hover:bg-green-500/10 transition-colors text-sm md:text-base w-full md:w-auto text-center
+                          min-h-[48px] flex items-center justify-center focus:ring-2 focus:ring-green-500">
                     [Download_CV.pdf]
                 </a>
             </div>
         </header>
 
-        <!-- Grid Layout -->
         <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-            <!-- Main Content -->
             <div class="md:col-span-2 space-y-6 md:space-y-8">
-                <!-- Professional Experience -->
                 <section>
                     <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ professional_experience</h2>
-                    
-                    <!-- BairesDev -->
-                    <article class="mb-4 md:mb-6 pl-2 md:pl-4 border-l-2 border-green-500/20">
-                        <div class="flex flex-col md:flex-row md:justify-between mb-2 gap-1">
-                            <h3 class="text-green-300 text-base md:text-inherit">Software Engineer | BairesDev LLC (Remote)</h3>
-                            <span class="text-green-500/50 text-sm md:text-inherit">2022-Present</span>
-                        </div>
-                        <ul class="text-green-500/80 space-y-1 md:space-y-2 text-sm">
-                            <li class="flex">
-                                <span class="text-green-500/50 mr-2">»</span>
-                                Modernized legacy Java systems to REST APIs using Spring Boot
-                            </li>
-                            <!-- Other list items -->
-                        </ul>
-                    </article>
+                    <ul role="list">
+                        <!-- BairesDev -->
+                        <li class="mb-4 md:mb-6 pl-2 md:pl-4 border-l-2 border-green-500/20">
+                            <div class="flex flex-col md:flex-row md:justify-between mb-2 gap-1">
+                                <h3 class="text-green-300 text-base md:text-inherit">Software Engineer | BairesDev LLC (Remote)</h3>
+                                <span class="text-green-500/50 text-sm md:text-inherit">Jun 2022 – Present</span>
+                            </div>
+                            <ul role="list" class="text-green-500/80 space-y-1 md:space-y-2 text-sm">
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <span class="flex-1 text-balance">
+                                        Built AWS Lambda services (C#/.NET 8) for Shopify inventory sync with automatic error retries
+                                    </span>
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <span class="flex-1 text-balance">
+                                        Created high-speed image processing API handling 2K+ requests per minute
+                                    </span>
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <span class="flex-1 text-balance">
+                                        Modernized Java monolith to Spring Boot REST APIs using JPA and Hibernate
+                                    </span>
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <span class="flex-1 text-balance">
+                                        Mentored 3 junior developers through code reviews and pair programming
+                                    </span>
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <span class="flex-1 text-balance">
+                                        Designed Azure DevOps pipelines for automated testing and deployments
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
 
-                    <!-- Other experience articles with similar mobile adjustments -->
+                        <!-- Geoi2 -->
+                        <li class="mb-4 md:mb-6 pl-2 md:pl-4 border-l-2 border-green-500/20">
+                            <div class="flex flex-col md:flex-row md:justify-between mb-2 gap-1">
+                                <h3 class="text-green-300 text-base md:text-inherit">Full Stack Developer | Geoi2 Tecnologia (Remote)</h3>
+                                <span class="text-green-500/50 text-sm md:text-inherit">Aug 2019 – Jun 2022</span>
+                            </div>
+                            <ul role="list" class="text-green-500/80 space-y-1 md:space-y-2 text-sm">
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <div class="flex-1">
+                                        Replaced legacy JSF system with Angular 13 micro-frontends and Spring Boot backend
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <div class="flex-1">
+                                        Developed Java CLI tool to automate database setup and ETL using Pentaho Kettle
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <div class="flex-1">
+                                        Compressed JSON payloads by 90% with gzip for MongoDB data ingestion
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    <div class="flex-1">
+                                        Enforced HTTPS encryption for all client-server communications
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Previous .NET Roles -->
+                        <li class="pl-2 md:pl-4 border-l-2 border-green-500/20">
+                            <div class="flex flex-col md:flex-row md:justify-between mb-2 gap-1">
+                                <h3 class="text-green-300 text-base md:text-inherit">Previous .NET Roles (Various Contracts)</h3>
+                                <span class="text-green-500/50 text-sm md:text-inherit">2013–2019</span>
+                            </div>
+                            <ul role="list" class="text-green-500/80 space-y-1 md:space-y-2 text-sm">
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    Delivered government compliance systems using C#/.NET Framework 4.5 and SQL Server
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    Upgraded legacy ASP.NET applications to WebAPI services
+                                </li>
+                                <li class="flex">
+                                    <span aria-hidden="true" class="text-green-500/50 mr-2">»</span>
+                                    Collaborated with cross-functional teams via Slack and video calls
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </section>
             </div>
 
-            <!-- Sidebar -->
             <div class="space-y-6 md:space-y-8">
                 <!-- Technical Profile -->
                 <section>
                     <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ technical_profile</h2>
-                    <p class="text-green-500/80 text-sm md:text-inherit">
-                        C#/.NET developer with 12+ years experience building enterprise systems.
-                        Back-end specialist focused on scalable integrations and database architecture.
-                    </p>
+                    <div class="text-green-500/80 text-sm space-y-2">
+                        <p>Senior back-end developer with 12+ years building enterprise systems. Expert in:</p>
+                        <ul role="list" class="pl-4 space-y-1">
+                            <li class="flex">
+                                <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
+                                Legacy modernization (.NET Framework → .NET 8)
+                            </li>
+                            <li class="flex">
+                                <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
+                                Cloud integrations (AWS)
+                            </li>
+                            <li class="flex">
+                                <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
+                                High-performance database optimization
+                            </li>
+                            <li class="flex">
+                                <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
+                                Team mentorship & technical leadership
+                            </li>
+                        </ul>
+                        <p class="pt-2">Fluent in Portuguese (native), professional English (technical collaboration).</p>
+                    </div>
                 </section>
 
-                <!-- Core Stack -->
+                <!-- Core Competencies -->
                 <section>
-                    <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ core_stack</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-green-500/80 text-sm">
-                        <div class="flex items-center">
-                            <span class="w-2 h-2 bg-green-500 mr-2"></span>
-                            C#/.NET (12+ yrs)
+                    <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ core_competencies</h2>
+                    <div class="grid grid-cols-1 gap-3 text-green-500/80 text-sm">
+                        <div>
+                            <h3 class="text-green-300 mb-1">Back-end:</h3>
+                            <p>.NET 8, C#, Java 11, REST APIs, Entity Framework</p>
                         </div>
-                        <!-- Other skills -->
+                        <div>
+                            <h3 class="text-green-300 mb-1">Databases:</h3>
+                            <p>SQL Server (T-SQL), MongoDB, Query Optimization</p>
+                        </div>
+                        <div>
+                            <h3 class="text-green-300 mb-1">Cloud:</h3>
+                            <p>AWS Lambda, Docker, Azure DevOps CI/CD</p>
+                        </div>
+                        <div>
+                            <h3 class="text-green-300 mb-1">Integration:</h3>
+                            <p>Webhooks, ETL workflows, Secure HTTPS systems</p>
+                        </div>
                     </div>
                 </section>
 
@@ -84,50 +196,104 @@
                     <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ education</h2>
                     <div class="text-green-500/80 text-sm">
                         <h3 class="text-green-300">B.S. Computer Engineering</h3>
-                        <p>Anhanguera Uniderp | 2009-2013</p>
-                        <p class="mt-1 md:mt-2 text-green-500/70 text-xs md:text-sm">
-                            Thesis: Neural network weather prediction system
+                        <p>Anhanguera Uniderp | 2009–2013</p>
+                        <p class="mt-2 text-green-500/70 text-xs md:text-sm">
+                            Thesis: Weather prediction system using Python and Neurolab neural networks
                         </p>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section>
+                    <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ certifications</h2>
+                    <div class="border border-green-500/30 p-4">
+                        <div class="text-green-300">Oracle Certified Professional</div>
+                        <div class="text-green-500/50 text-sm">Java SE 11 Developer | 2021</div>
+                    </div>
+                </section>
+
+                <!-- Technical Environment -->
+                <section>
+                    <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ technical_environment</h2>
+                    <div class="grid grid-cols-2 gap-x-4 text-green-500/80 text-sm">
+                        <div>
+                            <h3 class="text-green-300 mb-1">Languages:</h3>
+                            <p>C#, Java, SQL, TypeScript</p>
+                        </div>
+                        <div>
+                            <h3 class="text-green-300 mb-1">Tools:</h3>
+                            <p>Dapper, Spring Data, Postman, Pentaho</p>
+                        </div>
+                        <div class="col-span-2">
+                            <h3 class="text-green-300 mb-1">Databases:</h3>
+                            <p>SQL Server, MongoDB, MySQL</p>
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Keep existing footer and scripts -->
     <footer class="border-t border-green-500/30 mt-8 md:mt-12">
         <div class="max-w-4xl mx-auto px-4 py-4 text-center text-green-500/50 text-xs md:text-sm">
-            <div class="flex items-center justify-center space-x-2 md:space-x-4 mb-2">
-                <span class="blink">■</span>
+            <div class="flex items-center justify-center space-x-4 mb-2">
+                <span aria-hidden="true" class="blink">■</span>
                 <span>Operational Since 2011</span>
-                <span class="blink">■</span>
+                <span aria-hidden="true" class="blink">■</span>
             </div>
             <p>© 2023 Túlio Ribeiro — All systems nominal</p>
         </div>
     </footer>
 
     <script>
-        // Matrix background
+        // Optimized Matrix Animation
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        let animationId;
+        let lastRender = 0;
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
-        const drops = Array(Math.floor(canvas.width/10)).fill(1);
-
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#0F0';
-            ctx.font = '10px monospace';
-
-            drops.forEach((drop, i) => {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i*10, drop*10);
-                drops[i] = (drop*10 > canvas.height || Math.random() > 0.95) ? 0 : drop + 1;
-            });
+        const drops = [];
+        
+        function initMatrix() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            drops.length = Math.floor(canvas.width / 10);
+            drops.fill(1);
         }
-        setInterval(drawMatrix, 50);
+
+        function drawMatrix(timestamp) {
+            if (!lastRender) lastRender = timestamp;
+            const delta = timestamp - lastRender;
+            
+            if (delta > 50) { // Throttle to ~20fps
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#66FF66';
+                ctx.font = '10px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const char = chars[Math.floor(Math.random() * chars.length)];
+                    ctx.fillText(char, i * 10, drops[i] * 10);
+                    drops[i] = drops[i] * 10 > canvas.height || Math.random() > 0.95 ? 0 : drops[i] + 1;
+                }
+                lastRender = timestamp;
+            }
+            animationId = requestAnimationFrame(drawMatrix);
+        }
+
+        function handleVisibilityChange() {
+            if (document.hidden) {
+                cancelAnimationFrame(animationId);
+            } else {
+                animationId = requestAnimationFrame(drawMatrix);
+            }
+        }
+
+        initMatrix();
+        animationId = requestAnimationFrame(drawMatrix);
+        window.addEventListener('resize', initMatrix);
+        document.addEventListener('visibilitychange', handleVisibilityChange);
     </script>
 
     <style>
@@ -139,7 +305,7 @@
             position: absolute;
             left: 2px;
             top: 0;
-            color: #0F0;
+            color: #66FF66;
             background: black;
             overflow: hidden;
             clip-path: inset(0 0 50% 0);
@@ -156,6 +322,12 @@
         }
         @keyframes blink {
             50% { opacity: 0; }
+        }
+        @media (pointer: coarse) {
+            a, button {
+                min-height: 48px;
+                min-width: 48px;
+            }
         }
     </style>
 </body>
