@@ -38,6 +38,69 @@
             transport_type: 'beacon'
         });
     </script>
+
+    <style>
+        .glitch {
+            position: relative;
+            display: inline-block; /* Ensure proper positioning context */
+        }
+
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 2px;
+            top: 0;
+            color: #66FF66;
+            background: black;
+            overflow: hidden;
+            /* Vendor prefixes for clip-path */
+            -webkit-clip-path: inset(0 0 50% 0);
+            clip-path: inset(0 0 50% 0);
+            animation: glitch 3s infinite linear alternate-reverse;
+            opacity: 0.7;
+            /* Mobile rendering optimizations */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            pointer-events: none; /* Prevent interaction with pseudo-element */
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                -webkit-clip-path: inset(20% 0 30% 0);
+                clip-path: inset(20% 0 30% 0);
+            }
+            60% {
+                -webkit-clip-path: inset(10% 0 40% 0);
+                clip-path: inset(10% 0 40% 0);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @media (pointer: coarse) {
+            a, button {
+                min-height: 48px;
+                min-width: 48px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-black text-[#66FF66] font-mono min-h-screen overflow-x-hidden relative">
 <canvas id="matrix" class="fixed inset-0 -z-10 opacity-20" aria-hidden="true"></canvas>
@@ -304,53 +367,5 @@
     window.addEventListener('resize', initMatrix);
     document.addEventListener('visibilitychange', handleVisibilityChange);
 </script>
-
-<style>
-    .glitch {
-        position: relative;
-    }
-
-    .glitch::after {
-        content: attr(data-text);
-        position: absolute;
-        left: 2px;
-        top: 0;
-        color: #66FF66;
-        background: black;
-        overflow: hidden;
-        clip-path: inset(0 0 50% 0);
-        animation: glitch 3s infinite linear alternate-reverse;
-        opacity: 0.7;
-    }
-
-    @keyframes glitch {
-        0% {
-            transform: translate(0);
-        }
-        20% {
-            transform: translate(-2px, 2px);
-        }
-        100% {
-            transform: translate(0);
-        }
-    }
-
-    .blink {
-        animation: blink 1s step-end infinite;
-    }
-
-    @keyframes blink {
-        50% {
-            opacity: 0;
-        }
-    }
-
-    @media (pointer: coarse) {
-        a, button {
-            min-height: 48px;
-            min-width: 48px;
-        }
-    }
-</style>
 </body>
 </html>
