@@ -15,20 +15,17 @@
                     },
                     colors: {
                         'primary': '#0EA5E9', // Sky 500 - A strong, modern primary color
-                        'secondary': '#64748B', // Slate 500 - For less prominent text and accents
+                        'secondary': '#4b5563', // A professional, muted gray
                         'accent': '#FBBF24',    // Amber 500 -  A subtle accent color for highlights
-                        'background': '#F9FAFB', // Gray 50 - Very light background for a clean look
-                        'card': '#FFFFFF',       // White - For content cards to stand out
-                        'text-primary': '#1E293B', // Gray 800 - Darker text for main content
-                        'text-secondary': '#4B5563', // Gray 600 - Lighter text for less important info
+                        'background': '#f8fafc', // A very light gray for a subtle background
+                        'card': '#ffffff',       // White - For content cards to stand out
+                        'text-primary': '#1f2937', // A very dark gray, almost black, for main text
+                        'text-secondary': '#6b7280', // A lighter gray for less important text
                     },
                 },
             },
         }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLHRVPNSXT"></script>
     <script>
@@ -47,155 +44,207 @@
         });
     </script>
 </head>
-<body class="bg-background text-text-primary font-sans">
-    <div class="max-w-3xl mx-auto px-6 py-12">
+<body class="bg-background text-text-primary font-sans p-6">
+<div class="max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-md">
 
-        <header class="mb-8 flex justify-between items-center">
-            <div class="flex items-center">
-                <img class="h-20 w-20 rounded-full mr-4" src="avatar.jpg" alt="Túlio Ribeiro dos Anjos Avatar">
-                <div>
-                    <h1 class="text-3xl font-bold tracking-tight text-primary">Túlio Ribeiro dos Anjos</h1>
-                    <p class="text-lg text-secondary">Senior Back-End Developer</p>
-                </div>
+    <header class="mb-8 flex justify-between items-center">
+        <div class="flex items-center">
+            <img class="h-20 w-20 rounded-full mr-4" src="avatar.jpg" alt="Túlio Ribeiro dos Anjos Avatar">
+            <div>
+                <h1 class="text-3xl font-bold text-primary">Túlio Ribeiro dos Anjos</h1>
+                <p class="text-lg text-secondary">Senior Back-End Developer</p>
             </div>
-            <nav>
-                <a href="#projects" class="text-secondary hover:text-primary transition-colors duration-200">Projects</a>
-            </nav>
-        </header>
+        </div>
+        <nav>
+            <a href="#projects" class="text-primary hover:underline">Projects</a>
+        </nav>
+    </header>
 
-        <section class="mb-6 p-6 bg-card rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold mb-4 border-b pb-2">Contact & Details</h2>
-            <ul class="text-secondary space-y-2">
-                <li>Location: Campo Grande, MS, Brazil</li>
-                <li>Email: <a href="mailto:mail@tulio.org" class="text-primary hover:underline">mail@tulio.org</a></li>
-                <li>Phone: +55 67 9 9266 0804</li>
-                <li>Website: <a href="https://tulio.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">tulio.org</a></li>
-                <li><span class="inline-block mr-2">💼</span> Open to Remote Work</li>
-                <li>
-                    <a href="resume.pdf" download="Tulio_Ribeiro_Resume.pdf" class="text-primary hover:underline">
-                        Download Resume (PDF)
-                    </a>
+    <section class="mb-6 p-6 border border-gray-200 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Contact & Details</h2>
+        <ul class="space-y-2 text-text-secondary">
+            <li>Location: Campo Grande, MS, Brazil</li>
+            <li>Email: <a href="mailto:mail@tulio.org" class="text-primary hover:underline">mail@tulio.org</a></li>
+            <li>Phone: +55 67 9 9266 0804</li>
+            <li>Website: <a href="https://tulio.org" target="_blank" rel="noopener noreferrer"
+                            class="text-primary hover:underline">tulio.org</a></li>
+            <li><a href="https://www.linkedin.com/in/tulioanjos" target="_blank" rel="noopener noreferrer"
+                   class="text-primary hover:underline">👤 LinkedIn Profile</a></li>
+            <li><span class="inline-block mr-2">💼</span> Open to Remote Work</li>
+            <li>
+                <a href="resume.pdf" download="Tulio_Ribeiro_Resume.pdf"
+                   class="text-primary hover:underline">
+                    Download Resume (PDF)
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Summary</h2>
+        <p class="text-text-secondary">Senior back-end developer with 12+ years of experience modernizing legacy systems, delivering
+            high-performance solutions, and leading cloud integrations. Skilled in .NET (Framework to 8), Java 11, AWS,
+            and advanced data handling. Proven track record reducing maintenance overhead, optimizing databases, and
+            ensuring stable, scalable software in production environments.</p>
+    </section>
+
+    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Core Competencies</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <h3 class="font-semibold text-lg mb-2 text-text-primary">Languages & Frameworks</h3>
+                <ul class="list-disc list-inside text-text-secondary">
+                    <li>C# (.NET 8, .NET Framework)</li>
+                    <li>Java (11)</li>
+                    <li>Spring Boot</li>
+                    <li>REST APIs</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-lg mb-2 text-text-primary">Databases</h3>
+                <ul class="list-disc list-inside text-text-secondary">
+                    <li>SQL Server (T-SQL)</li>
+                    <li>MongoDB</li>
+                    <li>Entity Framework</li>
+                    <li>JPA, Hibernate</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-lg mb-2 text-text-primary">Cloud & DevOps</h3>
+                <ul class="list-disc list-inside text-text-secondary">
+                    <li>AWS (Lambda, S3)</li>
+                    <li>Docker</li>
+                    <li>Azure DevOps (CI/CD, YAML pipelines)</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-lg mb-2 text-text-primary">System Integration</h3>
+                <ul class="list-disc list-inside text-text-secondary">
+                    <li>ETL workflows</li>
+                    <li>API design</li>
+                    <li>Secure HTTPS, Webhooks</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Professional Experience</h2>
+
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2 text-text-primary">Software Engineer</h3>
+            <h4 class="text-secondary font-semibold">BairesDev LLC (Remote) | Jun 2022 – Present</h4>
+            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
+                <li><span class="font-semibold">.NET 8 AWS Services & Retail Integrations</span>
+                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                        <li>Developed scalable AWS Lambda (C#/.NET 8) solutions to synchronize over 100,000 SKUs between
+                            LulaRoe inventories and Shopify, overcoming API throttling via data-diffing logic and
+                            intelligent retries.
+                        </li>
+                        <li>Implemented robust error handling and logging in CloudWatch, ensuring reliability in
+                            production and enabling seamless adoption by multiple retailers.
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="font-semibold">High-Performance Image Processing</span>
+                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                        <li>Created an AWS Lambda function (C#/.NET 8, SkiaSharp) to generate dynamic image collages
+                            on-demand, achieving sub-second processing (excluding I/O).
+                        </li>
+                        <li>Provided multiple collage layouts (1–4 images) while preserving responsive performance for
+                            Wayroo’s end-user platform.
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="font-semibold">Java to Spring Boot Modernization</span>
+                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                        <li>Re-architected complex legacy Java APIs into Spring Boot REST APIs, simplifying ongoing
+                            development and reducing maintenance overhead.
+                        </li>
+                        <li>Adopted Spring Data JPA and Hibernate to mitigate raw SQL risks and standardize data access,
+                            backed by thorough integration tests.
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="font-semibold">Azure DevOps CI/CD</span>
+                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                        <li>Automated microservice deployments using YAML-based Azure DevOps pipelines, integrating unit
+                            and integration tests to cut post-deployment issues.
+                        </li>
+                        <li>Streamlined releases with fully automated build, test, and deployment workflows,
+                            accelerating feature delivery.
+                        </li>
+                    </ul>
                 </li>
             </ul>
-        </section>
+        </div>
 
-        <section class="mb-8 p-6 bg-card rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold mb-4 border-b pb-2">Summary</h2>
-            <p class="text-secondary">Senior back-end developer with 12+ years of experience modernizing legacy systems, delivering high-performance solutions, and leading cloud integrations. Skilled in .NET (Framework to 8), Java 11, AWS, and advanced data handling. Proven track record reducing maintenance overhead, optimizing databases, and ensuring stable, scalable software in production environments.</p>
-        </section>
-
-        <section class="mb-8 p-6 bg-card rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold mb-4 border-b pb-2">Core Competencies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <h3 class="font-semibold text-lg mb-2">Languages & Frameworks</h3>
-                    <ul class="list-disc list-inside text-secondary">
-                        <li>C# (.NET 8, .NET Framework)</li>
-                        <li>Java (11)</li>
-                        <li>Spring Boot</li>
-                        <li>REST APIs</li>
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2 text-text-primary">Full Stack Developer</h3>
+            <h4 class="text-secondary font-semibold">Geoi2 Tecnologia (Remote) | Aug 2019 – Jun 2022</h4>
+            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
+                <li><span class="font-semibold">Legacy Overhaul & Performance Boost</span>
+                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                        <li>Revamped the bottlenecked ‘eContas’ JSF system into an Angular 13 micro-frontend + Spring
+                            Boot backend, dramatically improving responsiveness and user satisfaction.
+                        </li>
                     </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2">Databases</h3>
-                    <ul class="list-disc list-inside text-secondary">
-                        <li>SQL Server (T-SQL)</li>
-                        <li>MongoDB</li>
-                        <li>Entity Framework</li>
-                        <li>JPA, Hibernate</li>
+                </li>
+                <li><span class="font-semibold">Database & ETL Automation</span>
+                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                        <li>Built a Java CLI tool for automated database setup (including on-demand file-based DBMS
+                            instances) and Pentaho Kettle ETL configuration across diverse DBMSs (SQL Server, MySQL,
+                            PostgreSQL, Oracle, etc.) for government audits.
+                        </li>
+                        <li>Incorporated gzip compression for JSON payloads into MongoDB, reducing data volume by ~90%
+                            and ensuring reliable data transfer in bandwidth-constrained city deployments.
+                        </li>
                     </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2">Cloud & DevOps</h3>
-                    <ul class="list-disc list-inside text-secondary">
-                        <li>AWS (Lambda, S3)</li>
-                        <li>Docker</li>
-                        <li>Azure DevOps (CI/CD, YAML pipelines)</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2">System Integration</h3>
-                    <ul class="list-disc list-inside text-secondary">
-                        <li>ETL workflows</li>
-                        <li>API design</li>
-                        <li>Secure HTTPS, Webhooks</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-8 p-6 bg-card rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold mb-4 border-b pb-2">Professional Experience</h2>
-
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Software Engineer</h3>
-                <h4 class="text-secondary font-semibold">BairesDev LLC (Remote) | Jun 2022 – Present</h4>
-                <ul class="list-disc list-inside text-secondary mt-2 space-y-2">
-                    <li><span class="font-semibold">.NET 8 AWS Services & Retail Integrations</span>
-                        <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                            <li>Developed scalable AWS Lambda (C#/.NET 8) solutions to synchronize over 100,000 SKUs between LulaRoe inventories and Shopify, overcoming API throttling via data-diffing logic and intelligent retries.</li>
-                            <li>Implemented robust error handling and logging in CloudWatch, ensuring reliability in production and enabling seamless adoption by multiple retailers.</li>
-                        </ul>
-                    </li>
-                    <li><span class="font-semibold">High-Performance Image Processing</span>
-                        <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                            <li>Created an AWS Lambda function (C#/.NET 8, SkiaSharp) to generate dynamic image collages on-demand, achieving sub-second processing (excluding I/O).</li>
-                            <li>Provided multiple collage layouts (1–4 images) while preserving responsive performance for Wayroo’s end-user platform.</li>
-                        </ul>
-                    </li>
-                    <li><span class="font-semibold">Java to Spring Boot Modernization</span>
-                        <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                            <li>Re-architected complex legacy Java APIs into Spring Boot REST APIs, simplifying ongoing development and reducing maintenance overhead.</li>
-                            <li>Adopted Spring Data JPA and Hibernate to mitigate raw SQL risks and standardize data access, backed by thorough integration tests.</li>
-                        </ul>
-                    </li>
-                    <li><span class="font-semibold">Azure DevOps CI/CD</span>
-                        <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                            <li>Automated microservice deployments using YAML-based Azure DevOps pipelines, integrating unit and integration tests to cut post-deployment issues.</li>
-                            <li>Streamlined releases with fully automated build, test, and deployment workflows, accelerating feature delivery.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Full Stack Developer</h3>
-                <h4 class="text-secondary font-semibold">Geoi2 Tecnologia (Remote) | Aug 2019 – Jun 2022</h4>
-                <ul class="list-disc list-inside text-secondary mt-2 space-y-2">
-                    <li><span class="font-semibold">Legacy Overhaul & Performance Boost</span>
-                        <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                            <li>Revamped the bottlenecked ‘eContas’ JSF system into an Angular 13 micro-frontend + Spring Boot backend, dramatically improving responsiveness and user satisfaction.</li>
-                        </ul>
-                    </li>
-                    <li><span class="font-semibold">Database & ETL Automation</span>
-                        <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                            <li>Built a Java CLI tool for automated database setup (including on-demand file-based DBMS instances) and Pentaho Kettle ETL configuration across diverse DBMSs (SQL Server, MySQL, PostgreSQL, Oracle, etc.) for government audits.</li>
-                            <li>Incorporated gzip compression for JSON payloads into MongoDB, reducing data volume by ~90% and ensuring reliable data transfer in bandwidth-constrained city deployments.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="mb-8 p-6 bg-card rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold mb-4 border-b pb-2">Education</h2>
-            <div>
-                <h3 class="text-lg font-semibold mb-2">B.S. in Computer Engineering</h3>
-                <h4 class="text-secondary font-semibold">Anhanguera Uniderp (2009–2013)</h4>
-            </div>
-        </section>
-
-        <section class="mb-8 p-6 bg-card rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold mb-4 border-b pb-2">Certifications</h2>
-            <ul class="list-disc list-inside text-secondary">
-                <li>Oracle Certified Professional: Java SE 11 Developer (2021)</li>
+                </li>
             </ul>
-        </section>
+        </div>
 
-        <footer class="text-center text-secondary py-4 border-t">
-            <p>© 2024 Túlio Ribeiro dos Anjos. All rights reserved.</p>
-        </footer>
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2 text-text-primary">Full-Stack Developer</h3>
+            <h4 class="text-secondary font-semibold">Fonte Tecnologia (Full-time) | Aug 2017 – Aug 2019</h4>
+            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
+                <li>Built and maintained web applications using C# .NET WebAPI framework and Knockout.js and SignalR
+                    libraries for front-end development.
+                </li>
+            </ul>
+        </div>
 
-    </div>
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2 text-text-primary">Full-Stack Developer</h3>
+            <h4 class="text-secondary font-semibold">PSG Tecnologia (Full-time) | Mar 2013 – Aug 2017</h4>
+            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
+                <li>Full-stack development using C#, JavaScript, and T-SQL languages and various .NET technologies, such
+                    as MVC, WebAPI, Entity Framework, Core, Code First, and Model First.
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Education</h2>
+        <div>
+            <h3 class="text-lg font-semibold mb-2 text-text-primary">B.S. in Computer Engineering</h3>
+            <h4 class="text-secondary font-semibold">Anhanguera Uniderp (2009–2013)</h4>
+        </div>
+    </section>
+
+    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Certifications</h2>
+        <ul class="list-disc list-inside text-text-secondary">
+            <li>Oracle Certified Professional: Java SE 11 Developer (2021)</li>
+        </ul>
+    </section>
+
+    <footer class="text-center py-4 border-t border-gray-200">
+        <p class="text-text-secondary">© 2025 Túlio Ribeiro dos Anjos. All rights reserved.</p>
+    </footer>
+
+</div>
 </body>
 </html>
