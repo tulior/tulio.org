@@ -40,49 +40,42 @@
     </script>
 
     <style>
-        .glitch {
-            position: relative;
-            display: inline-block; /* Ensure proper positioning context */
+        .neon-scanline-fade {
+            position: relative; /* For pseudo-element positioning */
+            display: inline-block; /* Keep it inline, adjust as needed */
+            color: #66FF66; /* Base text color */
+            text-shadow: 0 0 8px #66FF66, 0 0 16px #33FF33; /* Neon glow */
+            overflow: hidden; /* Clip the scanline effect */
+            animation: neonFadeIn 1.5s ease-out forwards; /* Fade-in animation */
+            opacity: 0; /* Start fully transparent for fade-in */
         }
 
-        .glitch::after {
-            content: attr(data-text);
+        .neon-scanline-fade::before {
+            content: "";
             position: absolute;
-            left: 2px;
             top: 0;
-            color: #66FF66;
-            background: black;
-            overflow: hidden;
-            /* Vendor prefixes for clip-path */
-            -webkit-clip-path: inset(0 0 50% 0);
-            clip-path: inset(0 0 50% 0);
-            animation: glitch 3s infinite linear alternate-reverse;
-            opacity: 0.7;
-            /* Mobile rendering optimizations */
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            pointer-events: none; /* Prevent interaction with pseudo-element */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(102, 255, 102, 0.15) 50%); /* Subtle scanline overlay */
+            background-size: 100% 4px; /* Adjust scanline thickness here */
+            pointer-events: none; /* Make it non-interactive */
+            animation: scanlineVerticalShift 5s linear infinite alternate; /* Subtle vertical scanline movement */
+            opacity: 0.8; /* Adjust scanline opacity */
         }
 
-        @keyframes glitch {
-            0% {
-                transform: translate(0);
-            }
-            20% {
-                transform: translate(-2px, 2px);
-            }
-            40% {
-                -webkit-clip-path: inset(20% 0 30% 0);
-                clip-path: inset(20% 0 30% 0);
-            }
-            60% {
-                -webkit-clip-path: inset(10% 0 40% 0);
-                clip-path: inset(10% 0 40% 0);
-            }
-            100% {
-                transform: translate(0);
+        @keyframes neonFadeIn {
+            to {
+                opacity: 1; /* Fade in to full opacity */
             }
         }
+
+        @keyframes scanlineVerticalShift {
+            to {
+                background-position-y: 4px; /* Shift scanlines slightly down */
+            }
+        }
+
 
         .blink {
             animation: blink 1s step-end infinite;
@@ -109,7 +102,7 @@
     <header class="mb-8 md:mb-12 border-b border-green-500/30 pb-4 md:pb-6">
         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
             <div>
-                <h1 class="text-2xl md:text-3xl mb-2 glitch" data-text="Túlio_Ribeiro_dos_Anjos">Túlio Ribeiro dos
+                <h1 class="text-2xl md:text-3xl mb-2 neon-scanline-fade" data-text="Túlio_Ribeiro_dos_Anjos">Túlio Ribeiro dos
                     Anjos</h1>
                 <div class="text-green-500/80 text-xs md:text-sm">
                     <ul role="list">
