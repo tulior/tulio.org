@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-          content="Túlio Ribeiro - Senior Back-end Developer with 12+ years experience in .NET modernization and cloud integrations">
+          content="Túlio Ribeiro - Senior Back-end Developer Portfolio. 12+ years experience in .NET modernization and cloud integrations. See my skills and download my CV.">
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self' https://cdn.tailwindcss.com https://www.googletagmanager.com;
-               script-src 'self' https://cdn.tailwindcss.com https://www.googletagmanager.com 'unsafe-inline';
-               style-src 'self' 'unsafe-inline';
+          content="default-src 'self' https://www.googletagmanager.com;
+               script-src 'self' https://www.googletagmanager.com;
+               style-src 'self';
                connect-src 'self' https://www.google-analytics.com;">
-    <title>tulio@portfolio:~/execute</title>
+    <title>Túlio Ribeiro - Senior .NET Back-end Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tulio.org">
@@ -39,74 +39,18 @@
         });
     </script>
 
-    <style>
-        .neon-scanline-fade {
-            position: relative; /* For pseudo-element positioning */
-            display: inline-block; /* Keep it inline, adjust as needed */
-            color: #66FF66; /* Base text color */
-            text-shadow: 0 0 8px #66FF66, 0 0 16px #33FF33; /* Neon glow */
-            overflow: hidden; /* Clip the scanline effect */
-            animation: neonFadeIn 1.5s ease-out forwards; /* Fade-in animation */
-            opacity: 0; /* Start fully transparent for fade-in */
-        }
-
-        .neon-scanline-fade::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, transparent 50%, rgba(102, 255, 102, 0.15) 50%); /* Subtle scanline overlay */
-            background-size: 100% 4px; /* Adjust scanline thickness here */
-            pointer-events: none; /* Make it non-interactive */
-            animation: scanlineVerticalShift 5s linear infinite alternate; /* Subtle vertical scanline movement */
-            opacity: 0.8; /* Adjust scanline opacity */
-        }
-
-        @keyframes neonFadeIn {
-            to {
-                opacity: 1; /* Fade in to full opacity */
-            }
-        }
-
-        @keyframes scanlineVerticalShift {
-            to {
-                background-position-y: 4px; /* Shift scanlines slightly down */
-            }
-        }
-
-
-        .blink {
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        @media (pointer: coarse) {
-            a, button {
-                min-height: 48px;
-                min-width: 48px;
-            }
-        }
-    </style>
 </head>
 <body class="bg-black text-[#66FF66] font-mono min-h-screen overflow-x-hidden relative">
-<canvas id="matrix" class="fixed inset-0 -z-10 opacity-20" aria-hidden="true"></canvas>
+<!-- Removed Canvas Matrix -->
 
 <main class="max-w-4xl mx-auto px-4 py-6 md:py-8 text-sm">
     <header class="mb-8 md:mb-12 border-b border-green-500/30 pb-4 md:pb-6">
         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
             <div>
-                <h1 class="text-2xl md:text-3xl mb-2 neon-scanline-fade" data-text="Túlio_Ribeiro_dos_Anjos">Túlio Ribeiro dos
-                    Anjos</h1>
+                <h1 class="text-2xl md:text-3xl mb-2 ">Túlio Ribeiro dos Anjos</h1>
                 <div class="text-green-500/80 text-xs md:text-sm">
                     <ul role="list">
-                        <li>📧 mail@tulio.org | 📱 +55 67 9 9266 0804</li>
+                        <li>📧 <a href="mailto:mail@tulio.org" class="hover:text-green-300 focus:ring-2 focus:ring-green-500 transition-colors">mail@tulio.org</a> | 📱 +55 67 9 9266 0804</li>
                         <li>🌎 Campo Grande, Brazil | 🔗 <a href="https://tulio.org"
                                                           class="hover:text-green-300 focus:ring-2 focus:ring-green-500 transition-colors">tulio.org</a>
                         </li>
@@ -118,7 +62,7 @@
             <a href="/Download_CV.pdf" download
                class="border border-green-500/30 px-4 py-2 hover:bg-green-500/10 transition-colors text-sm md:text-base w-full md:w-auto text-center
                           min-h-[48px] flex items-center justify-center focus:ring-2 focus:ring-green-500">
-                [Download_CV.pdf]
+                Download CV
             </a>
         </div>
     </header>
@@ -126,8 +70,7 @@
     <div class="grid md:grid-cols-3 gap-6 md:gap-8">
         <div class="md:col-span-2 space-y-6 md:space-y-8">
             <section>
-                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$
-                    professional_experience</h2>
+                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">Professional Experience</h2>
                 <ul role="list">
                     <!-- BairesDev Updated -->
                     <li class="mb-4 md:mb-6 pl-2 md:pl-4 border-l-2 border-green-500/20">
@@ -208,34 +151,34 @@
         <div class="space-y-6 md:space-y-8">
             <!-- Technical Profile -->
             <section>
-                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ technical_profile</h2>
+                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">Technical Profile</h2>
                 <div class="text-green-500/80 text-sm space-y-2">
                     <p>Senior back-end developer with 12+ years building enterprise systems. Expert in:</p>
                     <ul role="list" class="pl-4 space-y-1">
                         <li class="flex">
                             <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
-                            Legacy modernization (.NET Framework to .NET 8)
+                            Legacy Modernization: Expertise in migrating .NET Framework applications to .NET 8, including code refactoring, dependency updates, and cloud migration strategies.
                         </li>
                         <li class="flex">
                             <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
-                            Cloud integrations (AWS)
+                            Cloud Integrations (AWS): Proficient in designing and deploying applications on AWS, utilizing services like Lambda, S3, and API Gateway. Experience with serverless architectures and cloud-native development.
                         </li>
                         <li class="flex">
                             <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
-                            High-performance databases
+                            High-Performance Databases: Experience optimizing database performance for SQL Server and MongoDB, including query tuning, indexing strategies, and efficient data modeling.
                         </li>
                         <li class="flex">
                             <span aria-hidden="true" class="text-green-500/50 mr-2">▹</span>
                             Strong mentorship experience
                         </li>
                     </ul>
-                    <p class="pt-2">Fluent in Portuguese (native), professional English (technical collaboration).</p>
+                    <p class="pt-2">Fluent in Portuguese (Native), Professional proficiency in English (for technical collaboration).</p>
                 </div>
             </section>
 
             <!-- Core Competencies -->
             <section>
-                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ core_competencies</h2>
+                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">Core Competencies</h2>
                 <div class="grid grid-cols-1 gap-3 text-green-500/80 text-sm">
                     <div>
                         <h3 class="text-green-300 mb-1">Back-end Architecture:</h3>
@@ -258,7 +201,7 @@
 
             <!-- Education -->
             <section>
-                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ education</h2>
+                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">Education</h2>
                 <div class="text-green-500/80 text-sm">
                     <h3 class="text-green-300">B.S. Computer Engineering</h3>
                     <p>Anhanguera Uniderp | 2009–2013</p>
@@ -270,7 +213,7 @@
 
             <!-- Certifications -->
             <section>
-                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$ certifications</h2>
+                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">Certifications</h2>
                 <div class="border border-green-500/30 p-4">
                     <div class="text-green-300">Oracle Certified Professional</div>
                     <div class="text-green-500/50 text-sm">Java SE 11 Developer | 2021</div>
@@ -279,8 +222,7 @@
 
             <!-- Technical Environment -->
             <section>
-                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">$
-                    technical_environment</h2>
+                <h2 class="text-lg md:text-xl mb-3 md:mb-4 border-b border-green-500/30 pb-2">Technical Environment</h2>
                 <div class="grid grid-cols-2 gap-x-4 text-green-500/80 text-sm">
                     <div>
                         <h3 class="text-green-300 mb-1">Languages:</h3>
@@ -302,63 +244,12 @@
 
 <footer class="border-t border-green-500/30 mt-8 md:mt-12">
     <div class="max-w-4xl mx-auto px-4 py-4 text-center text-green-500/50 text-xs md:text-sm">
-        <div class="flex items-center justify-center space-x-4 mb-2">
-            <span aria-hidden="true" class="blink">■</span>
-            <span>Operational Since 2011</span>
-            <span aria-hidden="true" class="blink">■</span>
+        <div>
+            <span>© 2025 Túlio Ribeiro</span>
         </div>
-        <p>© 2025 Túlio Ribeiro — All systems nominal</p>
     </div>
 </footer>
 
-<script>
-    // Matrix animation script remains unchanged
-    const canvas = document.getElementById('matrix');
-    const ctx = canvas.getContext('2d');
-    let animationId;
-    let lastRender = 0;
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
-    const drops = [];
-
-    function initMatrix() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        drops.length = Math.floor(canvas.width / 10);
-        drops.fill(1);
-    }
-
-    function drawMatrix(timestamp) {
-        if (!lastRender) lastRender = timestamp;
-        const delta = timestamp - lastRender;
-
-        if (delta > 50) {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#66FF66';
-            ctx.font = '10px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const char = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(char, i * 10, drops[i] * 10);
-                drops[i] = drops[i] * 10 > canvas.height || Math.random() > 0.95 ? 0 : drops[i] + 1;
-            }
-            lastRender = timestamp;
-        }
-        animationId = requestAnimationFrame(drawMatrix);
-    }
-
-    function handleVisibilityChange() {
-        if (document.hidden) {
-            cancelAnimationFrame(animationId);
-        } else {
-            animationId = requestAnimationFrame(drawMatrix);
-        }
-    }
-
-    initMatrix();
-    animationId = requestAnimationFrame(drawMatrix);
-    window.addEventListener('resize', initMatrix);
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-</script>
+<!-- Removed Matrix Script -->
 </body>
 </html>
