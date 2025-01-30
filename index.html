@@ -1,29 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Túlio Ribeiro dos Anjos - Senior Back-End Developer</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Túlio Ribeiro dos Anjos | Senior Backend Engineer</title>
+    <meta name="title" content="Túlio Ribeiro dos Anjos | Senior Backend Engineer">
+    <meta name="description"
+          content="12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture and database optimization expert.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tulio.org/">
+    <meta property="og:title" content="Túlio Ribeiro dos Anjos | Senior Backend Engineer">
+    <meta property="og:description"
+          content="12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture expert.">
+    <meta property="og:image" content="https://tulio.org/img/og-banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tulio.org/">
+    <meta property="twitter:title" content="Túlio Ribeiro dos Anjos | Senior Backend Engineer">
+    <meta property="twitter:description"
+          content="12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture expert.">
+    <meta property="twitter:image" content="https://tulio.org/img/og-banner.png">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap" as="style">
+
+    <!-- Fonts -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Security Headers (via meta as fallback) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0EA5E9">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-                        'mono': ['Roboto Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+                        sans: ['Inter', 'system-ui'],
+                        mono: ['Roboto Mono', 'ui-monospace']
                     },
                     colors: {
-                        'primary': '#0EA5E9', // Sky 500 - A strong, modern primary color
-                        'secondary': '#4b5563', // A professional, muted gray
-                        'accent': '#FBBF24',    // Amber 500 -  A subtle accent color for highlights
-                        'background': '#f8fafc', // A very light gray for a subtle background
-                        'card': '#ffffff',       // White - For content cards to stand out
-                        'text-primary': '#1f2937', // A very dark gray, almost black, for main text
-                        'text-secondary': '#6b7280', // A lighter gray for less important text
+                        primary: '#0EA5E9',
+                        secondary: '#4b5563',
+                        background: '#f8fafc',
+                        card: '#ffffff',
+                        'text-primary': '#1f2937',
+                        'text-secondary': '#6b7280',
                     },
-                },
-            },
+                }
+            }
         }
     </script>
 
@@ -44,207 +87,110 @@
         });
     </script>
 </head>
-<body class="bg-background text-text-primary font-sans p-6">
-<div class="max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-md">
+<body class="bg-background text-text-primary font-sans">
+<!-- Generate as SVG then export to PNG -->
+<svg width="1200" height="630" viewBox="0 0 1200 630">
+    <rect width="1200" height="630" fill="#f8fafc"/>
 
-    <header class="mb-8 flex justify-between items-center">
-        <div class="flex items-center">
-            <img class="h-20 w-20 rounded-full mr-4" src="avatar.jpg" alt="Túlio Ribeiro dos Anjos Avatar">
-            <div>
-                <h1 class="text-3xl font-bold text-primary">Túlio Ribeiro dos Anjos</h1>
-                <p class="text-lg text-secondary">Senior Back-End Developer</p>
+    <!-- Terminal Window -->
+    <rect x="50" y="100" width="1100" height="400" rx="8" fill="#0EA5E9" fill-opacity="0.1"/>
+    <text x="70" y="160" font-family="Roboto Mono" font-size="32" fill="#1f2937">
+        $ tulio --expertise
+    </text>
+    <text x="70" y="220" font-family="Roboto Mono" font-size="24" fill="#4b5563">
+        > cloud_architecture: true
+        > legacy_modernization: true
+        > distributed_systems: true
+    </text>
+
+    <!-- Profile Text -->
+    <text x="70" y="500" font-family="Inter" font-size="48" fill="#1f2937">
+        Túlio Ribeiro dos Anjos
+    </text>
+    <text x="70" y="560" font-family="Inter" font-size="36" fill="#4b5563">
+        Backend Systems Specialist
+    </text>
+</svg>
+<!-- Hero Section -->
+<div class="min-h-screen flex items-center justify-center">
+    <div class="text-center max-w-2xl px-4">
+        <div class="mb-8">
+            <div class="text-6xl md:text-7xl font-mono text-primary">
+                <span class="text-text-secondary">&lt;</span>/<span class="text-text-secondary">&gt;</span>
             </div>
         </div>
-        <nav>
-            <a href="#projects" class="text-primary hover:underline">Projects</a>
-        </nav>
-    </header>
-
-    <section class="mb-6 p-6 border border-gray-200 rounded-lg">
-        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Contact & Details</h2>
-        <ul class="space-y-2 text-text-secondary">
-            <li>Location: Campo Grande, MS, Brazil</li>
-            <li>Email: <a href="mailto:mail@tulio.org" class="text-primary hover:underline">mail@tulio.org</a></li>
-            <li>Phone: +55 67 9 9266 0804</li>
-            <li>Website: <a href="https://tulio.org" target="_blank" rel="noopener noreferrer"
-                            class="text-primary hover:underline">tulio.org</a></li>
-            <li><a href="https://www.linkedin.com/in/tulioanjos" target="_blank" rel="noopener noreferrer"
-                   class="text-primary hover:underline">👤 LinkedIn Profile</a></li>
-            <li><span class="inline-block mr-2">💼</span> Open to Remote Work</li>
-            <li>
-                <a href="resume.pdf" download="Tulio_Ribeiro_Resume.pdf"
-                   class="text-primary hover:underline">
-                    Download Resume (PDF)
-                </a>
-            </li>
-        </ul>
-    </section>
-
-    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
-        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Summary</h2>
-        <p class="text-text-secondary">Senior back-end developer with 12+ years of experience modernizing legacy systems, delivering
-            high-performance solutions, and leading cloud integrations. Skilled in .NET (Framework to 8), Java 11, AWS,
-            and advanced data handling. Proven track record reducing maintenance overhead, optimizing databases, and
-            ensuring stable, scalable software in production environments.</p>
-    </section>
-
-    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
-        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Core Competencies</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-                <h3 class="font-semibold text-lg mb-2 text-text-primary">Languages & Frameworks</h3>
-                <ul class="list-disc list-inside text-text-secondary">
-                    <li>C# (.NET 8, .NET Framework)</li>
-                    <li>Java (11)</li>
-                    <li>Spring Boot</li>
-                    <li>REST APIs</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-semibold text-lg mb-2 text-text-primary">Databases</h3>
-                <ul class="list-disc list-inside text-text-secondary">
-                    <li>SQL Server (T-SQL)</li>
-                    <li>MongoDB</li>
-                    <li>Entity Framework</li>
-                    <li>JPA, Hibernate</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-semibold text-lg mb-2 text-text-primary">Cloud & DevOps</h3>
-                <ul class="list-disc list-inside text-text-secondary">
-                    <li>AWS (Lambda, S3)</li>
-                    <li>Docker</li>
-                    <li>Azure DevOps (CI/CD, YAML pipelines)</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-semibold text-lg mb-2 text-text-primary">System Integration</h3>
-                <ul class="list-disc list-inside text-text-secondary">
-                    <li>ETL workflows</li>
-                    <li>API design</li>
-                    <li>Secure HTTPS, Webhooks</li>
-                </ul>
-            </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-mono">tulio_anjos</h1>
+        <p class="text-xl text-text-secondary mb-8">senior_backend_engineer</p>
+        <div class="space-y-4">
+            <a href="resume.pdf" download="Tulio_Ribeiro_Resume.pdf"
+               class="inline-block w-full md:w-auto bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#0284c7] transition-colors font-mono text-sm">
+                download_resume().pdf
+            </a>
         </div>
-    </section>
-
-    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
-        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Professional Experience</h2>
-
-        <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-2 text-text-primary">Software Engineer</h3>
-            <h4 class="text-secondary font-semibold">BairesDev LLC (Remote) | Jun 2022 – Present</h4>
-            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
-                <li><span class="font-semibold">.NET 8 AWS Services & Retail Integrations</span>
-                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                        <li>Developed scalable AWS Lambda (C#/.NET 8) solutions to synchronize over 100,000 SKUs between
-                            LulaRoe inventories and Shopify, overcoming API throttling via data-diffing logic and
-                            intelligent retries.
-                        </li>
-                        <li>Implemented robust error handling and logging in CloudWatch, ensuring reliability in
-                            production and enabling seamless adoption by multiple retailers.
-                        </li>
-                    </ul>
-                </li>
-                <li><span class="font-semibold">High-Performance Image Processing</span>
-                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                        <li>Created an AWS Lambda function (C#/.NET 8, SkiaSharp) to generate dynamic image collages
-                            on-demand, achieving sub-second processing (excluding I/O).
-                        </li>
-                        <li>Provided multiple collage layouts (1–4 images) while preserving responsive performance for
-                            Wayroo’s end-user platform.
-                        </li>
-                    </ul>
-                </li>
-                <li><span class="font-semibold">Java to Spring Boot Modernization</span>
-                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                        <li>Re-architected complex legacy Java APIs into Spring Boot REST APIs, simplifying ongoing
-                            development and reducing maintenance overhead.
-                        </li>
-                        <li>Adopted Spring Data JPA and Hibernate to mitigate raw SQL risks and standardize data access,
-                            backed by thorough integration tests.
-                        </li>
-                    </ul>
-                </li>
-                <li><span class="font-semibold">Azure DevOps CI/CD</span>
-                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                        <li>Automated microservice deployments using YAML-based Azure DevOps pipelines, integrating unit
-                            and integration tests to cut post-deployment issues.
-                        </li>
-                        <li>Streamlined releases with fully automated build, test, and deployment workflows,
-                            accelerating feature delivery.
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-2 text-text-primary">Full Stack Developer</h3>
-            <h4 class="text-secondary font-semibold">Geoi2 Tecnologia (Remote) | Aug 2019 – Jun 2022</h4>
-            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
-                <li><span class="font-semibold">Legacy Overhaul & Performance Boost</span>
-                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                        <li>Revamped the bottlenecked ‘eContas’ JSF system into an Angular 13 micro-frontend + Spring
-                            Boot backend, dramatically improving responsiveness and user satisfaction.
-                        </li>
-                    </ul>
-                </li>
-                <li><span class="font-semibold">Database & ETL Automation</span>
-                    <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
-                        <li>Built a Java CLI tool for automated database setup (including on-demand file-based DBMS
-                            instances) and Pentaho Kettle ETL configuration across diverse DBMSs (SQL Server, MySQL,
-                            PostgreSQL, Oracle, etc.) for government audits.
-                        </li>
-                        <li>Incorporated gzip compression for JSON payloads into MongoDB, reducing data volume by ~90%
-                            and ensuring reliable data transfer in bandwidth-constrained city deployments.
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-2 text-text-primary">Full-Stack Developer</h3>
-            <h4 class="text-secondary font-semibold">Fonte Tecnologia (Full-time) | Aug 2017 – Aug 2019</h4>
-            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
-                <li>Built and maintained web applications using C# .NET WebAPI framework and Knockout.js and SignalR
-                    libraries for front-end development.
-                </li>
-            </ul>
-        </div>
-
-        <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-2 text-text-primary">Full-Stack Developer</h3>
-            <h4 class="text-secondary font-semibold">PSG Tecnologia (Full-time) | Mar 2013 – Aug 2017</h4>
-            <ul class="list-disc list-inside mt-2 space-y-2 text-text-secondary">
-                <li>Full-stack development using C#, JavaScript, and T-SQL languages and various .NET technologies, such
-                    as MVC, WebAPI, Entity Framework, Core, Code First, and Model First.
-                </li>
-            </ul>
-        </div>
-
-    </section>
-
-    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
-        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Education</h2>
-        <div>
-            <h3 class="text-lg font-semibold mb-2 text-text-primary">B.S. in Computer Engineering</h3>
-            <h4 class="text-secondary font-semibold">Anhanguera Uniderp (2009–2013)</h4>
-        </div>
-    </section>
-
-    <section class="mb-8 p-6 border border-gray-200 rounded-lg">
-        <h2 class="text-xl font-semibold mb-4 border-b border-gray-200 pb-2 text-text-primary">Certifications</h2>
-        <ul class="list-disc list-inside text-text-secondary">
-            <li>Oracle Certified Professional: Java SE 11 Developer (2021)</li>
-        </ul>
-    </section>
-
-    <footer class="text-center py-4 border-t border-gray-200">
-        <p class="text-text-secondary">© 2025 Túlio Ribeiro dos Anjos. All rights reserved.</p>
-    </footer>
-
+    </div>
 </div>
+
+<!-- Future Content Sections (Placeholders) -->
+<div class="max-w-4xl mx-auto px-4 py-16">
+    <!-- Projects Grid -->
+    <section class="mb-20">
+        <h2 class="text-2xl font-mono mb-8">~/projects</h2>
+        <div class="grid gap-6">
+            <!-- Rust Project -->
+            <div class="p-6 border rounded-lg hover:border-primary transition-colors">
+                <div class="flex items-center mb-3">
+                    <span class="text-primary font-mono mr-2">[rust]</span>
+                    <h3 class="font-medium">Embedded Systems Experiment</h3>
+                </div>
+                <p class="text-text-secondary text-sm mb-4">
+                    Weekend project exploring low-level systems programming. Bare-metal Rust on ARM Cortex-M,
+                    custom allocator implementation, peripheral register access patterns.
+                </p>
+                <div class="flex items-center text-sm text-text-secondary">
+                    <span class="mr-4">Status: WIP</span>
+                    <span class="mr-4">Last commit: 2024-02-15</span>
+                    <a href="#" class="text-primary hover:underline">View Source</a>
+                </div>
+            </div>
+
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="mb-20">
+        <h2 class="text-2xl font-mono mb-8">~/writing</h2>
+        <div class="grid gap-6">
+            <!-- Sample Blog Post -->
+            <article class="p-6 border rounded-lg hover:border-primary transition-colors">
+                <h3 class="font-medium mb-2">Why I'm Learning Rust in 2024</h3>
+                <p class="text-text-secondary text-sm mb-4">
+                    Exploring memory safety patterns, comparing async ecosystems,
+                    and building systems programming intuition beyond managed runtimes.
+                </p>
+                <div class="text-sm text-text-secondary">
+                    <span class="mr-4">2024-03-10</span>
+                    <span class="mr-4">12 min read</span>
+                    <a href="#" class="text-primary hover:underline">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-gray-200 py-8 text-center text-text-secondary text-sm">
+    <div class="max-w-4xl mx-auto px-4">
+        <p class="mb-2">Connect:</p>
+        <div class="flex justify-center space-x-4">
+            <a href="mailto:mail@tulio.org" class="text-primary hover:underline">email</a>
+            <span class="text-text-secondary">|</span>
+            <a href="https://github.com/tulior" class="text-primary hover:underline">github</a>
+            <span class="text-text-secondary">|</span>
+            <a href="https://linkedin.com/in/tulioanjos" class="text-primary hover:underline">linkedin</a>
+        </div>
+        <p class="mt-4">© 2025 Túlio Ribeiro dos Anjos</p>
+    </div>
+</footer>
 </body>
 </html>
