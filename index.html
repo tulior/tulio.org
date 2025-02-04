@@ -86,6 +86,11 @@
             transport_type: 'beacon'
         });
     </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.min.css"/>
+    <script src="https://unpkg.com/prismjs@1.29.0/prism.js"></script>
+    <script src="https://unpkg.com/prismjs@1.29.0/components/prism-csharp.min.js"></script>
+    <!-- Add C# language support -->
 </head>
 <body class="bg-background text-text-primary font-sans">
 <!-- Hero Section -->
@@ -107,84 +112,72 @@
     </div>
 </div>
 
-<!-- After Hero Section -->
+<!-- Main Content Section -->
 <div class="max-w-4xl mx-auto px-4 py-16">
 
-    <!-- Current Focus Section -->
+    <!-- SchemaShroud Project Section -->
     <section class="mb-20">
-        <h2 class="text-2xl font-mono mb-8">~/current_focus</h2>
+        <h2 class="text-2xl font-mono mb-8">~/projects/schema_shroud</h2>
         <div class="p-6 border rounded-lg">
             <div class="flex items-center mb-4">
-                <span class="text-primary font-mono mr-2">[rust]</span>
-                <h3 class="font-medium">Systems Programming Journey</h3>
+                <span class="text-primary font-mono mr-2">[c#]</span>
+                <h3 class="font-medium">SchemaShroud Data Anonymizer</h3>
             </div>
             <div class="text-sm text-text-secondary space-y-4">
-                <p>"What I cannot create, I do not understand." — Richard Feynman</p>
-                <div class="flex items-center">
-                    <span class="mr-2">Current Exploration:</span>
-                    <span class="font-mono bg-primary/10 px-2 py-1 rounded">Ownership Patterns</span>
-                    <span class="mx-2">→</span>
-                    <span class="font-mono bg-primary/10 px-2 py-1 rounded">Async Ecosystem</span>
-                </div>
-                <div class="border-t border-gray-200 pt-4">
-                    <details>
-                        <summary class="cursor-pointer">Why Rust?</summary>
-                        <p class="mt-2">
-                            Exploring memory safety without GC, leveraging pattern matching,
-                            and understanding systems programming fundamentals that inform
-                            my cloud architecture work.
-                        </p>
-                    </details>
-                </div>
-            </div>
-        </div>
-    </section>
+                <p>A weekend project to explore data anonymization in .NET. SchemaShroud is a proof-of-concept library
+                    demonstrating GDPR-compliant data handling for non-production environments using declarative
+                    attributes.</p>
 
-    <!-- Technical Philosophy Section -->
-    <section class="mb-20">
-        <h2 class="text-2xl font-mono mb-8">~/engineering_notes</h2>
-        <div class="grid gap-6 md:grid-cols-2">
-            <div class="p-6 border rounded-lg">
-                <blockquote class="text-text-secondary space-y-4">
-                    <p class="text-lg">“The art of simplicity is a puzzle of complexity.”</p>
-                    <footer class="text-sm">— Douglas Horton</footer>
-                    <div class="border-t pt-4">
-                        <p class="text-sm">Seen in:</p>
-                        <ul class="list-disc list-inside">
-                            <li>API design tradeoffs</li>
-                            <li>Cloud cost optimization</li>
-                            <li>Legacy system modernization</li>
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div>
+                        <h4 class="font-medium mb-2">Technical Specs</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="mr-2">▸</span>
+                                <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">.NET 8.0</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">▸</span>
+                                <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Reflection-based processing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">▸</span>
+                                <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Custom strategy support</span>
+                            </li>
                         </ul>
                     </div>
-                </blockquote>
-            </div>
 
-            <div class="p-6 border rounded-lg">
-                <div class="text-text-secondary space-y-4">
-                    <div class="flex items-center mb-2">
-                        <span class="text-primary mr-2">▸</span>
-                        <h3 class="font-medium">Recent Technical Reading</h3>
+                    <div>
+                        <h4 class="font-medium mb-2">Resources</h4>
+                        <div class="flex flex-col space-y-2">
+                            <a href="https://github.com/tulior/schema-shroud"
+                               class="flex items-center text-primary hover:underline">
+                                <span class="mr-2">⟨/⟩</span>
+                                GitHub Repository
+                            </a>
+                        </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="text-xs mr-2">📚</span>
-                            <a href="#" class="hover:underline">"Database Internals" by Alex Petrov</a>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-xs mr-2">📄</span>
-                            <a href="#" class="hover:underline">Rust Ownership RFC</a>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-xs mr-2">🎧</span>
-                            <a href="#" class="hover:underline">Software Engineering Daily Podcast</a>
-                        </li>
-                    </ul>
+                </div>
+
+                <div class="mt-4 border-t pt-4">
+                    <h4 class="font-medium mb-2">Example Implementation</h4>
+                    <pre class="font-mono text-xs bg-card p-4 rounded overflow-x-auto">
+                        <code class="language-csharp">
+[SensitiveData(AnonymizationMethod.Hash)]
+public string Email {
+    get;
+    set;
+}
+
+var processor = new DataAnonymizer();
+var cleanData = processor.Anonymize(rawData);</code>
+                    </pre>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Progress Bars Section -->
+    <!-- System Check Section -->
     <section class="mb-20">
         <h2 class="text-2xl font-mono mb-8">~/system_check</h2>
         <div class="font-mono text-sm bg-card p-6 rounded-lg border space-y-6">
@@ -218,10 +211,10 @@
             <div>
                 <div class="flex justify-between mb-1">
                     <span>Rust Foundations</span>
-                    <span>40%</span>
+                    <span>0%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5">
-                    <div class="bg-primary h-2.5 rounded-full" style="width: 40%"></div>
+                    <div class="bg-primary h-2.5 rounded-full" style="width: 0%"></div>
                 </div>
             </div>
 
@@ -230,7 +223,6 @@
             </div>
         </div>
     </section>
-
 
 </div>
 
