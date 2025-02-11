@@ -2,7 +2,7 @@
 @import 'prismjs/themes/prism.css';
 
 @theme {
-  --font-sans: "Inter", "system-ui";
-  --font-mono: "Roboto Mono", "ui-monospace";
+    --font-sans: "Inter", "system-ui";
+    --font-mono: "Roboto Mono", "ui-monospace";
 }
 

@@ -9,7 +9,7 @@ import loadLanguages from 'prismjs/components/index.js';
 loadLanguages(['csharp']);
 
 // Receive props from the parent
-const { code, language = 'markup' } = Astro.props;
+const {code, language = 'markup'} = Astro.props;
 
 // Get the proper grammar from Prism (defaulting to markup if not found)
 const grammar = Prism.languages[language] || Prism.languages.markup;

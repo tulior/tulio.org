@@ -1,48 +1,55 @@
 ---
 import '../styles/global.css';
-const { title, description } = Astro.props;
+const {title, description} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{title || "Túlio Ribeiro dos Anjos | Senior Backend Engineer"}</title>
-    <meta name="description" content={description || "12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture and database optimization expert."} />
-    
-    <!-- Open Graph / Twitter meta tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tulio.org/" />
-    <meta property="og:title" content="Túlio Ribeiro dos Anjos | Senior Backend Engineer" />
-    <meta property="og:description" content="12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture expert." />
-    <meta property="og:image" content="https://tulio.org/img/og-banner.png" />
-    
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://tulio.org/" />
-    <meta property="twitter:title" content="Túlio Ribeiro dos Anjos | Senior Backend Engineer" />
-    <meta property="twitter:description" content="12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture expert." />
-    <meta property="twitter:image" content="https://tulio.org/img/og-banner.png" />
+        <meta name="description"
+              content={description || '12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture and database optimization expert.'}/>
 
-    <!-- Favicon and manifest -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+      <!-- Open Graph / Twitter meta tags -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://tulio.org/"/>
+        <meta property="og:title" content="Túlio Ribeiro dos Anjos | Senior Backend Engineer"/>
+        <meta property="og:description"
+              content="12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture expert."/>
+        <meta property="og:image" content="https://tulio.org/img/og-banner.png"/>
 
-    <!-- Security Header fallback -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#0EA5E9" />
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://tulio.org/"/>
+        <meta property="twitter:title" content="Túlio Ribeiro dos Anjos | Senior Backend Engineer"/>
+        <meta property="twitter:description"
+              content="12+ years building robust backend systems. .NET/Java specialist transitioning to Rust. Cloud architecture expert."/>
+        <meta property="twitter:image" content="https://tulio.org/img/og-banner.png"/>
 
-        <!-- Custom Fonts: Preconnect, Preload, and Load Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap" as="style" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-background text-text-primary font-sans">
-    <slot />
-  </body>
-</html>
+      <!-- Favicon and manifest -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+
+      <!-- Security Header fallback -->
+        <meta http-equiv="Content-Security-Policy"
+              content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"/>
+
+      <!-- Theme Color -->
+        <meta name="theme-color" content="#0EA5E9"/>
+
+      <!-- Custom Fonts: Preconnect, Preload, and Load Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preload"
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
+              as="style"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
+              rel="stylesheet"/>
+      </head>
+        <body class="bg-background text-text-primary font-sans">
+        <slot/>
+        </body>
+      </html>
 

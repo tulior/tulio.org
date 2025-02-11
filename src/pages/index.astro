@@ -17,202 +17,215 @@ var processor = new DataAnonymizer();
 var cleanData = processor.Anonymize(rawData);`;
 ---
 <BaseLayout title="Túlio Ribeiro dos Anjos | Senior Backend Engineer">
-  <Navbar />
-  <Hero />
+    <Navbar/>
+    <Hero/>
 
-  <!-- Add JS for scroll behavior (could also be moved into a separate component) -->
     <!-- Add JS for scroll behavior (could also be moved into a separate component) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const scrollArrow = document.getElementById('scroll-arrow');
-      const mainContent = document.getElementById('main-content');
-      if (scrollArrow && mainContent) {
-        scrollArrow.addEventListener('click', () => {
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        });
-      }
-    });
-  </script>
+    <!-- Add JS for scroll behavior (could also be moved into a separate component) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const scrollArrow = document.getElementById('scroll-arrow');
+        const mainContent = document.getElementById('main-content');
+        if (scrollArrow && mainContent) {
+          scrollArrow.addEventListener('click', () => {
+            mainContent.scrollIntoView({behavior: 'smooth'});
+          });
+        }
+      });
+    </script>
 
-  <main id="main-content" class="max-w-4xl mx-auto px-4 py-16">
-    <!-- Skills Section -->
-    <section class="mb-20">
-      <h2 class="md:text-2xl text-xl font-mono mb-8">~/skills</h2>
-      <div class="p-6 border rounded-lg">
-        <div class="grid gap-8 md:grid-cols-2">
-          <div>
-            <div class="flex items-center mb-4">
-              <span class="text-primary font-mono mr-2">[languages]</span>
-              <h3 class="font-medium">Core Stack</h3>
+    <main id="main-content" class="max-w-4xl mx-auto px-4 py-16">
+        <!-- Skills Section -->
+        <section class="mb-20">
+            <h2 class="md:text-2xl text-xl font-mono mb-8">~/skills</h2>
+            <div class="p-6 border rounded-lg">
+                <div class="grid gap-8 md:grid-cols-2">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary font-mono mr-2">[languages]</span>
+                            <h3 class="font-medium">Core Stack</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center">
+                                <span>C#/.NET (2.0 → 8)</span>
+                                <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">12+yrs</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span>Java 11 <span class="text-xs text-emerald-600">(OCP Certified)</span></span>
+                                <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">3yrs</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span>Rust</span>
+                                <span class="font-mono text-xs bg-orange-500/10 px-2 py-1 rounded text-orange-500">active learning</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Cloud & DevOps -->
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary font-mono mr-2">[devops]</span>
+                            <h3 class="font-medium">Cloud Infrastructure</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">AWS Lambda</span>
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">Azure DevOps</span>
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">Docker</span>
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">GitLab CI</span>
+                        </div>
+                    </div>
+                    <!-- Database Mastery -->
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary font-mono mr-2">[data]</span>
+                            <h3 class="font-medium">Database Systems</h3>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="mr-2">■</span>
+                                <span>SQL Server (T-SQL)</span>
+                                <span class="ml-2 font-mono text-xs bg-primary/10 px-2 rounded">Entity Framework</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">■</span>
+                                <span>MongoDB</span>
+                                <span class="ml-2 font-mono text-xs bg-primary/10 px-2 rounded">NoSQL Design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">■</span>
+                                <span>PostgreSQL/MySQL</span>
+                                <span class="ml-2 font-mono text-xs bg-primary/10 px-2 rounded">ETL Optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Architectural Patterns -->
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary font-mono mr-2">[arch]</span>
+                            <h3 class="font-medium">Key Expertise</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Legacy Modernization</span>
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">High-Performance APIs</span>
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Distributed Systems</span>
+                            <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Data Compression</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul class="space-y-3">
-              <li class="flex justify-between items-center">
-                <span>C#/.NET (2.0 → 8)</span>
-                <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">12+yrs</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span>Java 11 <span class="text-xs text-emerald-600">(OCP Certified)</span></span>
-                <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">3yrs</span>
-              </li>
-              <li class="flex justify-between items-center">
-                <span>Rust</span>
-                <span class="font-mono text-xs bg-orange-500/10 px-2 py-1 rounded text-orange-500">active learning</span>
-              </li>
-            </ul>
-          </div>
-          <!-- Cloud & DevOps -->
-          <div>
-            <div class="flex items-center mb-4">
-              <span class="text-primary font-mono mr-2">[devops]</span>
-              <h3 class="font-medium">Cloud Infrastructure</h3>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">AWS Lambda</span>
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">Azure DevOps</span>
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">Docker</span>
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded text-center">GitLab CI</span>
-            </div>
-          </div>
-          <!-- Database Mastery -->
-          <div>
-            <div class="flex items-center mb-4">
-              <span class="text-primary font-mono mr-2">[data]</span>
-              <h3 class="font-medium">Database Systems</h3>
-            </div>
-            <ul class="space-y-2">
-              <li class="flex items-center">
-                <span class="mr-2">■</span>
-                <span>SQL Server (T-SQL)</span>
-                <span class="ml-2 font-mono text-xs bg-primary/10 px-2 rounded">Entity Framework</span>
-              </li>
-              <li class="flex items-center">
-                <span class="mr-2">■</span>
-                <span>MongoDB</span>
-                <span class="ml-2 font-mono text-xs bg-primary/10 px-2 rounded">NoSQL Design</span>
-              </li>
-              <li class="flex items-center">
-                <span class="mr-2">■</span>
-                <span>PostgreSQL/MySQL</span>
-                <span class="ml-2 font-mono text-xs bg-primary/10 px-2 rounded">ETL Optimization</span>
-              </li>
-            </ul>
-          </div>
-          <!-- Architectural Patterns -->
-          <div>
-            <div class="flex items-center mb-4">
-              <span class="text-primary font-mono mr-2">[arch]</span>
-              <h3 class="font-medium">Key Expertise</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Legacy Modernization</span>
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">High-Performance APIs</span>
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Distributed Systems</span>
-              <span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Data Compression</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Projects Sections -->
-    <section class="mb-20">
-      <h2 class="md:text-2xl text-xl font-mono mb-8">~/projects/schema_shroud</h2>
-      <div class="p-6 border rounded-lg">
-        <div class="flex items-center mb-4">
-          <span class="text-primary font-mono mr-2">[c#]</span>
-          <h3 class="font-medium">SchemaShroud Data Anonymizer</h3>
-        </div>
-        <div class="text-sm text-text-secondary space-y-4">
-          <p>A weekend project to explore data anonymization in .NET. SchemaShroud is a proof-of-concept library demonstrating GDPR-compliant data handling for non-production environments using declarative attributes.</p>
-          <div class="grid gap-4 md:grid-cols-2">
-            <div>
-              <h4 class="font-medium mb-2">Technical Specs</h4>
-              <ul class="list-disc list-outside space-y-2 pl-5 text-primary">
-                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">.NET 8.0</span></li>
-                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Reflection-based processing</span></li>
-                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Custom strategy support</span></li>
-              </ul>
+        <!-- Projects Sections -->
+        <section class="mb-20">
+            <h2 class="md:text-2xl text-xl font-mono mb-8">~/projects/schema_shroud</h2>
+            <div class="p-6 border rounded-lg">
+                <div class="flex items-center mb-4">
+                    <span class="text-primary font-mono mr-2">[c#]</span>
+                    <h3 class="font-medium">SchemaShroud Data Anonymizer</h3>
+                </div>
+                <div class="text-sm text-text-secondary space-y-4">
+                    <p>A weekend project to explore data anonymization in .NET. SchemaShroud is a proof-of-concept
+                        library demonstrating GDPR-compliant data handling for non-production environments using
+                        declarative attributes.</p>
+                    <div class="grid gap-4 md:grid-cols-2">
+                        <div>
+                            <h4 class="font-medium mb-2">Technical Specs</h4>
+                            <ul class="list-disc list-outside space-y-2 pl-5 text-primary">
+                                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">.NET 8.0</span>
+                                </li>
+                                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Reflection-based processing</span>
+                                </li>
+                                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Custom strategy support</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">Resources</h4>
+                            <div class="flex flex-col space-y-2">
+                                <a href="https://github.com/tulior/schema-shroud"
+                                   class="flex items-center text-primary hover:underline">
+                                    <span class="mr-2">⟨/⟩</span> GitHub Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 border-t pt-4">
+                        <h4 class="font-medium mb-2">Example Implementation</h4>
+                        <CodeBlock code={schemaCode} language="csharp"/>
+                    </div>
+                </div>
             </div>
-            <div>
-              <h4 class="font-medium mb-2">Resources</h4>
-              <div class="flex flex-col space-y-2">
-                <a href="https://github.com/tulior/schema-shroud" class="flex items-center text-primary hover:underline">
-                  <span class="mr-2">⟨/⟩</span> GitHub Repository
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="mt-4 border-t pt-4">
-            <h4 class="font-medium mb-2">Example Implementation</h4>
-	    <CodeBlock code={schemaCode} language="csharp" />
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="mb-20">
-      <h2 class="md:text-2xl text-xl font-mono mb-8">~/projects/personal_website</h2>
-      <div class="p-6 border rounded-lg">
-        <div class="flex items-center mb-4">
-          <span class="text-primary font-mono mr-2">[html/css/js]</span>
-          <h3 class="font-medium">Personal Website</h3>
-        </div>
-        <div class="text-sm text-text-secondary space-y-4">
-          <p>This very website! A personal showcase built with Tailwind CSS and a sprinkle of JavaScript. It's designed to be lightweight, responsive, and a clean representation of my professional profile.</p>
-          <div class="grid gap-4 md:grid-cols-2">
-            <div>
-              <h4 class="font-medium mb-2">Technical Specs</h4>
-              <ul class="list-disc list-outside space-y-2 pl-5 text-primary">
-                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Tailwind CSS</span></li>
-                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">HTML</span></li>
-                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">JavaScript</span></li>
-                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Static Site</span></li>
-              </ul>
+        <section class="mb-20">
+            <h2 class="md:text-2xl text-xl font-mono mb-8">~/projects/personal_website</h2>
+            <div class="p-6 border rounded-lg">
+                <div class="flex items-center mb-4">
+                    <span class="text-primary font-mono mr-2">[html/css/js]</span>
+                    <h3 class="font-medium">Personal Website</h3>
+                </div>
+                <div class="text-sm text-text-secondary space-y-4">
+                    <p>This very website! A personal showcase built with Tailwind CSS and a sprinkle of JavaScript. It's
+                        designed to be lightweight, responsive, and a clean representation of my professional
+                        profile.</p>
+                    <div class="grid gap-4 md:grid-cols-2">
+                        <div>
+                            <h4 class="font-medium mb-2">Technical Specs</h4>
+                            <ul class="list-disc list-outside space-y-2 pl-5 text-primary">
+                                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Tailwind CSS</span>
+                                </li>
+                                <li class="pl-2"><span
+                                        class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">HTML</span></li>
+                                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">JavaScript</span>
+                                </li>
+                                <li class="pl-2"><span class="font-mono text-xs bg-primary/10 px-2 py-1 rounded">Static Site</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">Resources</h4>
+                            <div class="flex flex-col space-y-2">
+                                <a href="https://github.com/tulior/tulio.org"
+                                   class="flex items-center text-primary hover:underline">
+                                    <span class="mr-2">⟨/⟩</span> GitHub Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <h4 class="font-medium mb-2">Resources</h4>
-              <div class="flex flex-col space-y-2">
-                <a href="https://github.com/tulior/tulio.org" class="flex items-center text-primary hover:underline">
-                  <span class="mr-2">⟨/⟩</span> GitHub Repository
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Interactive Portfolio Section (Svelte component) -->
+        <!-- Interactive Portfolio Section (Svelte component) -->
 
-    <!-- Contact Section -->
-    <section class="mb-20">
-      <h2 class="md:text-2xl text-xl font-mono mb-8">~/contact</h2>
-      <div class="p-6 border rounded-lg">
-        <div class="space-y-4">
-          <p class="text-text-secondary">
-            Let's discuss your next project or engineering challenge.
-            I'm currently available for consulting engagements and select contract opportunities.
-          </p>
-          <div class="flex flex-col gap-3">
-            <a href="mailto:mail@tulio.org" class="flex items-center gap-2 text-primary hover:underline">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              mail@tulio.org
-            </a>
-            <a href="https://linkedin.com/in/tulioanjos" class="flex items-center gap-2 text-primary hover:underline">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-              LinkedIn Profile
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <Footer />
-  <FloatingLinks />
+        <!-- Contact Section -->
+        <section class="mb-20">
+            <h2 class="md:text-2xl text-xl font-mono mb-8">~/contact</h2>
+            <div class="p-6 border rounded-lg">
+                <div class="space-y-4">
+                    <p class="text-text-secondary">
+                        Let's discuss your next project or engineering challenge.
+                        I'm currently available for consulting engagements and select contract opportunities.
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <a href="mailto:mail@tulio.org" class="flex items-center gap-2 text-primary hover:underline">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                 aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            mail@tulio.org
+                        </a>
+                        <a href="https://linkedin.com/in/tulioanjos"
+                           class="flex items-center gap-2 text-primary hover:underline">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <Footer/>
+    <FloatingLinks/>
 </BaseLayout>
-
