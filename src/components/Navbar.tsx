@@ -13,16 +13,58 @@ const Navbar: React.FC = () => {
 
   const isActive = (path: string): boolean => currentPath === path;
 
+  const generateBreadcrumbs = (path: string) => {
+    const segments = path.split('/').filter(segment => segment !== '');
+    const breadcrumbs = [];
+
+    // Always start with Home
+    breadcrumbs.push({ name: 'Home', path: '/' });
+
+    let accumulatedPath = '';
+    for (const segment of segments) {
+      accumulatedPath += `/${segment}`;
+      const formattedName = segment
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      breadcrumbs.push({
+        name: formattedName,
+        path: accumulatedPath
+      });
+    }
+
+    return breadcrumbs;
+  };
+
+  const breadcrumbs = generateBreadcrumbs(currentPath);
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[var(--color-surface)]/80 backdrop-blur-sm shadow-md">
       <div className="relative">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <a
-            href="/"
-            className="text-2xl font-bold text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
-          >
-            Home{currentPath}
-          </a>
+          <div className="text-2xl font-bold">
+            <div className="flex items-center space-x-1">
+              {breadcrumbs.map((crumb, index) => (
+                <React.Fragment key={crumb.path}>
+                  {index !== 0 && (
+                    <span className="text-[var(--color-text-primary)] mx-1">/</span>
+                  )}
+                  {index === breadcrumbs.length - 1 ? (
+                    <span className="text-[var(--color-primary)]">
+                      {crumb.name}
+                    </span>
+                  ) : (
+                    <a
+                      href={crumb.path}
+                      className="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
+                    >
+                      {crumb.name}
+                    </a>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
           <ul className="hidden md:flex items-center space-x-6">
             <li>
               <a
@@ -57,7 +99,7 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           </ul>
-          {/* Hamburger Icon for Mobile */}
+          {/* Mobile menu toggle remains the same */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden focus:outline-none"
@@ -73,7 +115,7 @@ const Navbar: React.FC = () => {
             </svg>
           </button>
         </nav>
-        {/* Mobile Menu (positioned absolutely beneath the nav) */}
+        {/* Mobile menu remains the same */}
         {mobileMenuOpen && (
           <div className="absolute top-full left-0 w-full md:hidden transition-all duration-300">
             <ul className="px-6 py-4 space-y-4 bg-[var(--color-surface)]">
