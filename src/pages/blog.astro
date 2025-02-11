@@ -1,8 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Navbar from '../components/Navbar.astro';
+import Navbar from '../components/Navbar.tsx';
 ---
-<BaseLayout title="Túlio Ribeiro dos Anjos | Resume">
-    <Navbar/>
-</BaseLayout>
+<BaseLayout title="Túlio Ribeiro dos Anjos | Blog">
+    <Navbar currentPage="Blog" />
 
+    <main class="flex items-center justify-center h-screen px-6">
+        <div class="text-center space-y-6">
+            <h1 class="text-5xl font-extrabold text-[var(--color-primary)]">Coming Soon</h1>
+            <p class="text-xl text-[var(--color-text-secondary)]">
+                Our blog is currently under construction. We're working hard to bring you insights,
+                case studies, and deep dives into backend development, cloud integrations, and modern web technologies.
+                Stay tuned for updates!
+            </p>
+            <a
+              href="/"
+              class="inline-block px-8 py-3 bg-[var(--color-primary)] text-[var(--color-surface)] rounded-lg hover:bg-[var(--color-primary)]/90 transition-colors font-mono text-sm"
+            >
+                Return Home
+            </a>
+        </div>
+    </main>
+</BaseLayout>

@@ -1,24 +1,15 @@
 ---
-// src/components/CodeBlock.astro
-
-// Import Prism and the helper to load additional languages.
+// CodeBlock.astro
 import Prism from 'prismjs';
 import loadLanguages from 'prismjs/components/index.js';
 
 // Load the desired language(s); here we load C#
 loadLanguages(['csharp']);
 
-// Receive props from the parent
-const {code, language = 'markup'} = Astro.props;
-
-// Get the proper grammar from Prism (defaulting to markup if not found)
+const { code, language = 'markup' } = Astro.props;
 const grammar = Prism.languages[language] || Prism.languages.markup;
-
-// Highlight the code using Prism; this happens at build time.
 const highlighted = Prism.highlight(code, grammar, language);
 ---
-<pre class="font-mono text-xs bg-card p-4 rounded overflow-x-auto">
-  <!-- Use innerHTML to render the highlighted HTML output -->
+<pre class="font-mono text-xs bg-[var(--color-surface)] p-4 rounded overflow-x-auto">
   <code class={`language-${language}`} set:html={highlighted}></code>
 </pre>
-
