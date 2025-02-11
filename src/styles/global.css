@@ -1,14 +1,17 @@
 @import 'tailwindcss';
 @import 'prismjs/themes/prism.css';
 
+
 @theme {
-    --font-sans: "Inter", "system-ui";
-    --font-mono: "Roboto Mono", "ui-monospace";
+    --font-sans: "Space Grotesk", system-ui;  /* Modern tech vibe */
+    --font-mono: "IBM Plex Mono", ui-monospace; /* Enterprise-grade code font */
 
-    --color-primary: #0ea5e9; /* Tailwind's sky-500 equivalent, or your brand primary */
-    --color-secondary: #6b7280; /* Tailwind's gray-500 equivalent, or your brand secondary */
-    --color-text-primary: #1e293b; /* Tailwind's gray-800 equivalent, for primary text */
-    --color-text-secondary: #4b5563; /* Tailwind's gray-600 equivalent, for secondary text */
-    --color-background: #f9fafb; /* Tailwind's gray-50 equivalent, for background */
+    /* New Color Scheme */
+    --color-primary: #2b6cb0;        /* Trustworthy navy blue */
+    --color-secondary: #0F766E;      /* Modern teal accent */
+    --color-accent: #92400E;          /* Gold for highlights */
+    --color-text-primary: #1a365d;    /* Deep navy for text */
+    --color-text-secondary: #4a5568;  /* Softened gray-blue */
+    --color-background: #f7fafc;      /* Light airy background */
+    --color-surface: #ffffff;         /* Pure white for cards */
 }
-
