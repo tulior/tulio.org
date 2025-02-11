@@ -6,12 +6,15 @@ import Navbar from '../components/Navbar.astro';
   The BaseLayout imports your global styles (including fonts, Tailwind, and PrismJS CSS)
   and wraps the content. The Navbar is shown at the top.
 -->
+
+
 <BaseLayout title="Túlio Ribeiro dos Anjos | Resume">
-    <Navbar/>
+    <Navbar currentPage="Resume"/>
+    
     <!-- Add top padding to account for the fixed navbar height -->
     <main class="pt-24 max-w-4xl mx-auto px-4 py-8">
         <!-- Header Section -->
-        <section class="mb-12">
+        <section class="mb-12 text-center">
             <header class="text-center">
                 <h1 class="text-4xl font-bold text-primary">TÚLIO RIBEIRO DOS ANJOS</h1>
                 <p class="mt-2 text-xl font-medium text-secondary">Senior Back-End Developer</p>
@@ -23,6 +26,14 @@ import Navbar from '../components/Navbar.astro';
                     Open to Remote Work
                 </p>
             </header>
+
+            <a
+              href="/resume.pdf"
+              download="Tulio_Ribeiro_Resume.pdf"
+              class="mt-6 inline-block bg-primary text-[var(--color-surface)] px-8 py-3 rounded-lg hover:bg-[#2b6cb0]/90 transition-colors font-mono text-sm"
+            >
+                download_pdf().pdf
+            </a>
         </section>
 
         <hr class="mb-8 border-gray-300"/>
