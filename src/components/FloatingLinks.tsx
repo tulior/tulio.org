@@ -3,7 +3,8 @@ import React from 'react';
 
 const FloatingLinks: React.FC = () => {
   return (
-    <div className="fixed bottom-8 right-8 flex flex-col gap-4">
+    // Use responsive right offsets so the links stay within view on small screens.
+    <div className="fixed bottom-8 right-4 sm:right-8 flex flex-col gap-4">
       <a
         href="mailto:mail@tulio.org"
         className="p-3 bg-[var(--color-primary)] text-[var(--color-surface)] rounded-full shadow-sm hover:bg-[var(--color-primary)]/90 transition-colors"
