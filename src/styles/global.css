@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'prismjs/themes/prism.css';
 
 @theme {
     --font-sans: "Space Grotesk", system-ui;  /* Modern tech vibe */

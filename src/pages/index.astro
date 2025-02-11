@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.tsx';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
-import CodeBlock from '../components/CodeBlock.astro';
 import FloatingLinks from '../components/FloatingLinks.tsx';
+import {Code} from 'astro:components';
 
 const schemaCode = `
 [SensitiveData(AnonymizationMethod.Hash)]
@@ -17,7 +17,6 @@ var processor = new DataAnonymizer();
 var cleanData = processor.Anonymize(rawData);
 `;
 ---
-
 <BaseLayout title="Túlio Ribeiro dos Anjos | Senior Backend Engineer">
     <Navbar client:only="react"/>
     <Hero/>
@@ -35,13 +34,13 @@ var cleanData = processor.Anonymize(rawData);
       });
     </script>
 
-    <main id="main-content" class="max-w-6xl mx-auto px-6 py-16 space-y-20">
+    <main id="main-content" class="w-full max-w-6xl mx-auto px-6 py-16 space-y-20">
         <!-- Skills Section -->
         <section class="space-y-8">
             <h2 class="text-3xl font-mono font-medium text-[var(--color-primary)]">~/skills</h2>
             <div class="grid gap-8 md:grid-cols-2">
                 <!-- Core Stack -->
-                <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-6">
+                <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-4 md:p-6">
                     <div class="flex items-center gap-3 mb-4">
                         <span class="font-mono text-lg text-[var(--color-primary)]">[languages]</span>
                         <h3 class="text-xl font-semibold">Core Stack</h3>
@@ -164,10 +163,7 @@ var cleanData = processor.Anonymize(rawData);
                             </a>
                         </div>
                     </div>
-                    <div class="border-t pt-4">
-                        <h4 class="font-medium mb-2 text-[var(--color-primary)]">Example Implementation</h4>
-                        <CodeBlock code={schemaCode} language="csharp"/>
-                    </div>
+
                 </div>
 
                 <!-- Personal Website Project (Updated) -->
@@ -244,7 +240,6 @@ var cleanData = processor.Anonymize(rawData);
             </div>
         </section>
     </main>
-
-    <Footer/>
     <FloatingLinks/>
+    <Footer/>
 </BaseLayout>

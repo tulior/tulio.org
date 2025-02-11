@@ -15,17 +15,14 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[var(--color-surface)]/80 backdrop-blur-sm shadow-md">
-      {/* A relative container so the absolute mobile menu is positioned correctly */}
       <div className="relative">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo/Brand */}
           <a
             href="/"
             className="text-2xl font-bold text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
           >
-            Home {currentPath}
+            Home{currentPath}
           </a>
-          {/* Desktop Menu */}
           <ul className="hidden md:flex items-center space-x-6">
             <li>
               <a
