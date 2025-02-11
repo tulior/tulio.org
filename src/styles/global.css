@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 @import 'prismjs/themes/prism.css';
 
-@config "../../tailwind.config.js";
+@theme {
+  --font-sans: "Inter", "system-ui";
+  --font-mono: "Roboto Mono", "ui-monospace";
+}
 
