@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.svelte';
+
+const description = "Discover insightful articles and deep dives into backend development, cloud integrations, and modern web technologies by Túlio Ribeiro dos Anjos. Stay tuned as our blog is currently under construction.";
 ---
-<BaseLayout title="Túlio Ribeiro dos Anjos | Blog">
+<BaseLayout title="Túlio Ribeiro dos Anjos | Blog" description={description}>
     <Navbar client:load/>
 
     <main class="flex items-center justify-center h-screen px-6">

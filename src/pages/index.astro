@@ -16,8 +16,10 @@ public string Email {
 var processor = new DataAnonymizer();
 var cleanData = processor.Anonymize(rawData);
 `;
+
+const description = "Explore the portfolio of Túlio Ribeiro dos Anjos, a Senior Backend Engineer with 12+ years of experience. Discover innovative projects built with .NET, Java, and cloud technologies—crafted for modern enterprises, tech recruiters, and developers alike.";
 ---
-<BaseLayout title="Túlio Ribeiro dos Anjos | Senior Backend Engineer">
+<BaseLayout title="Túlio Ribeiro dos Anjos | Senior Backend Engineer" description={description}>
     <Navbar client:load/>
     <Hero/>
 

@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.svelte';
+
+const description = "View the professional resume of Túlio Ribeiro dos Anjos, a Senior Backend Engineer with over 12 years of experience modernizing legacy systems, building high-performance APIs, and leading cloud integrations. Explore detailed skills, certifications, and a rich work history.";
 ---
-<BaseLayout title="Túlio Ribeiro dos Anjos | Resume">
+<BaseLayout title="Túlio Ribeiro dos Anjos | Resume" description={description}>
     <Navbar client:load/>
     <main class="pt-24 max-w-6xl mx-auto px-6 py-16 space-y-20">
         <!-- Header Section -->
