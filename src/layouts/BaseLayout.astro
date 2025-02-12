@@ -77,6 +77,16 @@ const pageDescription =
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
     />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLHRVPNSXT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LLHRVPNSXT');
+    </script>
 </head>
 <body class="bg-[var(--color-background)] text-[var(--color-text-primary)] font-sans">
 <slot />
