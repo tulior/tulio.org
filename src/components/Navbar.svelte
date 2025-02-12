@@ -41,21 +41,24 @@
 
 <header class="fixed top-0 left-0 w-full z-50 bg-[var(--color-surface)]/80 backdrop-blur-sm shadow-md">
     <div class="relative">
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">
-                <div class="flex items-center space-x-1">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
+            <!-- Breadcrumbs - Updated for mobile -->
+            <div class="text-lg md:text-xl font-bold truncate">
+                <div class="flex items-center space-x-1 overflow-hidden">
                     {#each breadcrumbs as crumb, index}
                         {#if index !== 0}
-                            <span class="text-[var(--color-text-primary)] mx-1">/</span>
+                            <span class="text-[var(--color-text-primary)] mx-1 md:mx-1.5">/</span>
                         {/if}
                         {#if index === breadcrumbs.length - 1}
-                            <span class="text-[var(--color-primary)]">{crumb.name}</span>
+                            <span class="text-[var(--color-primary)] truncate max-w-[150px] md:max-w-none">
+                                {crumb.name}
+                            </span>
                         {:else}
                             <a
                                     href={crumb.path}
-                                    class="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
+                                    class="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors truncate max-w-[80px] md:max-w-none"
                             >
-                                {crumb.name}
+                                {crumb.name === 'Blog' ? 'Blog' : crumb.name.replace(/ .*/,'')}
                             </a>
                         {/if}
                     {/each}
