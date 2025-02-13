@@ -41,7 +41,7 @@
 
 <header class="fixed top-0 left-0 w-full z-50 bg-[var(--color-surface)]/80 backdrop-blur-sm shadow-md">
     <div class="relative">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
             <!-- Breadcrumbs - Updated for mobile -->
             <div class="text-lg md:text-xl font-bold truncate">
                 <div class="flex items-center space-x-1 overflow-hidden">
