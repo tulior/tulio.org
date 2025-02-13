@@ -1,16 +1,17 @@
 @import 'tailwindcss';
+
 @plugin "@tailwindcss/typography";
 
 @theme {
-    --font-sans: "Space Grotesk", system-ui;  /* Modern tech vibe */
-    --font-mono: "IBM Plex Mono", ui-monospace; /* Enterprise-grade code font */
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", monospace;
 
     /* Revamped Color Scheme */
-    --color-primary: #1D4ED8;        /* Bold, modern blue for primary elements */
-    --color-secondary: #0D9488;      /* Vibrant teal for secondary accents */
-    --color-accent: #D97706;         /* Warm amber for highlights */
-    --color-text-primary: #1a365d;   /* Deep navy for primary text */
-    --color-text-secondary: #4a5568; /* Muted gray-blue for secondary text */
-    --color-background: #F7FAFC;     /* Light, airy background */
-    --color-surface: #ffffff;        /* Pure white for cards and surfaces */
+    --color-primary: #2563EB;
+    --color-secondary: #6B7280;
+    --color-accent: #D4D4D8;
+    --color-text-primary: #111827;
+    --color-text-secondary: #6B7280;
+    --color-background: #F9FAFB;
+    --color-surface: #ffffff;
 }

@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.svelte';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
-import FloatingLinks from '../components/FloatingLinks.tsx';
 import {Code} from 'astro:components';
 
 const schemaCode = `
@@ -23,204 +22,97 @@ const description = "Explore the portfolio of Túlio Ribeiro dos Anjos, a Senior
     <Navbar client:load/>
     <Hero/>
 
-    <!-- Smooth Scroll Script for Hero Arrow -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const scrollArrow = document.getElementById('scroll-arrow');
-        const mainContent = document.getElementById('main-content');
-        if (scrollArrow && mainContent) {
-          scrollArrow.addEventListener('click', () => {
-            mainContent.scrollIntoView({behavior: 'smooth'});
-          });
-        }
-      });
-    </script>
-
     <main id="main-content" class="w-full max-w-6xl mx-auto px-6 py-16 space-y-20">
         <!-- Skills Section -->
         <section class="space-y-8">
-            <h2 class="text-3xl font-mono font-medium text-[var(--color-primary)]">~/skills</h2>
-            <div class="grid gap-8 md:grid-cols-2">
+            <h2 class="text-3xl font-mono font-medium text-[var(--color-primary)]">My Toolkit</h2>
+            <div class="space-y-8"> {/* Removed grid class - now just space-y-8 for vertical spacing */}
                 <!-- Core Stack -->
                 <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-4 md:p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-mono text-lg text-[var(--color-primary)]">[languages]</span>
-                        <h3 class="text-xl font-semibold">Core Stack</h3>
-                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Backend Languages & Frameworks</h3>
                     <ul class="space-y-3 text-[var(--color-text-primary)]">
-                        <li class="flex justify-between items-center">
-                            <span>C#/.NET (2.0 → 8)</span>
-                            <span class="font-mono text-xs bg-[var(--color-secondary)]/10 px-2 py-1 rounded text-[var(--color-secondary)]">12+yrs</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-              <span>
-                Java 11 <span class="text-xs text-emerald-600">(OCP Certified)</span>
-              </span>
-                            <span class="font-mono text-xs bg-[var(--color-secondary)]/10 px-2 py-1 rounded text-[var(--color-secondary)]">3yrs</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>Rust</span>
-                            <span class="font-mono text-xs bg-[var(--color-accent)]/10 px-2 py-1 rounded text-[var(--color-accent)]">active learning</span>
-                        </li>
+                        <li>C#/.NET (Framework to .NET 8) - 12+ years</li>
+                        <li>Java (Spring Boot) - 3 years, OCP Certified</li>
                     </ul>
                 </div>
                 <!-- Cloud Infrastructure -->
                 <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-mono text-lg text-[var(--color-primary)]">[devops]</span>
-                        <h3 class="text-xl font-semibold">Cloud Infrastructure</h3>
-                    </div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-center">AWS Lambda</span>
-                        <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-center">Azure DevOps</span>
-                        <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-center">Docker</span>
-                        <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-center">GitLab CI</span>
+                    <h3 class="text-xl font-semibold mb-4">Cloud & DevOps Technologies</h3>
+                    <div class="grid grid-cols-2 gap-3"> {/* Keep grid for skills *within* this card if desired */}
+                        <span>AWS Lambda</span>
+                        <span>Azure DevOps</span>
+                        <span>Docker</span>
+                        <span>GitLab CI</span>
                     </div>
                 </div>
                 <!-- Database Systems -->
                 <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-mono text-lg text-[var(--color-primary)]">[data]</span>
-                        <h3 class="text-xl font-semibold">Database Systems</h3>
-                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Data Management & Databases</h3>
                     <ul class="space-y-2 text-[var(--color-text-primary)]">
-                        <li class="flex items-center">
-                            <span class="mr-2 text-[var(--color-secondary)]">■</span>
-                            <span>SQL Server (T-SQL)</span>
-                            <span class="ml-2 font-mono text-xs bg-[var(--color-secondary)]/10 px-2 rounded text-[var(--color-secondary)]">Entity Framework</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2 text-[var(--color-secondary)]">■</span>
-                            <span>MongoDB</span>
-                            <span class="ml-2 font-mono text-xs bg-[var(--color-primary)]/10 px-2 rounded text-[var(--color-secondary)]">NoSQL Design</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2 text-[var(--color-secondary)]">■</span>
-                            <span>PostgreSQL/MySQL</span>
-                            <span class="ml-2 font-mono text-xs bg-[var(--color-primary)]/10 px-2 rounded text-[var(--color-secondary)]">ETL Optimization</span>
-                        </li>
+                        <li>SQL Server (T-SQL) - Entity Framework</li>
+                        <li>MongoDB - NoSQL Design</li>
                     </ul>
-                </div>
-                <!-- Key Expertise -->
-                <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-mono text-lg text-[var(--color-primary)]">[arch]</span>
-                        <h3 class="text-xl font-semibold">Key Expertise</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-            <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-[var(--color-primary)]">
-              Legacy Modernization
-            </span>
-                        <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-[var(--color-primary)]">
-              High-Performance APIs
-            </span>
-                        <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-[var(--color-primary)]">
-              Distributed Systems
-            </span>
-                        <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded text-[var(--color-primary)]">
-              Data Compression
-            </span>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section class="space-y-8">
-            <h2 class="text-3xl font-mono font-medium text-[var(--color-primary)]">~/projects</h2>
+            <h2 class="text-3xl font-mono font-medium text-[var(--color-primary)]">Selected Projects</h2>
             <div class="grid gap-8 md:grid-cols-2">
                 <!-- SchemaShroud Project -->
                 <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-mono text-lg text-[var(--color-secondary)]">[c#]</span>
-                        <h3 class="text-xl font-semibold">SchemaShroud Data Anonymizer</h3>
+                    <h3 class="text-xl font-semibold mb-4">SchemaShroud: .NET Data Anonymization Library for GDPR Compliance</h3>
+                    <div class="prose prose-sm max-w-none text-[var(--color-text-primary)] mb-4"> {/* Added prose class and adjusted text color */}
+                        <p>
+                            Developed SchemaShroud to address the need for GDPR-compliant data anonymization in .NET applications, particularly for non-production environments.  This library uses declarative attributes and reflection-based processing to anonymize sensitive data, offering customizable anonymization strategies.  Key technologies include .NET 8.0 and reflection.
+                        </p>
                     </div>
-                    <p class="text-[var(--color-text-secondary)] mb-4">
-                        A weekend project exploring data anonymization in .NET. SchemaShroud is a proof-of-concept
-                        library demonstrating GDPR-compliant data handling for non-production environments using
-                        declarative attributes.
+                    <p class="mb-4">
+                        <a
+                          href="https://github.com/tulior/schema-shroud"
+                          class="flex items-center text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors underline font-semibold" {/* Made link text bolder */}
+                        >
+                            <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false"> {/* Added GitHub Icon SVG */}
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                            GitHub Repository
+                        </a>
                     </p>
-                    <div class="grid gap-4 md:grid-cols-2 mb-4">
-                        <div>
-                            <h4 class="font-medium mb-2 text-[var(--color-primary)]">Technical Specs</h4>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>
-                                    <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded">.NET 8.0</span>
-                                </li>
-                                <li>
-                                    <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded">Reflection-based processing</span>
-                                </li>
-                                <li>
-                                    <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded">Custom strategy support</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-medium mb-2 text-[var(--color-primary)]">Resources</h4>
-                            <a
-                                    href="https://github.com/tulior/schema-shroud"
-                                    class="flex items-center text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors underline"
-                            >
-                                <span class="mr-2">⟨/⟩</span> GitHub Repository
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Personal Website Project (Updated) -->
+                <!-- Personal Website Project (Revised Title & Description) -->
                 <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-mono text-lg text-[var(--color-secondary)]">[astro/tailwind]</span>
-                        <h3 class="text-xl font-semibold">Personal Website</h3>
+                    <h3 class="text-xl font-semibold mb-4">Personal Portfolio Website (Astro, Tailwind CSS) - Optimized for Performance & SEO</h3>
+                    <div class="prose prose-sm max-w-none text-[var(--color-text-primary)] mb-4">
+                        <p>
+                            Built this portfolio website using Astro and Tailwind CSS to showcase my skills and experience, prioritizing <strong>optimal performance, accessibility, and SEO</strong>.  Leveraging static site generation and modern web technologies, the site achieves <strong>perfect scores (100/100) across all Google Lighthouse metrics</strong>: Performance, Accessibility, Best Practices, and SEO.
+                        </p>
+                        <p>
+                            This demonstrates a commitment to building <strong>high-quality, user-centric web experiences</strong> that are not only fast and efficient but also <strong>discoverable and accessible to all users</strong>. Key technologies include Astro, Tailwind CSS, and JavaScript.
+                        </p>
                     </div>
-                    <p class="text-[var(--color-text-secondary)] mb-4">
-                        This very website is built using <strong>Astro</strong> and <strong>Tailwind CSS</strong>.
-                        Leveraging a modern static site generator, the site is optimized for speed, SEO, and
-                        accessibility—all while showcasing my technical prowess and design sensibility. It combines
-                        modular components, dynamic interactivity, and smooth animations to deliver an engaging
-                        experience for both recruiters and developers.
+                    <p>
+                        <a
+                          href="https://github.com/tulior/tulio.org"
+                          class="flex items-center text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors underline font-semibold"
+                        >
+                            <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                            GitHub Repository
+                        </a>
                     </p>
-                    <div class="grid gap-4 md:grid-cols-2">
-                        <div>
-                            <h4 class="font-medium mb-2 text-[var(--color-primary)]">Technical Specs</h4>
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li>
-                                    <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded">Astro</span>
-                                </li>
-                                <li>
-                                    <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded">Tailwind CSS</span>
-                                </li>
-                                <li>
-                                    <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded">JavaScript</span>
-                                </li>
-                                <li>
-                                    <span class="font-mono text-xs bg-[var(--color-primary)]/10 px-2 py-1 rounded">Static Site Generation</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-medium mb-2 text-[var(--color-primary)]">Resources</h4>
-                            <a
-                                    href="https://github.com/tulior/tulio.org"
-                                    class="flex items-center text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors underline"
-                            >
-                                <span class="mr-2">⟨/⟩</span> GitHub Repository
-                            </a>
-                        </div>
-                    </div>
                 </div>
-
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="space-y-8">
-            <h2 class="text-3xl font-mono font-medium text-[var(--color-primary)]">~/contact</h2>
+            <h2 class="text-3xl font-mono font-medium text-[var(--color-primary)]">Let's Talk</h2>
             <div class="bg-[var(--color-surface)] shadow-md rounded-lg p-6 text-[var(--color-text-secondary)]">
-                <p class="mb-4">
-                    Let's discuss your next project or engineering challenge. I'm currently available for consulting
-                    engagements and select contract opportunities.
+                <p class="mb-4 text-[var(--color-text-primary)]"> {/* Adjusted text color here as well */}
+                    Let's build something great together. Connect with me via email or LinkedIn.
                 </p>
                 <div class="flex flex-col gap-4">
                     <a href="mailto:mail@tulio.org"
@@ -242,6 +134,5 @@ const description = "Explore the portfolio of Túlio Ribeiro dos Anjos, a Senior
             </div>
         </section>
     </main>
-    <FloatingLinks/>
     <Footer/>
 </BaseLayout>
