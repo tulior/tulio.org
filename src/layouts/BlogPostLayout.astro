@@ -15,8 +15,7 @@ const {frontmatter} = Astro.props;
                       prose-a:text-[var(--color-primary)]
                       prose-strong:text-[var(--color-text-primary)]
                       prose-em:text-[var(--color-text-primary)]
-                      hover:prose-a:text-[var(--color-primary-hover)]
-                      dark:prose-invert">
+                      hover:prose-a:text-[var(--color-primary-hover)]">
                 <h1>{frontmatter.title}</h1>
                 <time class="text-sm text-[var(--color-text-secondary)] block mb-8">
                   {new Date(frontmatter.date).toLocaleDateString('en-US', {
