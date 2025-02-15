@@ -50,20 +50,20 @@
     <div class="relative">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center">
             <!-- Breadcrumbs -->
-            <div class="text-base sm:text-lg font-medium text-gray-700 truncate">
+            <div class="text-base sm:text-lg font-medium text-[var(--color-secondary)] truncate">
                 <div class="flex items-center space-x-1 overflow-x-auto">
                     {#each breadcrumbs as crumb, index}
                         {#if index !== 0}
-                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-[var(--color-secondary)] mx-1">/</span>
                         {/if}
                         {#if index === breadcrumbs.length - 1}
-                <span class="text-blue-600 truncate max-w-[120px] sm:max-w-none">
-                  {crumb.name}
-                </span>
+              <span class="text-[var(--color-primary)] truncate max-w-[120px] sm:max-w-none">
+                {crumb.name}
+              </span>
                         {:else}
                             <a
                                     href={crumb.path}
-                                    class="text-gray-700 hover:text-blue-600 transition-colors truncate max-w-[80px] sm:max-w-none"
+                                    class="text-[var(--color-secondary)] hover:text-[var(--color-primary)] transition-colors truncate max-w-[80px] sm:max-w-none"
                             >
                                 {crumb.name}
                             </a>
@@ -78,7 +78,7 @@
                     <a
                             href="/resume"
                             class:active={isActive('/resume')}
-                            class="text-base font-medium transition-colors hover:text-blue-600 {isActive('/resume') ? 'text-blue-600' : 'text-gray-700'}"
+                            class="text-base font-medium transition-colors hover:text-[var(--color-primary)] {isActive('/resume') ? 'text-[var(--color-primary)]' : 'text-[var(--color-secondary)]'}"
                     >
                         Resume
                     </a>
@@ -87,7 +87,7 @@
                     <a
                             href="/blog"
                             class:active={isActive('/blog')}
-                            class="text-base font-medium transition-colors hover:text-blue-600 {isActive('/blog') ? 'text-blue-600' : 'text-gray-700'}"
+                            class="text-base font-medium transition-colors hover:text-[var(--color-primary)] {isActive('/blog') ? 'text-[var(--color-primary)]' : 'text-[var(--color-secondary)]'}"
                     >
                         Blog
                     </a>
@@ -95,7 +95,7 @@
                 <li>
                     <a
                             href="mailto:mail@tulio.org"
-                            class="px-4 py-2 border border-blue-600 rounded-full text-blue-600 font-medium hover:bg-blue-600 hover:text-white transition-colors"
+                            class="px-4 py-2 border border-[var(--color-primary)] rounded-full text-[var(--color-primary)] font-medium hover:bg-[var(--color-primary)] hover:text-white transition-colors"
                     >
                         Contact
                     </a>
@@ -108,13 +108,8 @@
                     class="md:hidden focus:outline-none"
                     aria-label="Toggle mobile menu"
             >
-                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                    />
+                <svg class="w-6 h-6 text-[var(--color-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </nav>
@@ -127,7 +122,7 @@
                         <a
                                 href="/resume"
                                 class:active={isActive('/resume')}
-                                class="block text-base font-medium transition-colors hover:text-blue-600 {isActive('/resume') ? 'text-blue-600' : 'text-gray-700'}"
+                                class="block text-base font-medium transition-colors hover:text-[var(--color-primary)] {isActive('/resume') ? 'text-[var(--color-primary)]' : 'text-[var(--color-secondary)]'}"
                         >
                             Resume
                         </a>
@@ -136,7 +131,7 @@
                         <a
                                 href="/blog"
                                 class:active={isActive('/blog')}
-                                class="block text-base font-medium transition-colors hover:text-blue-600 {isActive('/blog') ? 'text-blue-600' : 'text-gray-700'}"
+                                class="block text-base font-medium transition-colors hover:text-[var(--color-primary)] {isActive('/blog') ? 'text-[var(--color-primary)]' : 'text-[var(--color-secondary)]'}"
                         >
                             Blog
                         </a>
@@ -144,7 +139,7 @@
                     <li>
                         <a
                                 href="mailto:mail@tulio.org"
-                                class="block px-4 py-2 border border-blue-600 rounded-full text-blue-600 font-medium hover:bg-blue-600 hover:text-white transition-colors"
+                                class="block px-4 py-2 border border-[var(--color-primary)] rounded-full text-[var(--color-primary)] font-medium hover:bg-[var(--color-primary)] hover:text-white transition-colors"
                         >
                             Contact
                         </a>

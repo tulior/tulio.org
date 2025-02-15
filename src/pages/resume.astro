@@ -9,25 +9,24 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
     <Navbar client:load />
     <main class="pt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="bg-white shadow-xl rounded-3xl p-8 md:p-12 lg:p-16">
-
             <!-- Header Section -->
             <section class="text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-800 tracking-tight">Túlio Ribeiro dos Anjos</h1>
-                <p class="text-xl sm:text-2xl lg:text-3xl font-medium text-blue-600 mt-2">Full-Stack .NET & Cloud Developer</p>
-                <p class="text-base sm:text-lg text-gray-600 mt-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--color-text-primary)] tracking-tight">Túlio Ribeiro dos Anjos</h1>
+                <p class="text-xl sm:text-2xl lg:text-3xl font-medium text-[var(--color-primary)] mt-2">Full-Stack .NET & Cloud Developer</p>
+                <p class="text-base sm:text-lg text-[var(--color-secondary)] mt-4">
                     Campo Grande, Brazil • <span class="font-semibold">Remote Only</span>
                 </p>
-                <div class="mt-4 flex flex-wrap justify-center gap-4 text-gray-600">
-                    <a href="mailto:mail@tulio.org" class="hover:text-blue-600 transition-colors duration-200">
+                <div class="mt-4 flex flex-wrap justify-center gap-4 text-[var(--color-secondary)]">
+                    <a href="mailto:mail@tulio.org" class="hover:text-[var(--color-primary)] transition-colors duration-200">
                         mail@tulio.org
                     </a>
-                    <a href="tel:+5567992660804" class="hover:text-blue-600 transition-colors duration-200">
+                    <a href="tel:+5567992660804" class="hover:text-[var(--color-primary)] transition-colors duration-200">
                         +55 67 9 9266 0804
                     </a>
-                    <a href="https://tulio.org" target="_blank" rel="noopener" class="hover:text-blue-600 transition-colors duration-200">
+                    <a href="https://tulio.org" target="_blank" rel="noopener" class="hover:text-[var(--color-primary)] transition-colors duration-200">
                         tulio.org
                     </a>
-                    <a href="https://linkedin.com/in/tulioanjos" target="_blank" rel="noopener" class="hover:text-blue-600 transition-colors duration-200">
+                    <a href="https://linkedin.com/in/tulioanjos" target="_blank" rel="noopener" class="hover:text-[var(--color-primary)] transition-colors duration-200">
                         linkedin.com/in/tulioanjos
                     </a>
                 </div>
@@ -35,7 +34,7 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
                     <a
                       href="/resume.pdf"
                       download="Tulio_Ribeiro_Resume.pdf"
-                      class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                      class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base font-medium rounded-md text-white bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary)] transition-colors"
                     >
                         Download PDF Resume
                     </a>
@@ -47,18 +46,17 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                 <!-- Sidebar -->
                 <aside class="md:col-span-1 space-y-8">
-
                     <!-- Summary -->
-                    <div class="prose prose-sm prose-slate">
-                        <h2 class="text-xl font-semibold text-blue-600 mb-3">Summary</h2>
+                    <div class="prose prose-sm">
+                        <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Summary</h2>
                         <p>
                             I build scalable, high-performance systems with .NET. With over a decade of experience in C# and .NET, I’ve designed cloud-native applications, modernized legacy systems, and optimized real-time APIs. I’ve led e-commerce integrations at scale, built serverless architectures with AWS, and solved complex engineering problems in distributed systems. I focus on efficiency, maintainability, and software that lasts.
                         </p>
                     </div>
 
                     <!-- Key Achievements -->
-                    <div class="prose prose-sm prose-slate">
-                        <h2 class="text-xl font-semibold text-blue-600 mb-3">Key Achievements</h2>
+                    <div class="prose prose-sm">
+                        <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Key Achievements</h2>
                         <ul class="list-disc list-inside space-y-1">
                             <li><strong>High-Scale Shopify Integration:</strong> Developed an AWS Lambda-based integration in .NET 8 that synced over 100,000 SKUs.</li>
                             <li><strong>Real-Time Image Processing:</strong> Engineered a high-performance system using AWS Lambda and SkiaSharp, achieving sub-second response times.</li>
@@ -69,8 +67,8 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
                     </div>
 
                     <!-- Skills -->
-                    <div class="prose prose-sm prose-slate">
-                        <h2 class="text-xl font-semibold text-blue-600 mb-3">Skills</h2>
+                    <div class="prose prose-sm">
+                        <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Skills</h2>
                         <ul class="list-none space-y-1">
                             <li><span class="font-semibold">Cloud & DevOps:</span> AWS Lambda, S3, CloudWatch, Serverless, Docker, Azure Pipelines</li>
                             <li><span class="font-semibold">.NET & Backend:</span> .NET 8, C#, ASP.NET Core, Web API, Entity Framework</li>
@@ -83,16 +81,16 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
                     </div>
 
                     <!-- Certifications -->
-                    <div class="prose prose-sm prose-slate">
-                        <h2 class="text-xl font-semibold text-blue-600 mb-3">Certifications</h2>
+                    <div class="prose prose-sm">
+                        <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Certifications</h2>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Oracle Certified Java SE 11 Developer</li>
                         </ul>
                     </div>
 
                     <!-- Languages -->
-                    <div class="prose prose-sm prose-slate">
-                        <h2 class="text-xl font-semibold text-blue-600 mb-3">Languages</h2>
+                    <div class="prose prose-sm">
+                        <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Languages</h2>
                         <ul class="list-disc list-inside space-y-1">
                             <li>English: Professional Proficiency</li>
                             <li>Portuguese: Native</li>
@@ -101,19 +99,19 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
                 </aside>
 
                 <!-- Main Content -->
-                <section class="md:col-span-2 space-y-8 prose prose-sm prose-slate">
-                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Experience</h2>
+                <section class="md:col-span-2 space-y-8 prose prose-sm">
+                    <h2 class="text-2xl font-bold text-[var(--color-primary)] mb-4">Experience</h2>
 
                     <!-- Experience: BairesDev -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-700">BairesDev</h3>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">BairesDev</h3>
 
-                        <h4 class="text-lg font-medium text-gray-700 mt-2">Full-Stack .NET & Angular Engineer</h4>
-                        <p class="text-gray-500 mb-2">Feb 2025 – Present | Remote (São Paulo, São Paulo)</p>
+                        <h4 class="text-lg font-medium text-[var(--color-text-primary)] mt-2">Full-Stack .NET & Angular Engineer</h4>
+                        <p class="text-[var(--color-secondary)] mb-2">Feb 2025 – Present | Remote (São Paulo, São Paulo)</p>
                         <p>Building key full-stack components for a high-visibility project at a major Transit Technology client, utilizing .NET 8, Angular, and cloud-native architectures to build a next-generation transit management platform.</p>
 
-                        <h4 class="text-lg font-medium text-gray-700 mt-4">.NET Core Engineer</h4>
-                        <p class="text-gray-500 mb-2">Mar 2023 – Feb 2025 | Remote (Overland Park, Kansas)</p>
+                        <h4 class="text-lg font-medium text-[var(--color-text-primary)] mt-4">.NET Core Engineer</h4>
+                        <p class="text-[var(--color-secondary)] mb-2">Mar 2023 – Feb 2025 | Remote (Overland Park, Kansas)</p>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Developed a high-scale AWS Lambda-based Shopify integration (.NET 8), syncing 100,000+ SKUs.</li>
                             <li>Implemented intelligent API throttling (data diffing & retry), reducing failure rates.</li>
@@ -121,8 +119,8 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
                             <li>Designed and built a dynamic sales reporting service using JSON schema. Integrated CSVHelper with unit testing.</li>
                         </ul>
 
-                        <h4 class="text-lg font-medium text-gray-700 mt-4">Java & Spring Engineer</h4>
-                        <p class="text-gray-500 mb-2">Jun 2022 – Mar 2023 | Remote (San Francisco, California)</p>
+                        <h4 class="text-lg font-medium text-[var(--color-text-primary)] mt-4">Java & Spring Engineer</h4>
+                        <p class="text-[var(--color-secondary)] mb-2">Jun 2022 – Mar 2023 | Remote (San Francisco, California)</p>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Revamped legacy Java APIs into high-performance Spring Boot REST services.</li>
                             <li>Optimized data access with Spring Data JPA & Hibernate.</li>
@@ -132,8 +130,8 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
 
                     <!-- Experience: Geoi2 Tecnologia -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-700">GEOI2 Tecnologia da Informação LTDA.</h3>
-                        <p class="text-gray-500 mb-2">Aug 2019 – Jun 2022 | 3 years</p>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">GEOI2 Tecnologia da Informação LTDA.</h3>
+                        <p class="text-[var(--color-secondary)] mb-2">Aug 2019 – Jun 2022 | 3 years</p>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Transformed a sluggish legacy JSF application into a high-performance Angular 13 micro-frontend with a Spring Boot backend.</li>
                             <li>Developed a Java CLI tool to automate ETL and database provisioning.</li>
@@ -143,8 +141,8 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
 
                     <!-- Experience: Fonte Tecnologia -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-700">Fonte Tecnologia</h3>
-                        <p class="text-gray-500 mb-2">Aug 2017 – Aug 2019 | 2 years</p>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">Fonte Tecnologia</h3>
+                        <p class="text-[var(--color-secondary)] mb-2">Aug 2017 – Aug 2019 | 2 years</p>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Eliminated a critical CPU bottleneck in the CADG platform's real-time vehicle grid.</li>
                             <li>Designed and built a high-efficiency telephone form module for CADG.</li>
@@ -153,8 +151,8 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
 
                     <!-- Experience: PSG Tecnologia -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-700">PSG Tecnologia</h3>
-                        <p class="text-gray-500 mb-2">Mar 2013 – Aug 2017 | 4+ years</p>
+                        <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">PSG Tecnologia</h3>
+                        <p class="text-[var(--color-secondary)] mb-2">Mar 2013 – Aug 2017 | 4+ years</p>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Led the development of a digital system for managing Mato Grosso do Sul's Organic Law.</li>
                             <li>Designed and developed a module for creating thematic programs within Mato Grosso do Sul's Pluriannual Plan (PPA).</li>
@@ -163,10 +161,10 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
 
                     <!-- Education -->
                     <div>
-                        <h2 class="text-2xl font-bold text-blue-600 mb-4">Education</h2>
-                        <div class="text-gray-700">
+                        <h2 class="text-2xl font-bold text-[var(--color-primary)] mb-4">Education</h2>
+                        <div class="text-[var(--color-text-primary)]">
                             <p class="mb-1 font-medium">Bachelor’s in Computer Engineering – Uniderp</p>
-                            <p class="text-gray-500">Jan 2009 – Dec 2013</p>
+                            <p class="text-[var(--color-secondary)]">Jan 2009 – Dec 2013</p>
                         </div>
                     </div>
                 </section>

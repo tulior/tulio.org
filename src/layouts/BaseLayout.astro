@@ -1,11 +1,8 @@
 ---
-// baselayout.astro - Updated for SEO & Remote Focus
 import '../styles/global.css';
 const { title, description } = Astro.props;
-const pageTitle = title || "Túlio Ribeiro dos Anjos | Senior Backend Engineer - High-Performance & Reliable Systems (Remote)"; // More SEO-focused Title
-const pageDescription =
-  description ||
-  "Túlio Ribeiro dos Anjos: Senior Backend Engineer specializing in High-Performance & Reliable Systems. 12+ years .NET, Java, Cloud. Remote work expert. Portfolio & Resume."; // More SEO-focused Description
+const pageTitle = title || "Túlio Ribeiro dos Anjos | Senior Backend Engineer - High-Performance & Reliable Systems (Remote)";
+const pageDescription = description || "Túlio Ribeiro dos Anjos: Senior Backend Engineer specializing in High-Performance & Reliable Systems. 12+ years .NET, Java, Cloud. Remote work expert. Portfolio & Resume.";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -45,12 +42,12 @@ const pageDescription =
                 "https://linkedin.com/in/tulioanjos",
                 "https://github.com/tulior"
             ],
-            "jobTitle": "Senior Backend Engineer specializing in High-Performance & Reliable Systems (Remote)", // More Specific Job Title & Remote
+            "jobTitle": "Senior Backend Engineer specializing in High-Performance & Reliable Systems (Remote)",
             "worksFor": {
                 "@type": "Organization",
                 "name": "Independent / Consulting"
             },
-            "description": "Senior Backend Engineer specializing in High-Performance & Reliable Systems. 12+ years .NET, Java, Cloud. Remote work expert. Let's build robust and scalable solutions together." // More Specific & Remote Focused Description
+            "description": "Senior Backend Engineer specializing in High-Performance & Reliable Systems. 12+ years .NET, Java, Cloud. Remote work expert. Let's build robust and scalable solutions together."
         }
     </script>
 
@@ -71,7 +68,6 @@ const pageDescription =
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-LLHRVPNSXT');
     </script>
 </head>
