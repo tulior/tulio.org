@@ -2,45 +2,85 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.svelte';
 
-const description = "Discover insightful articles and deep dives into backend development, cloud integrations, and modern web technologies by Túlio Ribeiro dos Anjos.";
+const description = 'Discover insightful articles and deep dives into backend development, cloud integrations, and modern web technologies by Túlio Ribeiro dos Anjos.';
 
-const allPosts = Object.values(import.meta.glob('./blog/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('./blog/*.md', {eager: true}));
 const blogPosts = allPosts
-  .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+  .sort((a, b) => new Date(b.frontmatter.date).toLocaleDateString('en-us', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  }) - new Date(a.frontmatter.date).toLocaleDateString('en-us', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+}));
 ---
-<BaseLayout title="Túlio Ribeiro dos Anjos | Blog" description={description}>
-    <Navbar client:load />
 
-    <main class="pt-24 max-w-6xl mx-auto px-6 py-16 space-y-20">
-        <h1 class="text-4xl font-bold text-[var(--color-primary)] mb-8">Latest Posts</h1>
-        <div class="space-y-8">
-            {blogPosts.length === 0 ? (
-              <p class="text-xl text-[var(--color-text-secondary)]">No posts yet. Check back soon!</p>
-            ) : (
-              blogPosts.map(post => (
-                <article class="pb-6">
-                    <h2 class="text-2xl font-semibold mb-2">
-                        <a
-                          href={post.url}
-                          class="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors"
-                        >
-                            {post.frontmatter.title}
-                        </a>
-                    </h2>
-                    <time class="text-sm text-[var(--color-text-secondary)] block mb-2">
-                        {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                            timeZone: 'UTC'
-                        })}
-                    </time>
-                    <p class="text-[var(--color-text-secondary)]">
-                        {post.frontmatter.description}
-                    </p>
-                </article>
-              ))
-            )}
+<BaseLayout title="Túlio Ribeiro dos Anjos | Blog" description={description}>
+    <Navbar client:load/>
+
+    <main class="pt-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white shadow-lg rounded-3xl p-6 sm:p-8 lg:p-12">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-600 mb-6 sm:mb-8 tracking-tight">Latest Posts</h1>
+
+            <div class="space-y-10 sm:space-y-12">
+              {blogPosts.length === 0 ? (
+                      <p class="text-xl text-gray-600">No posts yet. Check back soon!</p>
+              ) : (
+                blogPosts.map((post) => (
+                        <article class="group relative border-b border-gray-200 pb-8 last:border-none">
+                            <div class="flex flex-col sm:flex-row items-start">
+                                <div class="flex-shrink-0 mr-0 sm:mr-6 mb-4 sm:mb-0">
+                                  {post.frontmatter.image && (
+                                          <a href={post.url} class="block">
+                                              <img
+                                                      src={post.frontmatter.image.src}
+                                                      alt={post.frontmatter.image.alt}
+                                                      class="w-full sm:w-40 h-auto object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105"
+                                                      loading="lazy"
+                                              />
+                                          </a>
+                                  )}
+                                </div>
+                                <div>
+                                    <h2 class="text-2xl sm:text-3xl font-semibold mb-2 leading-tight">
+                                        <a
+                                                href={post.url}
+                                                class="text-gray-800 hover:text-blue-600 transition-colors duration-200"
+                                        >
+                                          {post.frontmatter.title}
+                                        </a>
+                                    </h2>
+                                    <time class="text-sm text-gray-500 block mb-3">
+                                      {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric',
+                                        timeZone: 'UTC',
+                                      })}
+                                    </time>
+                                    <p class="text-gray-600">
+                                      {post.frontmatter.description}
+                                    </p>
+                                    <div class="mt-4">
+                                        <a
+                                                href={post.url}
+                                                class="inline-flex items-center text-blue-600 hover:underline transition-colors"
+                                        >
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </article>
+                ))
+              )}
+            </div>
         </div>
     </main>
 </BaseLayout>
