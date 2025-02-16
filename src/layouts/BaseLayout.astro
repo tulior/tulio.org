@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 const { title, description } = Astro.props;
 const pageTitle = title || "Túlio Ribeiro dos Anjos | Senior Backend Engineer - High-Performance & Reliable Systems (Remote)";
 const pageDescription = description || "Túlio Ribeiro dos Anjos: Senior Backend Engineer specializing in High-Performance & Reliable Systems. 12+ years .NET, Java, Cloud. Remote work expert. Portfolio & Resume.";
@@ -73,5 +74,6 @@ const pageDescription = description || "Túlio Ribeiro dos Anjos: Senior Backend
 </head>
 <body class="bg-[var(--color-background)] text-[var(--color-text-primary)] font-sans">
 <slot />
+<Footer/>
 </body>
 </html>
