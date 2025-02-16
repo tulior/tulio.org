@@ -50,12 +50,12 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
                     <div class="prose prose-sm">
                         <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Summary</h2>
                         <p>
-                            I build scalable, high-performance systems with .NET. With over a decade of experience in C# and .NET, I’ve designed cloud-native applications, modernized legacy systems, and optimized real-time APIs. I’ve led e-commerce integrations at scale, built serverless architectures with AWS, and solved complex engineering problems in distributed systems. I focus on efficiency, maintainability, and software that lasts.
+                            Building robust backend systems and cloud infrastructure, primarily with .NET and AWS. Focus on efficient code, reliable APIs, and solving complex integration challenges. Proficient in .NET 8, ASP.NET Core, AWS (Lambda, SQS, etc.), and related technologies.
                         </p>
                     </div>
 
                     <!-- Key Achievements -->
-                    <div class="prose prose-sm">
+                    <div class="prose prose-sm hidden"> {/* Hide Key Achievements section as it's less prominent in the markdown resume */}
                         <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Key Achievements</h2>
                         <ul class="list-disc list-inside space-y-1">
                             <li><strong>High-Scale Shopify Integration:</strong> Developed an AWS Lambda-based integration in .NET 8 that synced over 100,000 SKUs.</li>
@@ -70,21 +70,36 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
                     <div class="prose prose-sm">
                         <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Skills</h2>
                         <ul class="list-none space-y-1">
-                            <li><span class="font-semibold">Cloud & DevOps:</span> AWS Lambda, S3, CloudWatch, Serverless, Docker, Azure Pipelines</li>
+                            <li><span class="font-semibold">Cloud & DevOps:</span> AWS (Lambda, S3, SNS, SQS, CloudWatch), Docker, Serverless Architectures</li>
                             <li><span class="font-semibold">.NET & Backend:</span> .NET 8, C#, ASP.NET Core, Web API, Entity Framework</li>
-                            <li><span class="font-semibold">Front-End:</span> Angular, TypeScript, JavaScript</li>
+                            <li><span class="font-semibold">Front-End:</span> Angular, TypeScript, JavaScript, Static Site Generation</li>
                             <li><span class="font-semibold">Databases:</span> SQL Server, PostgreSQL, MySQL, MongoDB, Redis</li>
-                            <li><span class="font-semibold">E-Commerce & APIs:</span> Shopify API, REST, GraphQL, OAuth2</li>
-                            <li><span class="font-semibold">Performance & Optimization:</span> Multi-threading, API Throttling, WebSockets, Caching</li>
-                            <li><span class="font-semibold">Testing & CI/CD:</span> xUnit, NUnit, GitHub Actions, GitLab CI/CD</li>
+                            <li><span class="font-semibold">E-Commerce & APIs:</span> Shopify API, REST API, GraphQL, OAuth2</li>
+                            <li><span class="font-semibold">Performance & Optimization:</span> Multi-threading, WebSockets, API Throttling, Caching, SEO</li>
+                            <li><span class="font-semibold">Testing & CI/CD:</span> xUnit, NUnit, GitHub Actions, GitLab CI/CD, Azure Pipelines</li>
                         </ul>
+                    </div>
+
+                    <!-- Personal Projects & Open Source -->
+                    <div class="prose prose-sm">
+                        <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Personal Projects & Open Source</h2>
+                        <div>
+                            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1">SchemaShroud: .NET Data Anonymization Library <span class="italic text-[var(--color-secondary)]">(Open Source, .NET 8)</span></h3>
+                            <p class="mb-2 text-[var(--color-secondary)]">GDPR-compliant data anonymization for .NET 8, using declarative attributes and reflection.</p>
+                            <p><a href="https://github.com/tulior/schema-shroud" target="_blank" rel="noopener" class="hover:text-[var(--color-primary)] transition-colors duration-200">github.com/tulior/schema-shroud</a> – <span class="font-semibold">Actively maintained.</span></p>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1">Personal Portfolio & Tech Blog <span class="italic text-[var(--color-secondary)]">(Astro, Tailwind CSS)</span></h3>
+                            <p class="mb-2 text-[var(--color-secondary)]">Portfolio (<a href="https://tulio.org" target="_blank" rel="noopener" class="hover:text-[var(--color-primary)] transition-colors duration-200">tulio.org</a>) showcasing skills and advocating for better tech hiring. Achieved <span class="font-semibold">100/100 Google Lighthouse scores</span> (Performance, Accessibility, SEO).</p>
+                            <p class="text-[var(--color-secondary)]">High-performance web development & clear communication focus.</p>
+                        </div>
                     </div>
 
                     <!-- Certifications -->
                     <div class="prose prose-sm">
                         <h2 class="text-xl font-semibold text-[var(--color-primary)] mb-3">Certifications</h2>
                         <ul class="list-disc list-inside space-y-1">
-                            <li>Oracle Certified Java SE 11 Developer</li>
+                            <li>Oracle Certified Java SE 11 Developer <span class="text-[var(--color-secondary)]">(Apr 2021)</span></li>
                         </ul>
                     </div>
 
@@ -108,54 +123,50 @@ const description = "View the professional resume of Túlio Ribeiro dos Anjos, a
 
                         <h4 class="text-lg font-medium text-[var(--color-text-primary)] mt-2">Full-Stack .NET & Angular Engineer</h4>
                         <p class="text-[var(--color-secondary)] mb-2">Feb 2025 – Present | Remote (São Paulo, São Paulo)</p>
-                        <p>Building key full-stack components for a high-visibility project at a major Transit Technology client, utilizing .NET 8, Angular, and cloud-native architectures to build a next-generation transit management platform.</p>
+                        <p>Developing full-stack components for a transit management platform using .NET 8, Angular, and AWS services like Lambda, SQS, and API Gateway.</p>
 
                         <h4 class="text-lg font-medium text-[var(--color-text-primary)] mt-4">.NET Core Engineer</h4>
                         <p class="text-[var(--color-secondary)] mb-2">Mar 2023 – Feb 2025 | Remote (Overland Park, Kansas)</p>
                         <ul class="list-disc list-inside space-y-1">
-                            <li>Developed a high-scale AWS Lambda-based Shopify integration (.NET 8), syncing 100,000+ SKUs.</li>
-                            <li>Implemented intelligent API throttling (data diffing & retry), reducing failure rates.</li>
-                            <li>Developed a high-performance AWS Lambda-based image processing system (.NET 8, SkiaSharp) for real-time collage generation, achieving sub-second response times. Enhanced product previews.</li>
-                            <li>Designed and built a dynamic sales reporting service using JSON schema. Integrated CSVHelper with unit testing.</li>
+                            <li><strong>Shopify Integration:</strong> Built a Shopify integration—library, microservice, and AWS Lambda—to sync thousands of SKUs per retailer with API throttling mitigation (data diffing & retry). During beta, onboarded 50+ retailers, processing 400+ orders over 8 months with no reconciliation issues. Real-time inventory updates were handled asynchronously via SQS, keeping stock levels accurate without API bottlenecks.</li>
+                            <li><strong>Collage Generation:</strong> Built an image processing library with collage generation (SkiaSharp) and an AWS Lambda service (.NET 8) for real-time image composition. Added dynamic product previews with sub-second response times, improving conversions. Stored processed images in Amazon S3.</li>
+                            <li><strong>CSV Reporting:</strong> Designed a sales reporting system using JSON schema to handle different CSV formats from multiple payment platforms. Integrated CSVHelper with validation and parsing logic to ensure accuracy. Provided structured financial reports that met FTC compliance requirements.</li>
                         </ul>
 
                         <h4 class="text-lg font-medium text-[var(--color-text-primary)] mt-4">Java & Spring Engineer</h4>
                         <p class="text-[var(--color-secondary)] mb-2">Jun 2022 – Mar 2023 | Remote (San Francisco, California)</p>
                         <ul class="list-disc list-inside space-y-1">
-                            <li>Revamped legacy Java APIs into high-performance Spring Boot REST services.</li>
-                            <li>Optimized data access with Spring Data JPA & Hibernate.</li>
-                            <li>Implemented robust automated testing.</li>
+                            <li>Refactored legacy Java APIs into Spring Boot REST services for a B2B privacy compliance platform. Optimized data access with Spring Data JPA & Hibernate, reducing query latency and improving reliability. Added automated testing to ensure API stability and integrated with Slack, Jira, and GitHub for security reviews.</li>
                         </ul>
                     </div>
 
-                    <!-- Experience: Geoi2 Tecnologia -->
+                    <!-- Experience: GEOI2 Tecnologia -->
                     <div>
                         <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">GEOI2 Tecnologia da Informação LTDA.</h3>
-                        <p class="text-[var(--color-secondary)] mb-2">Aug 2019 – Jun 2022 | 3 years</p>
+                        <p class="text-[var(--color-secondary)] mb-2">Aug 2019 – Jun 2022 | Hybrid (Campo Grande, Brazil)</p>
                         <ul class="list-disc list-inside space-y-1">
-                            <li>Transformed a sluggish legacy JSF application into a high-performance Angular 13 micro-frontend with a Spring Boot backend.</li>
-                            <li>Developed a Java CLI tool to automate ETL and database provisioning.</li>
-                            <li>Integrated Pentaho KTR and gzip compression.</li>
+                            <li>Rebuilt a slow legacy JSF application as an Angular 13 micro-frontend with a Spring Boot backend, improving page load times and user experience.</li>
+                            <li>Built a Java CLI tool to automate ETL and database provisioning for State Audit Office financial audits. Integrated Pentaho KTR to extract data from Sybase, Firebird, PostgreSQL, and MySQL into MongoDB. Used Gzip compression to reduce data size by 90%, making transfers reliable over 128kbps municipal networks.</li>
                         </ul>
                     </div>
 
                     <!-- Experience: Fonte Tecnologia -->
                     <div>
                         <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">Fonte Tecnologia</h3>
-                        <p class="text-[var(--color-secondary)] mb-2">Aug 2017 – Aug 2019 | 2 years</p>
+                        <p class="text-[var(--color-secondary)] mb-2">Aug 2017 – Aug 2019 | On-Site (Campo Grande, Brazil)</p>
                         <ul class="list-disc list-inside space-y-1">
-                            <li>Eliminated a critical CPU bottleneck in the CADG platform's real-time vehicle grid.</li>
-                            <li>Designed and built a high-efficiency telephone form module for CADG.</li>
+                            <li>Worked on SIGO-CADG, a computer-aided dispatch system used by public safety forces in Mato Grosso do Sul for managing real-time incidents. Fixed a CPU bottleneck in its live vehicle tracking system by replacing inefficient setTimeout loops with an optimized timer, improving performance for emergency response operations.</li>
+                            <li>Built a telephone form module for emergency call reporting, reducing dispatcher workload and improving coordination between operational units.</li>
                         </ul>
                     </div>
 
                     <!-- Experience: PSG Tecnologia -->
                     <div>
                         <h3 class="text-xl font-semibold text-[var(--color-text-primary)]">PSG Tecnologia</h3>
-                        <p class="text-[var(--color-secondary)] mb-2">Mar 2013 – Aug 2017 | 4+ years</p>
+                        <p class="text-[var(--color-secondary)] mb-2">Mar 2013 – Aug 2017 | On-Site (Campo Grande, Brazil)</p>
                         <ul class="list-disc list-inside space-y-1">
-                            <li>Led the development of a digital system for managing Mato Grosso do Sul's Organic Law.</li>
-                            <li>Designed and developed a module for creating thematic programs within Mato Grosso do Sul's Pluriannual Plan (PPA).</li>
+                            <li>Built a system for managing the State Constitution of Mato Grosso do Sul (Brazil), allowing government officials to create, edit, and track legal statutes. Made updates faster and easier.</li>
+                            <li>Developed a module for managing thematic programs in the state’s Pluriannual Plan (PPA), improving organization and tracking of public spending initiatives.</li>
                         </ul>
                     </div>
 
