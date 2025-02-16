@@ -1,20 +1,23 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 import svelte from '@astrojs/svelte';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  server: {
-      port: 8000,
-      host: true
+    site: 'https://tulio.org',
+    server: {
+        port: 8000,
+        host: true
     },
 
-  integrations: [react(), svelte()],
+    integrations: [react(), svelte(), sitemap()],
 
-  vite: {
-    plugins: [tailwindcss()]
-  }
+    vite: {
+        plugins: [tailwindcss()]
+    }
 });
