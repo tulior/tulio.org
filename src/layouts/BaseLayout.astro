@@ -1,83 +1,29 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
+import Shell from '../components/Shell.astro';
 
-const { title, description } = Astro.props;
-const pageTitle =
-  title ||
-  "Túlio Ribeiro dos Anjos | Pragmatic .NET Performance Engineer (Remote Only)";
-const pageDescription =
-  description ||
-  "Túlio Ribeiro dos Anjos is a pragmatic .NET & Cloud Developer focused on building efficient, high-performance systems. With deep expertise in .NET 8 and AWS, he champions remote work and practical solutions to complex engineering challenges.";
-
-// Use a dynamic canonical URL based on the current request
-const canonicalUrl = new URL(Astro.request.url, Astro.site).toString();
+const {
+  title = 'Túlio Ribeiro dos Anjos | Backend Systems Engineer',
+  description = 'Personal timeline, engineering artifacts, and writing from Túlio Ribeiro dos Anjos.',
+  noindex = false,
+} = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <!-- Primary SEO Meta Tags -->
-    <title>{pageTitle}</title>
-    <meta name="description" content={pageDescription} />
-    <meta name="author" content="Túlio Ribeiro dos Anjos" />
-    <link rel="canonical" href={canonicalUrl} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={pageDescription} />
-    <meta property="og:image" content="https://tulio.org/img/og-banner.png" />
-    <meta property="og:site_name" content="Túlio: The Pragmatic .NET Performance Engineer" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content={canonicalUrl} />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={pageDescription} />
-    <meta name="twitter:image" content="https://tulio.org/img/og-banner.png" />
-
-    <!-- Structured Data: Person Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Túlio Ribeiro dos Anjos",
-            "url": "https://tulio.org/",
-            "sameAs": [
-                "https://linkedin.com/in/tulioanjos",
-                "https://github.com/tulior"
-            ],
-            "jobTitle": "Pragmatic .NET Performance Engineer (Remote Only)",
-            "worksFor": {
-                "@type": "Organization",
-                "name": "Independent / Consulting"
-            },
-            "description": "Túlio is a hands-on .NET & Cloud Developer with a focus on building efficient, high-performance systems. He thrives on solving real-world challenges through practical, remote-first solutions."
-        }
-    </script>
-
-    <!-- Security Header -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';" />
-
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#1D4ED8" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLHRVPNSXT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-LLHRVPNSXT');
-    </script>
-</head>
-<body class="bg-[var(--color-background)] text-[var(--color-text-primary)] font-sans">
-<slot />
-<Footer />
-</body>
+  <head>
+    <SEO title={title} description={description} noindex={noindex} />
+  </head>
+  <body class="scrollbar-estuary">
+    <Shell>
+      <Header />
+      <main id="main-content">
+        <slot />
+      </main>
+      <Footer />
+    </Shell>
+  </body>
 </html>

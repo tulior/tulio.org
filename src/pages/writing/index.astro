@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import WritingRow from '../../components/WritingRow.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('writing', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout title="Writing | tulio.org" description="Essays and field notes from Túlio Ribeiro dos Anjos.">
+  <section class="px-5 py-12 sm:px-8 lg:px-12">
+    <p class="field-label">Field notes</p>
+    <h1 class="mt-3 text-balance font-mono text-4xl font-bold text-text-primary sm:text-5xl">Writing</h1>
+    <p class="mt-5 max-w-2xl text-pretty leading-8 text-text-secondary">
+      Ideas about software, work, AI, interviews, and the systems people build around themselves.
+    </p>
+
+    <div class="mt-8 overflow-hidden rounded-[var(--radius-panel)] border border-border bg-surface/80">
+      {posts.map((post) => <WritingRow post={post} />)}
+    </div>
+  </section>
+</BaseLayout>

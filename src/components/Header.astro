@@ -1,0 +1,54 @@
+---
+import { navItems } from '../data/nav';
+
+const pathname = Astro.url.pathname;
+
+function normalize(path: string): string {
+  return path.length > 1 ? path.replace(/\/$/, '') : path;
+}
+
+function isCurrent(href: string): boolean {
+  if (!href.startsWith('/')) {
+    return false;
+  }
+
+  if (href.startsWith('/#')) {
+    return pathname === '/';
+  }
+
+  const current = normalize(pathname);
+  const target = normalize(href);
+  return current === target || current.startsWith(`${target}/`);
+}
+---
+
+<header class="sticky top-0 z-50">
+  <div class="flex w-full items-center justify-between gap-3 rounded-t-[calc(var(--radius-shell)-1px)] rounded-b-[var(--radius-panel)] border-b border-border bg-background/88 px-3 py-3 backdrop-blur-md xs:px-4 sm:px-8 lg:px-12">
+    <a href="/" class="shrink-0 font-mono text-base font-semibold tracking-[0.08em] text-primary sm:text-lg" aria-label="tulio.org home">
+      tulio.org
+    </a>
+
+    <nav aria-label="Primary navigation" class="flex min-w-0 items-center gap-1 xs:gap-2 sm:gap-3">
+      {navItems.map((item) => {
+        const active = isCurrent(item.href);
+        const cta = 'cta' in item && item.cta;
+        const external = 'external' in item && item.external;
+
+        return (
+          <a
+            href={item.href}
+            aria-current={active ? 'page' : undefined}
+            class:list={[
+              'rounded-md border border-transparent px-1.5 py-2 font-mono text-[0.62rem] text-text-secondary transition hover:border-primary/45 hover:text-primary xs:px-2 xs:text-xs sm:px-2.5 sm:text-sm',
+              active && '!border-primary/70 !bg-primary/10 !text-primary',
+              cta && '!border-primary px-2 text-primary hover:bg-primary hover:text-background sm:px-3',
+            ]}
+            {...(external ? { rel: 'noreferrer' } : {})}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+</header>

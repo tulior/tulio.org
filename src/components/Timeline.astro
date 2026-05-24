@@ -1,0 +1,11 @@
+---
+import { timeline } from '../data/timeline';
+import TimelineItem from './TimelineItem.astro';
+---
+
+<section id="timeline" class="px-5 py-8 sm:px-8 lg:px-12">
+  <h2 class="mb-5 font-mono text-2xl text-primary">Timeline</h2>
+  <ol class="relative space-y-0 before:absolute before:bottom-8 before:left-[0.72rem] before:top-8 before:w-px before:bg-primary/60">
+    {timeline.map((item) => <TimelineItem item={item} />)}
+  </ol>
+</section>

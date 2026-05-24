@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import ArtifactLayout from '../../layouts/ArtifactLayout.astro';
+
+export async function getStaticPaths() {
+  const artifacts = await getCollection('artifacts', ({ data }) => !data.draft);
+  return artifacts.map((artifact) => ({ params: { slug: artifact.id }, props: { artifact } }));
+}
+
+type Props = { artifact: CollectionEntry<'artifacts'> };
+const { artifact } = Astro.props;
+const { Content } = await render(artifact);
+---
+
+<ArtifactLayout artifact={artifact}>
+  <Content />
+</ArtifactLayout>

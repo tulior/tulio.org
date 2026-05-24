@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Not found | tulio.org" description="The requested page could not be found." noindex>
+  <section class="px-5 py-20 sm:px-8 lg:px-12">
+    <p class="field-label">404</p>
+    <h1 class="mt-3 text-balance font-mono text-4xl font-bold text-text-primary sm:text-5xl">Not found</h1>
+    <p class="mt-5 max-w-2xl text-pretty leading-8 text-text-secondary">
+      This route is not part of the field log. Timeline, Artifacts, and Writing are the canonical paths.
+    </p>
+    <a href="/" class="mt-8 inline-flex rounded-md border border-primary px-4 py-2 font-mono text-sm text-primary transition hover:bg-primary hover:text-background">
+      Return home
+    </a>
+  </section>
+</BaseLayout>
