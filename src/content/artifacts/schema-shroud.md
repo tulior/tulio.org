@@ -1,7 +1,7 @@
 ---
 title: 'SchemaShroud'
 updated: 2026-05-24
-description: 'A .NET data anonymization library for protecting sensitive fields in non-production and compliance-adjacent workflows.'
+description: 'A .NET library I wrote for marking fields that should be anonymized.'
 type: 'open-source-library'
 status: 'maintained'
 featured: true
@@ -13,12 +13,6 @@ interactive: false
 apiMode: 'none'
 ---
 
-SchemaShroud is an open-source .NET library for declaring sensitive fields and anonymizing data through explicit attributes.
+SchemaShroud is a small .NET library. You mark model properties with attributes, then run data through the anonymizer.
 
-The interesting part is the contract: sensitive data is marked near the model, then processed through a predictable anonymization pipeline. That keeps privacy behavior inspectable instead of hiding it in scattered scripts or one-off cleanup jobs.
-
-## What It Proves
-
-- Data protection work can be expressed as code-level intent.
-- Reflection-heavy utilities still need boring, readable contracts.
-- Compliance helpers should make risky behavior easier to see.
+I wrote it because privacy cleanup gets hard to trust when it lives in scattered scripts.

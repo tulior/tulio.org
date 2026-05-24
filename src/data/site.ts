@@ -3,11 +3,9 @@ export const site = {
   shortName: 'Túlio',
   handle: 'tulio.org',
   url: 'https://tulio.org',
-  description:
-    'Personal timeline, engineering artifacts, and writing from Túlio Ribeiro dos Anjos - a backend systems engineer focused on .NET, cloud, integrations, and production reliability.',
+  description: 'A small personal site for Túlio Ribeiro dos Anjos: notes, links, and a timeline.',
   defaultImage: '/img/og-banner.png',
-  defaultImageAlt:
-    'Túlio Ribeiro dos Anjos - backend systems engineer focused on .NET, cloud, integrations, and production reliability.',
+  defaultImageAlt: 'Túlio Ribeiro dos Anjos.',
 
   locale: 'en',
   languageTag: 'en',
@@ -26,8 +24,7 @@ export const site = {
     familyName: 'Ribeiro dos Anjos',
     alternateNames: ['Túlio Anjos', 'Tulio Ribeiro dos Anjos', 'Tulio Anjos'],
     role: 'Backend systems engineer',
-    summary:
-      'Backend systems engineer focused on .NET, cloud integrations, distributed systems, and production reliability.',
+    summary: 'I write backend software, mostly .NET, integrations, cloud services, and production fixes.',
     location: {
       city: 'Campo Grande',
       region: 'Mato Grosso do Sul',
@@ -45,7 +42,6 @@ export const site = {
       'cloud integrations',
       'API design',
       'distributed systems',
-      'production reliability',
       'systems integration',
       'software architecture',
     ],

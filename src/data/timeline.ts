@@ -6,118 +6,83 @@ export type TimelineItem = {
   place?: string;
   tone: TimelineTone;
   summary: string;
-  lesson: string;
-  evidence?: readonly string[];
   stack?: readonly string[];
 };
 
 export const timeline = [
   {
     period: 'TODO',
-    title: 'First contact with computers',
+    title: 'First computer I cared about',
     tone: 'origin',
     summary:
-      'This needs Túlio’s actual memory: the machine, the room, the person nearby, or the small obsession that made computers feel like something to investigate instead of just use.',
-    lesson: 'Do not polish this until the real first moment is known.',
-    evidence: ['Ask Túlio for the concrete first machine or moment.'],
+      'I do not remember the exact machine well enough to make this sound good. This slot is here so I can replace it with the real story later.',
   },
   {
     period: 'TODO',
     title: 'First internet years',
     tone: 'origin',
     summary:
-      'This needs the real internet story: forums, downloads, games, tutorials, chat rooms, slow links, or whatever made the network feel less like a utility and more like a place.',
-    lesson: 'The important detail is not that the internet existed. It is what it let him reach.',
-    evidence: ['Ask Túlio what he actually did online first.'],
+      'Same problem here: I remember the shape more than the date. Forums, downloads, tutorials, probably too many half-finished things. I need to write the actual version before this becomes fake nostalgia.',
   },
   {
     period: 'TODO',
-    title: 'First programming pull',
+    title: 'First code I changed',
     tone: 'origin',
     summary:
-      'This needs the first thing he changed with code: a script, page, copied snippet, broken install, tiny automation, or small tool that made the computer answer differently.',
-    lesson: 'The first useful program is usually small. Keep the exact smallness.',
-    evidence: ['Ask Túlio for the first language, script, or project.'],
+      'I do not have the clean origin story written down. It was probably small and copied from somewhere, which is how a lot of programming starts.',
   },
   {
     period: '2009–2013',
-    title: 'Computer Engineering foundation',
+    title: 'Computer Engineering',
     place: 'Uniderp · Campo Grande, Brazil',
     tone: 'education',
     summary:
-      'University gave formal names to things he was already circling: programming, systems, hardware and software boundaries, and the habit of breaking messy problems into parts without pretending they are clean.',
-    lesson: 'The useful part was not sounding like an engineer. It was learning how to stay with a problem long enough to model it.',
-    evidence: ['Bachelor’s in Computer Engineering'],
-    stack: ['Computer engineering', 'Programming fundamentals', 'Systems thinking'],
+      'I studied Computer Engineering at Uniderp. Some of it was useful, some of it was only useful later, and plenty of it I do not think about now.',
+    stack: ['Computer engineering', 'Programming', 'Systems'],
   },
   {
     period: '2013–2017',
-    title: 'Government systems with real-world accountability',
+    title: 'Legal statutes and public planning software',
     place: 'PSG Tecnologia · Campo Grande, Brazil',
     tone: 'work',
     summary:
-      'Worked on systems for legal statutes and public planning. Government software was an early lesson in friction: budgets, procurement, and politics move slower than a sprint, but the code still has to be understandable after the meeting is over.',
-    lesson: 'A system can be boring and still be carrying real accountability.',
-    evidence: [
-      'Built statute creation, editing, and tracking workflows',
-      'Improved organization and tracking of public spending initiatives',
-    ],
+      'I wrote C# and SQL Server software for legal statute workflows and public planning/budget tracking. Government software was slow in the normal ways: meetings, forms, rules, and names that changed after I had already built the screen.',
     stack: ['C#', '.NET', 'SQL Server', 'Government workflows'],
   },
   {
     period: '2017–2019',
-    title: 'Public safety systems where latency had consequences',
+    title: 'Dispatch software and a CPU problem',
     place: 'Fonte Tecnologia · Campo Grande, Brazil',
     tone: 'work',
     summary:
-      'Worked on SIGO-CADG, a dispatch system used by public safety forces in Mato Grosso do Sul. The performance problem was not abstract: live vehicle tracking was wasting CPU in a screen operators needed to stay responsive.',
-    lesson: 'A slow screen is not cosmetic when someone is trying to coordinate a response.',
-    evidence: [
-      'Fixed a CPU bottleneck in live vehicle tracking by replacing inefficient timer loops',
-      'Built a telephone form module for emergency call reporting',
-    ],
-    stack: ['JavaScript', '.NET', 'Real-time tracking', 'Operational systems'],
+      'I worked on SIGO-CADG, a dispatch system in Mato Grosso do Sul. I fixed a vehicle tracking screen that was burning CPU with timer loops, and built forms for emergency call reporting. It was not glamorous; it was a screen people needed open.',
+    stack: ['JavaScript', '.NET', 'Vehicle tracking', 'Dispatch'],
   },
   {
     period: '2019–2022',
-    title: 'Modernization under ugly infrastructure constraints',
+    title: 'Old apps, new screens, slow links',
     place: 'GEOI2 Tecnologia da Informação LTDA. · Campo Grande, Brazil',
     tone: 'work',
     summary:
-      'Modernization here meant carrying old systems forward, not pretending a clean rewrite was available. He rebuilt slow legacy workflows and built ETL tooling for public audit work across several databases, including compression because some municipal networks were still brutally slow.',
-    lesson: 'Sometimes the architecture decision is compression because the network is the boss.',
-    evidence: [
-      'Migrated a legacy JSF app to Angular 13 and Spring Boot',
-      'Built a Java CLI for ETL and database provisioning across Sybase, Firebird, PostgreSQL, MySQL, and MongoDB',
-      'Used Gzip compression to reduce data size by 90% for unreliable 128kbps municipal networks',
-    ],
-    stack: ['Java', 'Spring Boot', 'Angular', 'Pentaho KTR', 'MongoDB', 'PostgreSQL', 'MySQL'],
+      'I helped move a JSF app to Angular 13 and Spring Boot, and built a Java CLI to move and provision data across Sybase, Firebird, PostgreSQL, MySQL, and MongoDB. Some municipalities still had 128kbps links, so gzip mattered more than clever code.',
+    stack: ['Java', 'Spring Boot', 'Angular', 'Sybase', 'Firebird', 'PostgreSQL', 'MySQL', 'MongoDB'],
   },
   {
     period: '2022–2025',
-    title: 'Remote backend systems, integrations, and scale pressure',
+    title: 'Remote backend contract work',
     place: 'BairesDev · Remote',
     tone: 'work',
     summary:
-      'Remote backend work widened the surface area: privacy compliance APIs, Shopify SKU and order sync, SQS-backed inventory updates, Lambda image composition, and reporting. The common thread was integration work, where failures tend to hide between systems.',
-    lesson: 'Most production bugs do not respect repo boundaries.',
-    evidence: [
-      'Refactored Java APIs into Spring Boot REST services for privacy compliance',
-      'Built Shopify integration services for SKU and order synchronization',
-      'Built AWS Lambda image composition with SkiaSharp and S3 output',
-      'Designed CSV reporting with schema-based validation',
-    ],
+      'I did remote backend work: privacy compliance APIs in Java/Spring Boot, Shopify SKU and order sync, SQS inventory updates, Lambda image composition with SkiaSharp, and CSV reports with schema validation. A lot of it was getting two systems to agree long enough to not wake someone up.',
     stack: ['Java', 'Spring Boot', '.NET 8', 'AWS Lambda', 'SQS', 'S3', 'Shopify API', 'SkiaSharp'],
   },
   {
     period: '2025–Present',
-    title: 'Transit systems, .NET, Angular, and production clarity',
-    place: 'BairesDev · Remote',
+    title: 'Transit systems',
+    place: 'Velozient · Remote contract',
     tone: 'current',
     summary:
-      'Current work sits in transit management systems, with .NET, Angular, APIs, integrations, and AWS around it. The center of gravity has not changed much: make the moving parts clear enough that production has fewer places to surprise you.',
-    lesson: 'Good systems are easier to explain when something is already going wrong.',
-    evidence: ['.NET 8', 'Angular', 'AWS services', 'Transit management context'],
+      'I am contracting at Velozient now, working around transit management systems with .NET, Angular, AWS, APIs, and integrations. Mostly normal software work: tickets, bugs, meetings, and figuring out what the system actually does before changing it.',
     stack: ['.NET 8', 'Angular', 'AWS', 'APIs', 'Integrations'],
   },
 ] as const satisfies readonly TimelineItem[];

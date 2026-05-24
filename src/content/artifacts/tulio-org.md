@@ -1,7 +1,7 @@
 ---
 title: 'tulio.org'
 updated: 2026-05-24
-description: 'The personal site rebuilt as a static field log: timeline, artifacts, writing, and a custom Deep Estuary design system.'
+description: 'This website. Astro, Tailwind, Bun, GitHub Pages.'
 type: 'case-study'
 status: 'maintained'
 featured: true
@@ -16,12 +16,8 @@ interactive: false
 apiMode: 'none'
 ---
 
-This site is an artifact in its own right: a static Astro frontend with near-zero default client JavaScript, a typed content model, and a visual system built around a personal-professional timeline.
+This is this site.
 
-The rebuild rejects the generic portfolio shape. Writing explains ideas; artifacts demonstrate work; the homepage shows how the person became the engineer.
+I rebuilt it with Astro, Tailwind CSS v4, Bun, and GitHub Pages because I wanted the domain to point at something that was mine.
 
-## What It Proves
-
-- A personal site can be structured around intellectual objects instead of recruiter furniture.
-- Static HTML is enough for the core experience.
-- Interactive tools can live under artifacts without fragmenting navigation.
+There is no product here. It is a few pages, some links, and a place to put writing if I feel like it.
