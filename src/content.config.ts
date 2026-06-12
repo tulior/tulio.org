@@ -24,6 +24,7 @@ const artifacts = defineCollection({
     type: z.enum(['interactive-tool', 'open-source-library', 'backend-system', 'case-study', 'data-atlas', 'experiment']),
     status: z.enum(['live', 'maintained', 'prototype', 'archived']),
     featured: z.boolean().default(false),
+    order: z.number().optional(),
     stack: z.array(z.string()).default([]),
     primaryAction: z
       .object({

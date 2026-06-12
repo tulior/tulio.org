@@ -1,11 +1,12 @@
 ---
 title: 'wingetdb'
 updated: 2026-05-24
-description: 'Generates a static index for Windows Package Manager packages.'
+description: 'A static generator and public index for Windows Package Manager packages.'
 type: 'interactive-tool'
 status: 'live'
 featured: true
-stack: ['Go', 'Static HTML', 'Vanilla JS', 'GitHub Pages']
+order: 2
+stack: ['Go', 'Static HTML', 'Vanilla JS', 'GitHub Pages', 'winget']
 primaryAction:
   label: 'Source'
   href: 'https://github.com/tulior/wingetdb'
@@ -14,8 +15,6 @@ secondaryAction:
   href: 'https://winget.tulio.org/'
 ---
 
-wingetdb builds the static site behind `winget.tulio.org`.
+wingetdb builds a static site for browsing Windows Package Manager packages.
 
-It reads from `microsoft/winget-pkgs` and emits package pages with IDs, version history, and copyable `winget install` commands.
-
-The public site is the output. The repository is the generator.
+It reads from `microsoft/winget-pkgs` and generates package pages with IDs, version history, and copyable `winget install` commands.
