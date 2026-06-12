@@ -8,6 +8,7 @@ interface Props {
   type?: 'website' | 'article' | undefined;
   publishedTime?: Date | undefined;
   modifiedTime?: Date | undefined;
+  imagePath?: string | undefined;
 }
 
 const {
@@ -17,10 +18,11 @@ const {
   type = 'website',
   publishedTime,
   modifiedTime,
+  imagePath = site.defaultImage,
 } = Astro.props;
 const fullTitle = title ? `${title} | tulio.org` : `${site.name} | Backend Systems Engineer`;
 const canonical = new URL(Astro.url.pathname, site.url).toString();
-const image = new URL(site.defaultImage, site.url).toString();
+const image = new URL(imagePath, site.url).toString();
 ---
 
 <meta charset="UTF-8" />

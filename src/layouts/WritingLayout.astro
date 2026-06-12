@@ -8,7 +8,8 @@ import { formatDate } from '../lib/dates';
 type Props = { post: CollectionEntry<'writing'> };
 const { post } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).toString();
-const image = new URL(site.defaultImage, site.url).toString();
+const imagePath = `/writing/${post.id}/og.png`;
+const image = new URL(imagePath, site.url).toString();
 const modifiedTime = post.data.updated ?? post.data.date;
 const ld = {
   '@context': 'https://schema.org',
@@ -39,6 +40,7 @@ const ld = {
   type="article"
   publishedTime={post.data.date}
   modifiedTime={modifiedTime}
+  imagePath={imagePath}
 >
   <Fragment slot="head">
     <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />

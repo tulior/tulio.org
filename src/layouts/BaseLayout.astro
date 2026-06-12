@@ -12,6 +12,7 @@ interface Props {
   type?: 'website' | 'article' | undefined;
   publishedTime?: Date | undefined;
   modifiedTime?: Date | undefined;
+  imagePath?: string | undefined;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   type = 'website',
   publishedTime,
   modifiedTime,
+  imagePath,
 } = Astro.props;
 ---
 
@@ -34,6 +36,7 @@ const {
       type={type}
       publishedTime={publishedTime}
       modifiedTime={modifiedTime}
+      imagePath={imagePath}
     />
     <slot name="head" />
   </head>

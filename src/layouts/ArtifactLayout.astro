@@ -15,9 +15,10 @@ const relatedWriting =
         .filter((post) => !post.data.draft)
         .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
     : [];
+const imagePath = `/built/${artifact.id}/og.png`;
 ---
 
-<BaseLayout title={artifact.data.title} description={artifact.data.description}>
+<BaseLayout title={artifact.data.title} description={artifact.data.description} imagePath={imagePath}>
   <article class="mx-auto max-w-6xl px-5 py-12 sm:px-8 lg:px-12">
     <a href="/built/" class="font-mono text-sm text-text-muted hover:text-text-primary">&larr; Built</a>
 

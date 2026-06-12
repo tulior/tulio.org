@@ -2,8 +2,8 @@ export const site = {
   name: 'Túlio Ribeiro dos Anjos',
   url: 'https://tulio.org',
   description: 'Backend notes, production fixes, integration seams, and small public tools by Túlio Ribeiro dos Anjos.',
-  defaultImage: '/img/og-banner.png',
-  defaultImageAlt: 'Túlio Ribeiro dos Anjos.',
+  defaultImage: '/og.png',
+  defaultImageAlt: 'Túlio Ribeiro dos Anjos — backend notes, production fixes, and small public tools.',
 
   ogLocale: 'en_US',
 
