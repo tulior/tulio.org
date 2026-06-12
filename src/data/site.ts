@@ -1,6 +1,5 @@
 export const site = {
   name: 'Túlio Ribeiro dos Anjos',
-  shortName: 'Túlio',
   url: 'https://tulio.org',
   description: 'Backend engineering notes, public projects, and a work timeline from Túlio Ribeiro dos Anjos.',
   defaultImage: '/img/og-banner.png',

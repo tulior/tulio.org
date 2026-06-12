@@ -7,12 +7,12 @@ import Shell from '../components/Shell.astro';
 import { site } from '../data/site';
 
 interface Props {
-  title?: string;
-  description?: string;
-  noindex?: boolean;
-  type?: 'website' | 'article';
-  publishedTime?: Date;
-  modifiedTime?: Date;
+  title?: string | undefined;
+  description?: string | undefined;
+  noindex?: boolean | undefined;
+  type?: 'website' | 'article' | undefined;
+  publishedTime?: Date | undefined;
+  modifiedTime?: Date | undefined;
 }
 
 const {
@@ -23,21 +23,19 @@ const {
   publishedTime,
   modifiedTime,
 } = Astro.props;
-
-const seoProps = {
-  description,
-  noindex,
-  type,
-  ...(title !== undefined ? { title } : {}),
-  ...(publishedTime !== undefined ? { publishedTime } : {}),
-  ...(modifiedTime !== undefined ? { modifiedTime } : {}),
-};
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <SEO {...seoProps} />
+    <SEO
+      title={title}
+      description={description}
+      noindex={noindex}
+      type={type}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+    />
     <slot name="head" />
   </head>
   <body class="scrollbar-estuary">

@@ -31,6 +31,9 @@ const writing = (await getPublishedWriting()).slice(0, 3);
         <p class="mt-5 max-w-2xl text-pretty text-base leading-8 text-text-secondary sm:text-lg">
           I work mostly in .NET, Java, AWS, and integrations: getting two systems to agree and stay agreed.
         </p>
+        <p class="mt-5 font-mono text-sm leading-6 text-accent">
+          Open to backend contract work from 2026 · GMT-4 · <a href="mailto:mail@tulio.org" class="underline decoration-accent/40 underline-offset-4 hover:text-primary-soft">mail@tulio.org</a>
+        </p>
       </div>
 
       <figure class="w-40 sm:w-48 lg:ml-auto lg:w-64">
@@ -55,7 +58,7 @@ const writing = (await getPublishedWriting()).slice(0, 3);
   <section id="artifacts" class="px-5 py-8 sm:px-8 lg:px-12">
     <div class="mb-4 flex items-end justify-between gap-4">
       <h2 class="font-mono text-2xl text-primary">Artifacts</h2>
-      <a href="/artifacts/" class="font-mono text-xs text-primary hover:text-primary-soft">VIEW ALL &rarr;</a>
+      <a href="/artifacts/" class="font-mono text-xs tracking-[0.08em] text-primary hover:text-primary-soft">VIEW ALL &rarr;</a>
     </div>
     <div class="grid gap-4 md:grid-cols-3">
       {artifacts.map((artifact) => <ArtifactCard artifact={artifact} />)}
@@ -65,7 +68,7 @@ const writing = (await getPublishedWriting()).slice(0, 3);
   <section id="writing" class="px-5 py-8 sm:px-8 lg:px-12">
     <div class="mb-4 flex items-end justify-between gap-4">
       <h2 class="font-mono text-2xl text-primary">Writing</h2>
-      <a href="/writing/" class="font-mono text-xs text-primary hover:text-primary-soft">VIEW ALL &rarr;</a>
+      <a href="/writing/" class="font-mono text-xs tracking-[0.08em] text-primary hover:text-primary-soft">VIEW ALL &rarr;</a>
     </div>
     <div class="overflow-hidden rounded-[var(--radius-panel)] border border-border bg-surface/80">
       {writing.map((post) => <WritingRow post={post} />)}

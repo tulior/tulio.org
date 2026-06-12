@@ -4,14 +4,20 @@ import { site } from '../data/site';
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-border px-5 py-8 sm:px-8 lg:px-12">
-  <div class="flex flex-col gap-3 font-mono text-xs text-text-muted sm:flex-row sm:items-center sm:justify-between">
+<footer class="relative overflow-hidden border-t border-border px-5 py-8 sm:px-8 lg:px-12">
+  <svg class="pointer-events-none absolute bottom-[-5rem] right-[-4rem] h-64 w-64 opacity-25" viewBox="0 0 512 512" fill="none" aria-hidden="true">
+    <path d="M72 248c30-80 88-126 174-138 84-12 148 15 190 82" stroke="rgb(45 212 191 / 0.32)" stroke-width="1.5" />
+    <path d="M96 272c24-65 75-104 152-114 70-9 124 13 162 66" stroke="rgb(45 212 191 / 0.25)" stroke-width="1.5" />
+    <path d="M126 296c20-52 62-82 126-90 54-7 98 9 132 48" stroke="rgb(192 132 87 / 0.28)" stroke-width="1.5" />
+    <path d="M62 390c62-22 123-26 182-12 70 16 134 10 192-20" stroke="rgb(49 89 99 / 0.55)" stroke-width="1" />
+  </svg>
+  <div class="relative flex flex-col gap-3 font-mono text-xs text-text-muted sm:flex-row sm:items-center sm:justify-between">
     <p>&copy; {year} {site.name}</p>
-    <div class="flex gap-4">
+    <div class="flex flex-wrap gap-x-4 gap-y-2">
       <a href={site.github} class="hover:text-primary" rel="noreferrer">GitHub</a>
       <a href={site.linkedin} class="hover:text-primary" rel="noreferrer">LinkedIn</a>
       <a href="/rss.xml" class="hover:text-primary">RSS</a>
-      <a href={`mailto:${site.email}`} class="hover:text-primary">Email</a>
+      <a href={`mailto:${site.email}`} class="hover:text-primary">{site.email}</a>
     </div>
   </div>
 </footer>

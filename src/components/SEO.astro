@@ -2,12 +2,12 @@
 import { site } from '../data/site';
 
 interface Props {
-  title?: string;
-  description?: string;
-  noindex?: boolean;
-  type?: 'website' | 'article';
-  publishedTime?: Date;
-  modifiedTime?: Date;
+  title?: string | undefined;
+  description?: string | undefined;
+  noindex?: boolean | undefined;
+  type?: 'website' | 'article' | undefined;
+  publishedTime?: Date | undefined;
+  modifiedTime?: Date | undefined;
 }
 
 const {

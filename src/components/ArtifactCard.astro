@@ -12,8 +12,8 @@ const secondaryExternal = artifact.data.secondaryAction?.href.startsWith('http')
 
 <article class="panel flex min-h-full flex-col p-4 transition hover:border-primary/70 md:p-5">
   <div class="flex items-center justify-between gap-3">
-    <p class="font-mono text-[0.7rem] uppercase text-warm">{typeLabel}</p>
-    <p class="rounded-[var(--radius-pill)] border border-border px-2 py-1 font-mono text-[0.7rem] uppercase text-text-muted">
+    <p class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-warm">{typeLabel}</p>
+    <p class="rounded-[var(--radius-pill)] border border-border px-2 py-1 font-mono text-[0.7rem] uppercase tracking-[0.08em] text-text-muted">
       {artifact.data.status}
     </p>
   </div>
@@ -27,7 +27,7 @@ const secondaryExternal = artifact.data.secondaryAction?.href.startsWith('http')
   {artifact.data.stack.length > 0 && (
     <ul class="mt-4 flex flex-wrap gap-2" aria-label="Stack">
       {artifact.data.stack.map((tag) => (
-        <li class="rounded border border-border px-2 py-1 font-mono text-[0.7rem] uppercase text-text-muted">
+        <li class="rounded border border-border px-2 py-1 font-mono text-[0.7rem] uppercase tracking-[0.08em] text-text-muted">
           {tag}
         </li>
       ))}

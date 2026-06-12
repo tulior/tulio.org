@@ -22,7 +22,6 @@
   --color-primary-soft: #5EEAD4;
   --color-accent: #A3E635;
   --color-warm: #C08457;
-  --color-redline: #F87171;
   --color-code-bg: #031013;
 
   --radius-panel: 1.25rem;
@@ -30,7 +29,6 @@
   --radius-pill: 999px;
 
   --breakpoint-xs: 30rem;
-  --breakpoint-3xl: 112rem;
 }
 
 :root {
@@ -99,6 +97,7 @@
 @utility field-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-primary);
 }
