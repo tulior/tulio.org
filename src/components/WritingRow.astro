@@ -7,13 +7,13 @@ const { post, headingLevel = 'h3' } = Astro.props;
 const Heading = headingLevel;
 ---
 
-<article class="border-b border-border last:border-b-0">
-  <a href={`/writing/${post.id}/`} class="grid gap-2 p-4 transition hover:bg-surface-raised/55 md:grid-cols-[9rem_1fr] md:p-5">
-    <time class="font-mono text-xs tabular-nums text-warm" datetime={post.data.date.toISOString()}>
+<article class="border-t border-border first:border-t-0">
+  <a href={`/writing/${post.id}/`} class="grid gap-2 py-5 transition md:grid-cols-[9rem_1fr]">
+    <time class="font-mono text-xs tabular-nums text-text-muted" datetime={post.data.date.toISOString()}>
       {formatDate(post.data.date)}
     </time>
     <div>
-      <Heading class="font-mono text-base text-text-primary">{post.data.title}</Heading>
+      <Heading class="text-base font-semibold text-text-primary hover:text-primary">{post.data.title}</Heading>
       <p class="mt-2 text-sm leading-6 text-text-secondary">{post.data.description}</p>
     </div>
   </a>

@@ -18,30 +18,22 @@ const relatedWriting =
 ---
 
 <BaseLayout title={artifact.data.title} description={artifact.data.description}>
-  <article class="px-5 py-12 sm:px-8 lg:px-12">
-    <a href="/artifacts/" class="font-mono text-sm text-primary hover:text-primary-soft">&larr; Artifacts</a>
+  <article class="mx-auto max-w-6xl px-5 py-12 sm:px-8 lg:px-12">
+    <a href="/built/" class="font-mono text-sm text-text-muted hover:text-text-primary">&larr; Built</a>
 
-    <header class="mt-8 max-w-3xl">
+    <header class="mt-8 max-w-4xl">
       <p class="field-label">{artifact.data.type.replaceAll('-', ' ')} · {artifact.data.status}</p>
-      <h1 class="mt-3 text-balance font-mono text-4xl font-bold text-text-primary sm:text-5xl">
+      <h1 class="mt-3 text-balance font-display text-5xl font-bold leading-[0.95] tracking-[-0.05em] text-text-primary sm:text-7xl">
         {artifact.data.title}
       </h1>
-      <p class="mt-5 text-pretty text-lg leading-8 text-text-secondary">{artifact.data.description}</p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a
-          href={artifact.data.primaryAction.href}
-          class="rounded-md border border-primary px-4 py-2 font-mono text-sm text-primary transition hover:bg-primary hover:text-background"
-          {...(primaryExternal ? { rel: 'noreferrer' } : {})}
-        >
-          {artifact.data.primaryAction.label}
+      <p class="mt-6 max-w-[60ch] text-pretty text-lg leading-8 text-text-secondary">{artifact.data.description}</p>
+      <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-[0.08em] text-text-muted">
+        <a href={artifact.data.primaryAction.href} class="hover:text-text-primary" {...(primaryExternal ? { rel: 'noreferrer' } : {})}>
+          {artifact.data.primaryAction.label} &rarr;
         </a>
         {artifact.data.secondaryAction && (
-          <a
-            href={artifact.data.secondaryAction.href}
-            class="rounded-md border border-border px-4 py-2 font-mono text-sm text-text-secondary transition hover:border-primary hover:text-primary"
-            {...(secondaryExternal ? { rel: 'noreferrer' } : {})}
-          >
-            {artifact.data.secondaryAction.label}
+          <a href={artifact.data.secondaryAction.href} class="hover:text-text-primary" {...(secondaryExternal ? { rel: 'noreferrer' } : {})}>
+            {artifact.data.secondaryAction.label} &rarr;
           </a>
         )}
       </div>
@@ -52,9 +44,9 @@ const relatedWriting =
     </Prose>
 
     {relatedWriting.length > 0 && (
-      <section class="mt-10 border-t border-border pt-8">
-        <h2 class="font-mono text-2xl text-primary">Related writing</h2>
-        <div class="mt-5 overflow-hidden rounded-[var(--radius-panel)] border border-border bg-surface/80">
+      <section class="mt-12 max-w-4xl border-t border-border pt-8">
+        <h2 class="font-display text-3xl font-semibold tracking-[-0.04em] text-text-primary">Related writing</h2>
+        <div class="mt-5">
           {relatedWriting.map((post) => <WritingRow post={post} />)}
         </div>
       </section>

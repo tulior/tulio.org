@@ -7,13 +7,13 @@ const posts = await getPublishedWriting();
 ---
 
 <BaseLayout title="Writing" description="Notes on backend work, integrations, and things I fixed in production.">
-  <section class="px-5 py-12 sm:px-8 lg:px-12">
-    <h1 class="text-balance font-mono text-4xl font-bold text-text-primary sm:text-5xl">Writing</h1>
-    <p class="mt-5 max-w-2xl text-pretty leading-8 text-text-secondary">
+  <section class="mx-auto max-w-6xl px-5 py-12 sm:px-8 lg:px-12">
+    <h1 class="text-balance font-display text-5xl font-bold leading-[0.95] tracking-[-0.05em] text-text-primary sm:text-7xl">Writing</h1>
+    <p class="mt-6 max-w-2xl text-pretty leading-8 text-text-secondary">
       Notes on backend work, integrations, and things I fixed in production.
     </p>
 
-    <div class="mt-8 overflow-hidden rounded-[var(--radius-panel)] border border-border bg-surface/80">
+    <div class="mt-10 max-w-4xl">
       {posts.map((post) => <WritingRow post={post} headingLevel="h2" />)}
     </div>
   </section>
