@@ -8,26 +8,32 @@ const Heading = headingLevel;
 const typeLabel = artifact.data.type.replaceAll('-', ' ');
 const primaryExternal = artifact.data.primaryAction.href.startsWith('http');
 const secondaryExternal = artifact.data.secondaryAction?.href.startsWith('http') ?? false;
+
+function presentStack(stack: readonly string[], max = 4): string {
+  const simplified = stack.map((tag) => tag.replace(/\s+v?\d+(?:\.\d+)*$/i, ''));
+  const shown = simplified.slice(0, max).join(' · ');
+  return simplified.length > max ? `${shown} · …` : shown;
+}
 ---
 
-<article class="border-t border-border py-6">
-  <p class="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-text-muted">
-    {typeLabel} · {artifact.data.status}
-  </p>
-
-  <Heading class="mt-3 text-2xl font-semibold tracking-tight text-text-primary">
+<article class="border-t border-border py-5">
+  <Heading class="text-2xl font-semibold tracking-tight text-text-primary">
     <a href={`/built/${artifact.id}/`} class="hover:text-primary">{artifact.data.title}</a>
   </Heading>
+
+  <p class="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.08em] text-text-muted">
+    {typeLabel} · {artifact.data.status}
+  </p>
 
   <p class="mt-3 max-w-2xl text-pretty text-base leading-7 text-text-secondary">{artifact.data.description}</p>
 
   {artifact.data.stack.length > 0 && (
-    <p class="mt-3 max-w-2xl font-mono text-xs leading-6 text-text-muted">
-      {artifact.data.stack.join(' · ')}
+    <p class="mt-2 max-w-2xl font-mono text-xs leading-6 text-text-muted">
+      {presentStack(artifact.data.stack)}
     </p>
   )}
 
-  <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-[0.08em] text-text-muted">
+  <div class="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-[0.08em] text-text-muted">
     <a href={artifact.data.primaryAction.href} class="hover:text-text-primary" {...(primaryExternal ? { rel: 'noreferrer' } : {})}>
       {artifact.data.primaryAction.label} &rarr;
     </a>

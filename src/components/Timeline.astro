@@ -1,13 +1,25 @@
 ---
 import { timeline } from '../data/timeline';
 import TimelineItem from './TimelineItem.astro';
+
+type Props = {
+  limit?: number;
+  showAllLink?: boolean;
+  sectionLabel?: string;
+};
+
+const { limit, showAllLink = false, sectionLabel = '03 / work trace' } = Astro.props;
+const visibleTimeline = typeof limit === 'number' ? timeline.slice(0, limit) : timeline;
 ---
 
 <section id="work" class="mx-auto max-w-6xl px-5 py-7 sm:px-8 lg:px-12">
   <div class="mb-5 flex items-end justify-between gap-4">
-    <h2 class="font-mono text-xs uppercase tracking-[0.12em] text-text-muted">03 / work trace</h2>
+    <h2 class="font-mono text-xs uppercase tracking-[0.12em] text-text-muted">{sectionLabel}</h2>
+    {showAllLink && (
+      <a href="/work/" class="font-mono text-xs tracking-[0.08em] text-text-muted hover:text-text-primary">all work &rarr;</a>
+    )}
   </div>
   <ol class="space-y-0">
-    {timeline.map((item) => <TimelineItem item={item} />)}
+    {visibleTimeline.map((item) => <TimelineItem item={item} />)}
   </ol>
 </section>
