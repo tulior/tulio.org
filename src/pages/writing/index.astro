@@ -1,23 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
 import WritingRow from '../../components/WritingRow.astro';
+import { getPublishedWriting } from '../../lib/content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const posts = (await getCollection('writing', ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
+const posts = await getPublishedWriting();
 ---
 
-<BaseLayout title="Writing | tulio.org" description="Some posts I wrote and left online.">
+<BaseLayout title="Writing" description="Notes on backend work, integrations, and things I fixed in production.">
   <section class="px-5 py-12 sm:px-8 lg:px-12">
-    <p class="field-label">Notes</p>
-    <h1 class="mt-3 text-balance font-mono text-4xl font-bold text-text-primary sm:text-5xl">Writing</h1>
+    <h1 class="text-balance font-mono text-4xl font-bold text-text-primary sm:text-5xl">Writing</h1>
     <p class="mt-5 max-w-2xl text-pretty leading-8 text-text-secondary">
-      Some posts I wrote. A few are probably too confident. Leaving them here anyway.
+      Notes on backend work, integrations, and things I fixed in production.
     </p>
 
     <div class="mt-8 overflow-hidden rounded-[var(--radius-panel)] border border-border bg-surface/80">
-      {posts.map((post) => <WritingRow post={post} />)}
+      {posts.map((post) => <WritingRow post={post} headingLevel="h2" />)}
     </div>
   </section>
 </BaseLayout>

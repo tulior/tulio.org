@@ -1,4 +1,4 @@
-export type TimelineTone = 'origin' | 'education' | 'work' | 'open-source' | 'current';
+export type TimelineTone = 'past' | 'current';
 
 export type TimelineItem = {
   period: string;
@@ -11,31 +11,10 @@ export type TimelineItem = {
 
 export const timeline = [
   {
-    period: 'TODO',
-    title: 'First computer I cared about',
-    tone: 'origin',
-    summary:
-      'I do not remember the exact machine well enough to make this sound good. This slot is here so I can replace it with the real story later.',
-  },
-  {
-    period: 'TODO',
-    title: 'First internet years',
-    tone: 'origin',
-    summary:
-      'Same problem here: I remember the shape more than the date. Forums, downloads, tutorials, probably too many half-finished things. I need to write the actual version before this becomes fake nostalgia.',
-  },
-  {
-    period: 'TODO',
-    title: 'First code I changed',
-    tone: 'origin',
-    summary:
-      'I do not have the clean origin story written down. It was probably small and copied from somewhere, which is how a lot of programming starts.',
-  },
-  {
     period: '2009–2013',
     title: 'Computer Engineering',
     place: 'Uniderp · Campo Grande, Brazil',
-    tone: 'education',
+    tone: 'past',
     summary:
       'I studied Computer Engineering at Uniderp. Some of it was useful, some of it was only useful later, and plenty of it I do not think about now.',
     stack: ['Computer engineering', 'Programming', 'Systems'],
@@ -44,7 +23,7 @@ export const timeline = [
     period: '2013–2017',
     title: 'Legal statutes and public planning software',
     place: 'PSG Tecnologia · Campo Grande, Brazil',
-    tone: 'work',
+    tone: 'past',
     summary:
       'I wrote C# and SQL Server software for legal statute workflows and public planning/budget tracking. Government software was slow in the normal ways: meetings, forms, rules, and names that changed after I had already built the screen.',
     stack: ['C#', '.NET', 'SQL Server', 'Government workflows'],
@@ -53,7 +32,7 @@ export const timeline = [
     period: '2017–2019',
     title: 'Dispatch software and a CPU problem',
     place: 'Fonte Tecnologia · Campo Grande, Brazil',
-    tone: 'work',
+    tone: 'past',
     summary:
       'I worked on SIGO-CADG, a dispatch system in Mato Grosso do Sul. I fixed a vehicle tracking screen that was burning CPU with timer loops, and built forms for emergency call reporting. It was not glamorous; it was a screen people needed open.',
     stack: ['JavaScript', '.NET', 'Vehicle tracking', 'Dispatch'],
@@ -62,7 +41,7 @@ export const timeline = [
     period: '2019–2022',
     title: 'Old apps, new screens, slow links',
     place: 'GEOI2 Tecnologia da Informação LTDA. · Campo Grande, Brazil',
-    tone: 'work',
+    tone: 'past',
     summary:
       'I helped move a JSF app to Angular 13 and Spring Boot, and built a Java CLI to move and provision data across Sybase, Firebird, PostgreSQL, MySQL, and MongoDB. Some municipalities still had 128kbps links, so gzip mattered more than clever code.',
     stack: ['Java', 'Spring Boot', 'Angular', 'Sybase', 'Firebird', 'PostgreSQL', 'MySQL', 'MongoDB'],
@@ -71,7 +50,7 @@ export const timeline = [
     period: '2022–2025',
     title: 'Remote backend contract work',
     place: 'BairesDev · Remote',
-    tone: 'work',
+    tone: 'past',
     summary:
       'I did remote backend work: privacy compliance APIs in Java/Spring Boot, Shopify SKU and order sync, SQS inventory updates, Lambda image composition with SkiaSharp, and CSV reports with schema validation. A lot of it was getting two systems to agree long enough to not wake someone up.',
     stack: ['Java', 'Spring Boot', '.NET 8', 'AWS Lambda', 'SQS', 'S3', 'Shopify API', 'SkiaSharp'],

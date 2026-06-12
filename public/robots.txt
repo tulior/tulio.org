@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tulio.org/sitemap.xml
+Sitemap: https://tulio.org/sitemap-index.xml

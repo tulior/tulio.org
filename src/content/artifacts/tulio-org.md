@@ -12,12 +12,14 @@ primaryAction:
 secondaryAction:
   label: 'Source'
   href: 'https://github.com/tulior/tulio.org'
-interactive: false
-apiMode: 'none'
+relatedWriting:
+  - 'level-up-or-be-left-behind-ais-demand-on-creativity'
+  - 'stop-technical-interviews'
+  - 'dumber-no-different'
 ---
 
-This is this site.
+The site you're reading: Astro, Tailwind CSS v4, Bun, GitHub Pages, and zero client-side JavaScript.
 
 I rebuilt it with Astro, Tailwind CSS v4, Bun, and GitHub Pages because I wanted the domain to point at something that was mine.
 
-There is no product here. It is a few pages, some links, and a place to put writing if I feel like it.
+The goal is a fast static home for writing, public projects, and the work history I want people to see first.

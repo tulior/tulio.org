@@ -21,12 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: .nvmrc
-          package-manager-cache: false
-
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -37,9 +31,6 @@ jobs:
 
       - name: Build
         run: bun run build
-
-      - name: Copy CNAME
-        run: cp CNAME dist/CNAME
 
       - name: Configure Pages
         uses: actions/configure-pages@v6

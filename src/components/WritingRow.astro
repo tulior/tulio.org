@@ -2,8 +2,9 @@
 import type { CollectionEntry } from 'astro:content';
 import { formatDate } from '../lib/dates';
 
-type Props = { post: CollectionEntry<'writing'> };
-const { post } = Astro.props;
+type Props = { post: CollectionEntry<'writing'>; headingLevel?: 'h2' | 'h3' };
+const { post, headingLevel = 'h3' } = Astro.props;
+const Heading = headingLevel;
 ---
 
 <article class="border-b border-border last:border-b-0">
@@ -12,7 +13,7 @@ const { post } = Astro.props;
       {formatDate(post.data.date)}
     </time>
     <div>
-      <h3 class="font-mono text-base text-text-primary">{post.data.title}</h3>
+      <Heading class="font-mono text-base text-text-primary">{post.data.title}</Heading>
       <p class="mt-2 text-sm leading-6 text-text-secondary">{post.data.description}</p>
     </div>
   </a>

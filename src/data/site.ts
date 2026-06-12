@@ -1,22 +1,16 @@
 export const site = {
   name: 'Túlio Ribeiro dos Anjos',
   shortName: 'Túlio',
-  handle: 'tulio.org',
   url: 'https://tulio.org',
-  description: 'A small personal site for Túlio Ribeiro dos Anjos: notes, links, and a timeline.',
+  description: 'Backend engineering notes, public projects, and a work timeline from Túlio Ribeiro dos Anjos.',
   defaultImage: '/img/og-banner.png',
   defaultImageAlt: 'Túlio Ribeiro dos Anjos.',
 
-  locale: 'en',
-  languageTag: 'en',
   ogLocale: 'en_US',
 
   email: 'mail@tulio.org',
   github: 'https://github.com/tulior',
   linkedin: 'https://linkedin.com/in/tulioanjos',
-
-  location: 'Campo Grande, Brazil',
-  workMode: 'Remote-first',
 
   identity: {
     fullName: 'Túlio Ribeiro dos Anjos',
@@ -45,20 +39,5 @@ export const site = {
       'systems integration',
       'software architecture',
     ],
-  },
-
-  pages: {
-    home: {
-      path: '/',
-      title: 'Túlio Ribeiro dos Anjos',
-    },
-    artifacts: {
-      path: '/artifacts/',
-      title: 'Artifacts',
-    },
-    writing: {
-      path: '/writing/',
-      title: 'Writing',
-    },
   },
 } as const;

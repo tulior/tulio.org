@@ -1,10 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
+import { getPublishedArtifacts } from '../../lib/content';
 import ArtifactLayout from '../../layouts/ArtifactLayout.astro';
 
 export async function getStaticPaths() {
-  const artifacts = await getCollection('artifacts', ({ data }) => !data.draft);
+  const artifacts = await getPublishedArtifacts();
   return artifacts.map((artifact) => ({ params: { slug: artifact.id }, props: { artifact } }));
 }
 

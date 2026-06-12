@@ -12,10 +12,6 @@ function isCurrent(href: string): boolean {
     return false;
   }
 
-  if (href.startsWith('/#')) {
-    return pathname === '/';
-  }
-
   const current = normalize(pathname);
   const target = normalize(href);
   return current === target || current.startsWith(`${target}/`);
@@ -24,7 +20,7 @@ function isCurrent(href: string): boolean {
 
 <header class="sticky top-0 z-50">
   <div class="flex w-full items-center justify-between gap-3 rounded-t-[calc(var(--radius-shell)-1px)] rounded-b-[var(--radius-panel)] border-b border-border bg-background/88 px-3 py-3 backdrop-blur-md xs:px-4 sm:px-8 lg:px-12">
-    <a href="/" class="shrink-0 font-mono text-base font-semibold tracking-[0.08em] text-primary sm:text-lg" aria-label="tulio.org home">
+    <a href="/" class="shrink-0 font-mono text-base font-semibold text-primary sm:text-lg" aria-label="tulio.org home">
       tulio.org
     </a>
 
@@ -32,18 +28,20 @@ function isCurrent(href: string): boolean {
       {navItems.map((item) => {
         const active = isCurrent(item.href);
         const cta = 'cta' in item && item.cta;
-        const external = 'external' in item && item.external;
+        const stateClass = active
+          ? 'border-primary/70 bg-primary/10 text-primary'
+          : cta
+            ? 'border-primary text-primary hover:bg-primary hover:text-background'
+            : 'border-transparent text-text-secondary hover:border-primary/45 hover:text-primary';
 
         return (
           <a
             href={item.href}
             aria-current={active ? 'page' : undefined}
             class:list={[
-              'rounded-md border border-transparent px-1.5 py-2 font-mono text-[0.62rem] text-text-secondary transition hover:border-primary/45 hover:text-primary xs:px-2 xs:text-xs sm:px-2.5 sm:text-sm',
-              active && '!border-primary/70 !bg-primary/10 !text-primary',
-              cta && '!border-primary px-2 text-primary hover:bg-primary hover:text-background sm:px-3',
+              'rounded-md border px-2 py-2 font-mono text-xs transition sm:px-3 sm:text-sm',
+              stateClass,
             ]}
-            {...(external ? { rel: 'noreferrer' } : {})}
           >
             {item.label}
           </a>

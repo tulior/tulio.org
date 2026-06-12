@@ -1,8 +1,9 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 
-type Props = { artifact: CollectionEntry<'artifacts'> };
-const { artifact } = Astro.props;
+type Props = { artifact: CollectionEntry<'artifacts'>; headingLevel?: 'h2' | 'h3' };
+const { artifact, headingLevel = 'h3' } = Astro.props;
+const Heading = headingLevel;
 
 const typeLabel = artifact.data.type.replaceAll('-', ' ');
 const primaryExternal = artifact.data.primaryAction.href.startsWith('http');
@@ -11,22 +12,22 @@ const secondaryExternal = artifact.data.secondaryAction?.href.startsWith('http')
 
 <article class="panel flex min-h-full flex-col p-4 transition hover:border-primary/70 md:p-5">
   <div class="flex items-center justify-between gap-3">
-    <p class="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-warm">{typeLabel}</p>
-    <p class="rounded-[var(--radius-pill)] border border-border px-2 py-1 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-text-muted">
+    <p class="font-mono text-[0.7rem] uppercase text-warm">{typeLabel}</p>
+    <p class="rounded-[var(--radius-pill)] border border-border px-2 py-1 font-mono text-[0.7rem] uppercase text-text-muted">
       {artifact.data.status}
     </p>
   </div>
 
-  <h3 class="mt-4 font-mono text-lg font-semibold text-text-primary">
+  <Heading class="mt-4 font-mono text-lg font-semibold text-text-primary">
     <a href={`/artifacts/${artifact.id}/`} class="hover:text-primary">{artifact.data.title}</a>
-  </h3>
+  </Heading>
 
   <p class="mt-3 text-pretty text-sm leading-6 text-text-secondary">{artifact.data.description}</p>
 
   {artifact.data.stack.length > 0 && (
     <ul class="mt-4 flex flex-wrap gap-2" aria-label="Stack">
       {artifact.data.stack.map((tag) => (
-        <li class="rounded border border-border px-2 py-1 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-text-muted">
+        <li class="rounded border border-border px-2 py-1 font-mono text-[0.7rem] uppercase text-text-muted">
           {tag}
         </li>
       ))}

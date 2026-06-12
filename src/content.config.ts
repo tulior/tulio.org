@@ -35,9 +35,6 @@ const artifacts = defineCollection({
         href: z.string(),
       })
       .optional(),
-    interactive: z.boolean().default(false),
-    toolModule: z.string().optional(),
-    apiMode: z.enum(['none', 'client-fetch']).default('none'),
     relatedWriting: z.array(reference('writing')).default([]),
     draft: z.boolean().default(false),
   }),

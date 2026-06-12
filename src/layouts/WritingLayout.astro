@@ -2,13 +2,48 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import Prose from '../components/Prose.astro';
+import { site } from '../data/site';
 import { formatDate } from '../lib/dates';
 
 type Props = { post: CollectionEntry<'writing'> };
 const { post } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).toString();
+const image = new URL(site.defaultImage, site.url).toString();
+const modifiedTime = post.data.updated ?? post.data.date;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date.toISOString(),
+  dateModified: modifiedTime.toISOString(),
+  image,
+  mainEntityOfPage: canonical,
+  author: {
+    '@type': 'Person',
+    name: site.identity.fullName,
+    url: site.url,
+  },
+  publisher: {
+    '@type': 'Person',
+    name: site.identity.fullName,
+    url: site.url,
+  },
+  keywords: post.data.tags,
+};
 ---
 
-<BaseLayout title={`${post.data.title} | Writing | tulio.org`} description={post.data.description}>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  publishedTime={post.data.date}
+  modifiedTime={modifiedTime}
+>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </Fragment>
+
   <article class="px-5 py-12 sm:px-8 lg:px-12">
     <a href="/writing/" class="font-mono text-sm text-primary hover:text-primary-soft">&larr; Writing</a>
 
@@ -23,7 +58,7 @@ const { post } = Astro.props;
       {post.data.tags.length > 0 && (
         <ul class="mt-5 flex flex-wrap gap-2" aria-label="Tags">
           {post.data.tags.map((tag) => (
-            <li class="rounded border border-border px-2 py-1 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-text-muted">
+            <li class="rounded border border-border px-2 py-1 font-mono text-[0.7rem] uppercase text-text-muted">
               {tag}
             </li>
           ))}

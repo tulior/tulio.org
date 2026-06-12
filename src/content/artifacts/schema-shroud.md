@@ -9,8 +9,6 @@ stack: ['.NET 8', 'C#', 'Reflection', 'Data privacy']
 primaryAction:
   label: 'Source'
   href: 'https://github.com/tulior/schema-shroud'
-interactive: false
-apiMode: 'none'
 ---
 
 SchemaShroud is a small .NET library. You mark model properties with attributes, then run data through the anonymizer.

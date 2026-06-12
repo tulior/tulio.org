@@ -12,8 +12,6 @@ primaryAction:
 secondaryAction:
   label: 'Source'
   href: 'https://github.com/tulior/wingetdb'
-interactive: false
-apiMode: 'none'
 ---
 
 winget.tulio.org is a generated static site for browsing Windows Package Manager packages.

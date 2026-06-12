@@ -1,0 +1,27 @@
+---
+import { site } from '../data/site';
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.identity.fullName,
+  givenName: site.identity.givenName,
+  familyName: site.identity.familyName,
+  alternateName: [...site.identity.alternateNames],
+  jobTitle: site.identity.role,
+  description: site.identity.summary,
+  email: `mailto:${site.email}`,
+  url: site.url,
+  image: new URL(site.defaultImage, site.url).toString(),
+  sameAs: [...site.identity.sameAs],
+  knowsAbout: [...site.identity.knowsAbout],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: site.identity.location.city,
+    addressRegion: site.identity.location.region,
+    addressCountry: site.identity.location.country,
+  },
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />
