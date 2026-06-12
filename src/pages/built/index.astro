@@ -13,7 +13,7 @@ const artifacts = await getPublishedArtifacts();
       Public tools and repositories.
     </p>
 
-    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-10 max-w-4xl">
       {artifacts.map((artifact) => <ArtifactCard artifact={artifact} headingLevel="h2" />)}
     </div>
   </section>

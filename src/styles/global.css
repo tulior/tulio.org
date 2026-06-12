@@ -17,8 +17,8 @@
   --color-border: #263a35;
   --color-border-strong: #334b45;
   --color-text-primary: #eef1e8;
-  --color-text-secondary: #aeb8ad;
-  --color-text-muted: #77847c;
+  --color-text-secondary: #c3cec7;
+  --color-text-muted: #91a39b;
   --color-primary: #c08457;
   --color-primary-soft: #d6a06f;
   --color-accent: #8fb7a8;
@@ -94,26 +94,11 @@
 @utility field-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-primary);
 }
 
-@utility timeline-dot {
-  inline-size: 0.875rem;
-  block-size: 0.875rem;
-  border-radius: 999px;
-  background: var(--color-border-strong);
-  box-shadow: 0 0 0 0.375rem rgb(192 132 87 / 0.10);
-}
-
-@utility timeline-dot-current {
-  inline-size: 0.875rem;
-  block-size: 0.875rem;
-  border-radius: 999px;
-  background: var(--color-primary);
-  box-shadow: 0 0 0 0.375rem rgb(192 132 87 / 0.16);
-}
 
 @utility scrollbar-estuary {
   scrollbar-width: thin;
