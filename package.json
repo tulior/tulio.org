@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "astro dev --host 0.0.0.0 --port 8000",
-    "build": "astro check && astro build",
+    "icons": "bun scripts/generate-icons.mjs",
+    "build": "bun run icons && astro check && astro build",
     "preview": "astro preview --host 0.0.0.0 --port 8000",
     "check": "astro check",
     "typecheck": "astro check",

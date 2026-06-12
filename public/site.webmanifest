@@ -1,6 +1,13 @@
 {
+  "id": "/",
   "name": "Túlio Ribeiro dos Anjos",
-  "short_name": "Túlio Anjos",
+  "short_name": "tulio.org",
+  "description": "Backend notes, production fixes, integration scars, and small public tools by Túlio Ribeiro dos Anjos.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "theme_color": "#08100f",
+  "background_color": "#08100f",
   "icons": [
     {
       "src": "/icons/icon-192.png",
@@ -20,8 +27,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#071316",
-  "background_color": "#071316",
-  "display": "standalone"
+  ]
 }
