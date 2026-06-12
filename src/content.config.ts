@@ -21,14 +21,16 @@ const artifacts = defineCollection({
     title: z.string(),
     updated: z.coerce.date().optional(),
     description: z.string(),
-    type: z.enum(['interactive-tool', 'open-source-library', 'backend-system', 'case-study', 'experiment']),
+    type: z.enum(['interactive-tool', 'open-source-library', 'backend-system', 'case-study', 'data-atlas', 'experiment']),
     status: z.enum(['live', 'maintained', 'prototype', 'archived']),
     featured: z.boolean().default(false),
     stack: z.array(z.string()).default([]),
-    primaryAction: z.object({
-      label: z.string(),
-      href: z.string(),
-    }),
+    primaryAction: z
+      .object({
+        label: z.string(),
+        href: z.string(),
+      })
+      .optional(),
     secondaryAction: z
       .object({
         label: z.string(),

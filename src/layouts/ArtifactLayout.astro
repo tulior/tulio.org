@@ -7,7 +7,7 @@ import WritingRow from '../components/WritingRow.astro';
 
 type Props = { artifact: CollectionEntry<'artifacts'> };
 const { artifact } = Astro.props;
-const primaryExternal = artifact.data.primaryAction.href.startsWith('http');
+const primaryExternal = artifact.data.primaryAction?.href.startsWith('http') ?? false;
 const secondaryExternal = artifact.data.secondaryAction?.href.startsWith('http') ?? false;
 const relatedWriting =
   artifact.data.relatedWriting.length > 0
@@ -28,16 +28,20 @@ const imagePath = `/built/${artifact.id}/og.png`;
         {artifact.data.title}
       </h1>
       <p class="mt-6 max-w-[60ch] text-pretty text-lg leading-8 text-text-secondary">{artifact.data.description}</p>
-      <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-[0.08em] text-text-muted">
-        <a href={artifact.data.primaryAction.href} class="hover:text-text-primary" {...(primaryExternal ? { rel: 'noreferrer' } : {})}>
-          {artifact.data.primaryAction.label} &rarr;
-        </a>
-        {artifact.data.secondaryAction && (
-          <a href={artifact.data.secondaryAction.href} class="hover:text-text-primary" {...(secondaryExternal ? { rel: 'noreferrer' } : {})}>
-            {artifact.data.secondaryAction.label} &rarr;
-          </a>
-        )}
-      </div>
+      {(artifact.data.primaryAction || artifact.data.secondaryAction) && (
+        <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs tracking-[0.08em] text-text-muted">
+          {artifact.data.primaryAction && (
+            <a href={artifact.data.primaryAction.href} class="hover:text-text-primary" {...(primaryExternal ? { rel: 'noreferrer' } : {})}>
+              {artifact.data.primaryAction.label} &rarr;
+            </a>
+          )}
+          {artifact.data.secondaryAction && (
+            <a href={artifact.data.secondaryAction.href} class="hover:text-text-primary" {...(secondaryExternal ? { rel: 'noreferrer' } : {})}>
+              {artifact.data.secondaryAction.label} &rarr;
+            </a>
+          )}
+        </div>
+      )}
     </header>
 
     <Prose>
